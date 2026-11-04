@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     siteName: "Daily Decor Inspo",
   },
   other: {
-    // Pinterest domain verification — replace YOUR_CODE with actual code from Pinterest
-    "p:domain_verify": "YOUR_PINTEREST_DOMAIN_VERIFY_CODE",
+    // Pinterest domain verification
+    "p:domain_verify": "63275721639a1ac70a4eedda202d5668",
   },
 };
 
