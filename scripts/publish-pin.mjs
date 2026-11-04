@@ -31,10 +31,16 @@ async function main() {
   const envLabel = isProd ? 'PRODUCTION' : 'SANDBOX';
   console.log(`\n🚀 Publishing Room #${roomNum} (${typeArg}) to Pinterest [${envLabel}]...`);
 
-  // Target board name based on category
-  let boardName = 'Cozy Bedroom Inspo';
-  if (room.category === 'reading-nook') {
+  // Target board name based on category (matched to Pinterest profile boards)
+  let boardName = 'Small Bedroom Hacks';
+  if (room.category === 'desktop-setup') {
+    boardName = 'Aesthetic Desk Setups';
+  } else if (room.category === 'living-room') {
+    boardName = 'Cozy Fall Apartment Inspo';
+  } else if (room.category === 'reading-nook') {
     boardName = 'Cozy Reading Nooks & Corners';
+  } else if (room.category === 'bathroom') {
+    boardName = 'Small Bathroom Hacks';
   } else if (room.category !== 'bedroom') {
     boardName = 'Aesthetic Home Decor Finds';
   }
