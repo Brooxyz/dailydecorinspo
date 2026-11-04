@@ -147,56 +147,56 @@
       "products": [
         {
           "number": 1,
-          "name": "Cream Bouclé Barrel Chair",
-          "description": "Textured bouclé curved accent barrel chair with plush high-density foam cushioning",
+          "name": "CHITA Swivel Bouclé Barrel Chair",
+          "description": "Plush textured bouclé curved accent barrel chair with 360-degree swivel base",
           "image": "/images/products/room-03/chair.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B0BJ7F7G7R?tag=dailydecorins-20",
-          "priceRange": "$130-160",
+          "amazonUrl": "https://www.amazon.com/dp/B0CCSC2FN7?tag=dailydecorins-20",
+          "priceRange": "$140-180",
           "rating": 4.6
         },
         {
           "number": 2,
-          "name": "Arched Black & Brass Floor Lamp",
-          "description": "Dimmable mid-century modern arched floor lamp with natural fabric drum shade",
+          "name": "Brightech Mason Arc Floor Lamp",
+          "description": "Modern arched standing floor lamp with textured neutral drum shade & weighted base",
           "image": "/images/products/room-03/lamp.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B099RN546H?tag=dailydecorins-20",
-          "priceRange": "$45-65",
+          "amazonUrl": "https://www.amazon.com/dp/B07CGZ665H?tag=dailydecorins-20",
+          "priceRange": "$55-75",
           "rating": 4.7
         },
         {
           "number": 3,
-          "name": "C-Shaped Walnut Side Table",
-          "description": "Minimalist wood end table sliding under chair for coffee, laptop, and books",
+          "name": "VASAGLE C-Shaped Side Table",
+          "description": "Minimalist wood & steel end table sliding under chair for coffee, laptop & books",
           "image": "/images/products/room-03/table.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B08HMRCS4Z?tag=dailydecorins-20",
-          "priceRange": "$30-45",
+          "amazonUrl": "https://www.amazon.com/dp/B08VDQN8H5?tag=dailydecorins-20",
+          "priceRange": "$25-35",
           "rating": 4.5
         },
         {
           "number": 4,
-          "name": "Terracotta Waffle Throw Blanket",
-          "description": "100% natural cotton chunky waffle weave decorative throw with fringe detail",
+          "name": "Bedsure 100% Cotton Waffle Blanket",
+          "description": "Natural soft chunky waffle weave throw blanket with fringe detail",
           "image": "/images/products/room-03/blanket.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B08N5V3G4J?tag=dailydecorins-20",
-          "priceRange": "$20-30",
+          "amazonUrl": "https://www.amazon.com/dp/B0BJDHFYPK?tag=dailydecorins-20",
+          "priceRange": "$22-32",
           "rating": 4.6
         },
         {
           "number": 5,
-          "name": "Floating Wood Picture Ledges",
-          "description": "Set of 2 natural oak floating display shelves for books and framed art",
+          "name": "Command Picture Ledge Display Shelf",
+          "description": "Damage-free wall-mounted picture ledge floating display shelf for books & art",
           "image": "/images/products/room-03/shelves.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B07T2R2L4Y?tag=dailydecorins-20",
-          "priceRange": "$25-35",
+          "amazonUrl": "https://www.amazon.com/dp/B07226MHP7?tag=dailydecorins-20",
+          "priceRange": "$18-25",
           "rating": 4.7
         },
         {
           "number": 6,
-          "name": "Potted Faux Olive Tree",
-          "description": "Realistic 4ft faux olive tree in rustic weathered terracotta ceramic planter",
+          "name": "Nearly Natural Faux Olive Tree",
+          "description": "Realistic tall artificial olive tree with natural wood trunk & lush green leaves",
           "image": "/images/products/room-03/tree.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B093L91B6G?tag=dailydecorins-20",
-          "priceRange": "$35-50",
+          "amazonUrl": "https://www.amazon.com/dp/B07MWSRTYR?tag=dailydecorins-20",
+          "priceRange": "$45-65",
           "rating": 4.6
         }
       ]

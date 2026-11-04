@@ -32,7 +32,12 @@ async function main() {
   console.log(`\n🚀 Publishing Room #${roomNum} (${typeArg}) to Pinterest [${envLabel}]...`);
 
   // Target board name based on category
-  const boardName = room.category === 'bedroom' ? 'Cozy Bedroom Inspo' : 'Home Decor Ideas';
+  let boardName = 'Cozy Bedroom Inspo';
+  if (room.category === 'reading-nook') {
+    boardName = 'Cozy Reading Nooks & Corners';
+  } else if (room.category !== 'bedroom') {
+    boardName = 'Aesthetic Home Decor Finds';
+  }
 
   console.log(`Checking boards for: "${boardName}"...`);
   let boards = await getBoards(isProd);
