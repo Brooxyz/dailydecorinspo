@@ -133,6 +133,73 @@
           "rating": 4.5
         }
       ]
+    },
+    {
+      "id": "cozy-boucle-reading-nook-03",
+      "slug": "cozy-boucle-reading-nook-03",
+      "title": "Cozy Bouclé Reading Nook",
+      "subtitle": "Warm walnut wood, textured bouclé & 2700K ambient glow",
+      "category": "reading-nook",
+      "tags": ["reading nook", "boucle chair", "cozy corner", "warm minimalism", "amazon finds"],
+      "roomImage": "/images/rooms/room-03.jpg",
+      "createdAt": "2026-11-04",
+      "totalPrice": "$280-380",
+      "products": [
+        {
+          "number": 1,
+          "name": "Cream Bouclé Barrel Chair",
+          "description": "Textured bouclé curved accent barrel chair with plush high-density foam cushioning",
+          "image": "/images/products/room-03/chair.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BJ7F7G7R?tag=dailydecorins-20",
+          "priceRange": "$130-160",
+          "rating": 4.6
+        },
+        {
+          "number": 2,
+          "name": "Arched Black & Brass Floor Lamp",
+          "description": "Dimmable mid-century modern arched floor lamp with natural fabric drum shade",
+          "image": "/images/products/room-03/lamp.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B099RN546H?tag=dailydecorins-20",
+          "priceRange": "$45-65",
+          "rating": 4.7
+        },
+        {
+          "number": 3,
+          "name": "C-Shaped Walnut Side Table",
+          "description": "Minimalist wood end table sliding under chair for coffee, laptop, and books",
+          "image": "/images/products/room-03/table.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B08HMRCS4Z?tag=dailydecorins-20",
+          "priceRange": "$30-45",
+          "rating": 4.5
+        },
+        {
+          "number": 4,
+          "name": "Terracotta Waffle Throw Blanket",
+          "description": "100% natural cotton chunky waffle weave decorative throw with fringe detail",
+          "image": "/images/products/room-03/blanket.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B08N5V3G4J?tag=dailydecorins-20",
+          "priceRange": "$20-30",
+          "rating": 4.6
+        },
+        {
+          "number": 5,
+          "name": "Floating Wood Picture Ledges",
+          "description": "Set of 2 natural oak floating display shelves for books and framed art",
+          "image": "/images/products/room-03/shelves.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07T2R2L4Y?tag=dailydecorins-20",
+          "priceRange": "$25-35",
+          "rating": 4.7
+        },
+        {
+          "number": 6,
+          "name": "Potted Faux Olive Tree",
+          "description": "Realistic 4ft faux olive tree in rustic weathered terracotta ceramic planter",
+          "image": "/images/products/room-03/tree.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B093L91B6G?tag=dailydecorins-20",
+          "priceRange": "$35-50",
+          "rating": 4.6
+        }
+      ]
     }
   ]
 }

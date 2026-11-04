@@ -229,6 +229,13 @@ async function main() {
       { number: 4, x: 280, y: 780 }, // Wool Rug
       { number: 5, x: 260, y: 380 }, // Linen Blackout Curtains
     ],
+    '03': [
+      { number: 1, x: 420, y: 740 }, // Boucle Chair
+      { number: 2, x: 350, y: 280 }, // Arched Lamp
+      { number: 3, x: 680, y: 680 }, // C-Table
+      { number: 4, x: 230, y: 640 }, // Terracotta Blanket
+      { number: 5, x: 580, y: 320 }, // Picture Ledges
+    ],
   };
 
   for (let index = 0; index < data.rooms.length; index++) {
