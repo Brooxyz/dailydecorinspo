@@ -223,11 +223,11 @@
         },
         {
           "number": 2,
-          "name": "Aothia Walnut Dual Monitor Stand Riser",
-          "description": "Solid walnut wood desktop shelf organizer supported by natural cork block feet",
+          "name": "SUPERJARE Dual Monitor Stand Riser",
+          "description": "Adjustable rustic brown wood dual-monitor stand riser with storage space underneath",
           "image": "/images/products/room-04/riser.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B08PBSRPFH?tag=dailydecorins-20",
-          "priceRange": "$30-45",
+          "amazonUrl": "https://www.amazon.com/dp/B07NPJZGVR?tag=dailydecorins-20",
+          "priceRange": "$28-38",
           "rating": 4.6
         },
         {
@@ -265,6 +265,73 @@
           "amazonUrl": "https://www.amazon.com/dp/B08DKQ3JG1?tag=dailydecorins-20",
           "priceRange": "$30-45",
           "rating": 4.6
+        }
+      ]
+    },
+    {
+      "id": "cozy-fall-living-room-05",
+      "slug": "cozy-fall-living-room-05",
+      "title": "Cozy Fall Apartment Living Room",
+      "subtitle": "Warm amber glow, textured bouclé & rustic autumn minimalism",
+      "category": "living-room",
+      "tags": ["fall living room", "cozy apartment", "warm minimalism", "autumn decor", "amazon finds"],
+      "roomImage": "/images/rooms/room-05.jpg",
+      "createdAt": "2026-11-05",
+      "totalPrice": "$170-240",
+      "products": [
+        {
+          "number": 1,
+          "name": "Sweet Water Decor Warm and Cozy Soy Candle",
+          "description": "Amber glass jar candle with wooden crackling wick, orange peel, cinnamon & pine scent",
+          "image": "/images/products/room-05/candle.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07Y5KB9M6?tag=dailydecorins-20",
+          "priceRange": "$20-25",
+          "rating": 4.6
+        },
+        {
+          "number": 2,
+          "name": "Bedsure Burnt Orange Chunky Knit Throw Blanket",
+          "description": "Super soft chunky chenille cable knit decorative couch throw blanket in rich autumn rust",
+          "image": "/images/products/room-05/blanket.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B099K1DYV8?tag=dailydecorins-20",
+          "priceRange": "$24-34",
+          "rating": 4.6
+        },
+        {
+          "number": 3,
+          "name": "Dripex Rustic Round Wood Coffee Table",
+          "description": "2-tier circular reclaimed oak accent table with open storage shelf & matte black steel legs",
+          "image": "/images/products/room-05/table.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B08HMRG35B?tag=dailydecorins-20",
+          "priceRange": "$65-85",
+          "rating": 4.5
+        },
+        {
+          "number": 4,
+          "name": "Eywamage Flameless Flickering LED Pillar Candles Set",
+          "description": "Set of 3 real paraffin wax cylinder candles with remote & 2700K warm flickering LED wick",
+          "image": "/images/products/room-05/candles.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B08BRT7K2K?tag=dailydecorins-20",
+          "priceRange": "$23-32",
+          "rating": 4.6
+        },
+        {
+          "number": 5,
+          "name": "Bsezen Ceramic Matte Donut Vase Set of 2",
+          "description": "Nordic minimalist off-white circular ceramic vases with ribbed texture for dried floral display",
+          "image": "/images/products/room-05/vases.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0B8SBFYDF?tag=dailydecorins-20",
+          "priceRange": "$22-30",
+          "rating": 4.7
+        },
+        {
+          "number": 6,
+          "name": "Sunm Boutique Faux Fall Eucalyptus & Pampas Grass",
+          "description": "Fluffy natural dried pampas plumes with warm terracotta eucalyptus stems for tabletop vase",
+          "image": "/images/products/room-05/pampas.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09CLL3C7B?tag=dailydecorins-20",
+          "priceRange": "$15-22",
+          "rating": 4.5
         }
       ]
     }

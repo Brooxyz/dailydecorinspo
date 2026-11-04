@@ -243,6 +243,14 @@ async function main() {
       { number: 4, x: 480, y: 760 }, // Leather Desk Pad
       { number: 5, x: 220, y: 320 }, // Wire Wall Grid
     ],
+    '05': [
+      { number: 1, x: 590, y: 920 }, // Amber Soy Candle
+      { number: 2, x: 300, y: 670 }, // Burnt Orange Throw
+      { number: 3, x: 500, y: 1020 }, // Round Wood Coffee Table
+      { number: 4, x: 470, y: 850 }, // LED Pillar Candles
+      { number: 5, x: 340, y: 800 }, // Donut Vases
+      { number: 6, x: 320, y: 620 }, // Pampas Grass
+    ],
   };
 
   for (let index = 0; index < data.rooms.length; index++) {
