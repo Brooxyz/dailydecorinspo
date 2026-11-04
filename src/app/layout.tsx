@@ -121,15 +121,19 @@ function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-4 pt-4">
+          <div className="flex items-center justify-center gap-6 pt-4 text-xs text-warm-600">
+            <a href="/privacy/" className="hover:text-warm-900 underline underline-offset-2 transition-colors">
+              Privacy Policy
+            </a>
+            <span>•</span>
             <a
               href="https://pinterest.com/dailydecorinspo_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-warm-500 hover:text-warm-700 transition-colors"
-              aria-label="Pinterest"
+              className="text-warm-600 hover:text-warm-900 transition-colors flex items-center gap-1"
             >
               <PinterestIcon />
+              Pinterest
             </a>
           </div>
 
