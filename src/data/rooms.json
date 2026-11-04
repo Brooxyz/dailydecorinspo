@@ -200,6 +200,73 @@
           "rating": 4.6
         }
       ]
+    },
+    {
+      "id": "warm-aesthetic-wfh-desk-setup-04",
+      "slug": "warm-aesthetic-wfh-desk-setup-04",
+      "title": "Warm Aesthetic WFH Desk Setup",
+      "subtitle": "Deep walnut wood, warm ambient glow & minimalist productivity",
+      "category": "desktop-setup",
+      "tags": ["desk setup", "wfh setup", "aesthetic desk", "home office", "amazon finds"],
+      "roomImage": "/images/rooms/room-04.jpg",
+      "createdAt": "2026-11-05",
+      "totalPrice": "$160-230",
+      "products": [
+        {
+          "number": 1,
+          "name": "OLIXIS Armless Criss Cross Desk Chair",
+          "description": "Ergonomic wide seat swivel office chair with caramel brown upholstery & black star base",
+          "image": "/images/products/room-04/chair.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BVYRVWZK?tag=dailydecorins-20",
+          "priceRange": "$50-70",
+          "rating": 4.5
+        },
+        {
+          "number": 2,
+          "name": "Aothia Walnut Dual Monitor Stand Riser",
+          "description": "Solid walnut wood desktop shelf organizer supported by natural cork block feet",
+          "image": "/images/products/room-04/riser.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B08PBSRPFH?tag=dailydecorins-20",
+          "priceRange": "$30-45",
+          "rating": 4.6
+        },
+        {
+          "number": 3,
+          "name": "Globe Electric 32\" Architect Desk Lamp",
+          "description": "Matte black metal cantilever swing-arm architect lamp casting 2700K warm vintage glow",
+          "image": "/images/products/room-04/lamp.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B01BTRYW9W?tag=dailydecorins-20",
+          "priceRange": "$22-30",
+          "rating": 4.6
+        },
+        {
+          "number": 4,
+          "name": "Aothia Vegan Leather Desk Pad",
+          "description": "Waterproof saddle tan brown PU leather desk blotter mat with non-slip backing",
+          "image": "/images/products/room-04/pad.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B082F615S3?tag=dailydecorins-20",
+          "priceRange": "$14-20",
+          "rating": 4.6
+        },
+        {
+          "number": 5,
+          "name": "Ecjiuyi Matte Black Wire Wall Grid Organizer",
+          "description": "Wall-mounted metal mesh display panel with clips for polaroids, notes & aesthetic prints",
+          "image": "/images/products/room-04/grid.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07FNLF9XS?tag=dailydecorins-20",
+          "priceRange": "$16-24",
+          "rating": 4.5
+        },
+        {
+          "number": 6,
+          "name": "Quntis Eye-Care Computer Monitor Light Bar",
+          "description": "Touch-control dimmable horizontal screen bar providing glare-free warm downward ambient light",
+          "image": "/images/products/room-04/lightbar.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B08DKQ3JG1?tag=dailydecorins-20",
+          "priceRange": "$30-45",
+          "rating": 4.6
+        }
+      ]
     }
   ]
 }

@@ -236,6 +236,13 @@ async function main() {
       { number: 4, x: 230, y: 640 }, // Terracotta Blanket
       { number: 5, x: 580, y: 320 }, // Picture Ledges
     ],
+    '04': [
+      { number: 1, x: 480, y: 880 }, // Criss Cross Chair
+      { number: 2, x: 500, y: 640 }, // Walnut Monitor Riser
+      { number: 3, x: 800, y: 520 }, // Architect Lamp
+      { number: 4, x: 480, y: 760 }, // Leather Desk Pad
+      { number: 5, x: 220, y: 320 }, // Wire Wall Grid
+    ],
   };
 
   for (let index = 0; index < data.rooms.length; index++) {
