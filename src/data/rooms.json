@@ -1,0 +1,62 @@
+{
+  "rooms": [
+    {
+      "id": "cozy-minimalist-bedroom-01",
+      "slug": "cozy-minimalist-bedroom-01",
+      "title": "Cozy Minimalist Bedroom",
+      "subtitle": "Warm tones meets functional design",
+      "category": "bedroom",
+      "tags": ["minimalist", "cozy", "budget", "amazon finds", "neutral tones"],
+      "roomImage": "/images/rooms/room-01.jpg",
+      "createdAt": "2026-11-04",
+      "totalPrice": "$130-180",
+      "products": [
+        {
+          "number": 1,
+          "name": "Natural Linen Curtains",
+          "description": "Light-filtering linen blend curtains, rod pocket, 2 panels",
+          "image": "/images/products/room-01/curtain.jpg",
+          "amazonUrl": "https://amzn.to/3SinWCQ",
+          "priceRange": "$25-35",
+          "rating": 4.5
+        },
+        {
+          "number": 2,
+          "name": "Felt Bulletin Board",
+          "description": "Modular design pin board for photos and notes",
+          "image": "/images/products/room-01/board.jpg",
+          "amazonUrl": "https://amzn.to/4hHToF9",
+          "priceRange": "$20-30",
+          "rating": 4.4
+        },
+        {
+          "number": 3,
+          "name": "Beige Comforter Set",
+          "description": "Washed microfiber comforter, ultra-soft, all-season",
+          "image": "/images/products/room-01/bedset.jpg",
+          "amazonUrl": "https://amzn.to/45wB5vj",
+          "priceRange": "$35-50",
+          "rating": 4.6
+        },
+        {
+          "number": 4,
+          "name": "White Knit Throw Blanket",
+          "description": "Chunky cable knit decorative throw, couch/bed accent",
+          "image": "/images/products/room-01/blanket.jpg",
+          "amazonUrl": "https://amzn.to/4hDFEes",
+          "priceRange": "$20-30",
+          "rating": 4.5
+        },
+        {
+          "number": 5,
+          "name": "White Cube Bookshelf",
+          "description": "3-tier open shelf organizer, stackable, modern design",
+          "image": "/images/products/room-01/bookshelf.jpg",
+          "amazonUrl": "https://amzn.to/3U89GNJ",
+          "priceRange": "$30-45",
+          "rating": 4.3
+        }
+      ]
+    }
+  ]
+}
