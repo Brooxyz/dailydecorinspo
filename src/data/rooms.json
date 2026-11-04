@@ -57,6 +57,82 @@
           "rating": 4.3
         }
       ]
+    },
+    {
+      "id": "moody-earth-tone-bedroom-02",
+      "slug": "moody-earth-tone-bedroom-02",
+      "title": "Moody Earth-Tone Bedroom",
+      "subtitle": "Deep navy linen meets warm minimalist textures",
+      "category": "bedroom",
+      "tags": ["moody bedroom", "earth tone", "navy duvet", "budget decor", "amazon finds"],
+      "roomImage": "/images/rooms/room-02.jpg",
+      "createdAt": "2026-11-04",
+      "totalPrice": "$220-310",
+      "products": [
+        {
+          "number": 1,
+          "name": "Navy Blue Comforter Cover",
+          "description": "Washed cotton duvet cover set with pillow shams, breathable navy tone",
+          "image": "/images/products/room-02/comforter.jpg",
+          "amazonUrl": "https://amzn.to/4xTmPZE",
+          "priceRange": "$35-45",
+          "rating": 4.6
+        },
+        {
+          "number": 2,
+          "name": "Black Ceramic Table Lamp",
+          "description": "Matte black ceramic bottle-shaped lamp with natural linen drum shade",
+          "image": "/images/products/room-02/lamp.jpg",
+          "amazonUrl": "https://amzn.to/4wZdrmw",
+          "priceRange": "$35-50",
+          "rating": 4.7
+        },
+        {
+          "number": 3,
+          "name": "Matte Black Curtain Rod",
+          "description": "Heavy-duty 1-inch curtain rod with minimalist cylindrical finials",
+          "image": "/images/products/room-02/rod.jpg",
+          "amazonUrl": "https://amzn.to/4hOrozD",
+          "priceRange": "$20-30",
+          "rating": 4.5
+        },
+        {
+          "number": 4,
+          "name": "Textured Wool Area Rug",
+          "description": "Hand-tufted low-pile wool rug in neutral grey-taupe weave",
+          "image": "/images/products/room-02/rug.jpg",
+          "amazonUrl": "https://amzn.to/4qzBqXP",
+          "priceRange": "$60-90",
+          "rating": 4.4
+        },
+        {
+          "number": 5,
+          "name": "Linen Total Blackout Curtains",
+          "description": "Thick textured linen blackout curtain panels, noise reducing",
+          "image": "/images/products/room-02/curtains.jpg",
+          "amazonUrl": "https://amzn.to/4zC9nuR",
+          "priceRange": "$30-45",
+          "rating": 4.6
+        },
+        {
+          "number": 6,
+          "name": "Nightstand Set of 2",
+          "description": "Industrial modern black bedside tables with 2 fabric drawers & open shelf",
+          "image": "/images/products/room-02/nightstands.jpg",
+          "amazonUrl": "https://amzn.to/4iuUPqB",
+          "priceRange": "$40-60",
+          "rating": 4.3
+        },
+        {
+          "number": 7,
+          "name": "Corner Wall Display Shelves",
+          "description": "4-tier radial corner floating shelves in rustic black wood",
+          "image": "/images/products/room-02/shelves.jpg",
+          "amazonUrl": "https://amzn.to/4xkufoK",
+          "priceRange": "$25-35",
+          "rating": 4.5
+        }
+      ]
     }
   ]
 }
