@@ -19,6 +19,7 @@ build/
 .env*.local
 .vercel
 reports/
+CLAUDE.md
 
 # typescript
 *.tsbuildinfo
