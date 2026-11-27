@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dailydecorinspo.vercel.app"),
   title: "Daily Decor Inspo — Shop the Room",
   description:
     "Curated room designs with budget-friendly Amazon finds. Shop the exact items from our styled rooms.",
@@ -38,6 +39,12 @@ export default function RootLayout({
         <meta
           name="p:domain_verify"
           content="63275721639a1ac70a4eedda202d5668"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Daily Decor Inspo RSS Feed"
+          href="https://dailydecorinspo.vercel.app/feed.xml"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -117,11 +124,11 @@ function Footer() {
           {/* Amazon Associates Disclosure — REQUIRED */}
           <div className="bg-warm-200/50 rounded-lg p-4 max-w-xl mx-auto">
             <p className="text-xs text-warm-700 leading-relaxed">
-              <strong>Affiliate Disclosure:</strong> As an Amazon Associate, I
-              earn from qualifying purchases. This means if you click on a link
-              and make a purchase, I may receive a small commission at no extra
-              cost to you. All product recommendations are based on personal
-              curation and aesthetic fit.
+              <strong>#ad</strong> As an Amazon Associate, I earn from
+              qualifying purchases. This means if you click on a link and make a
+              purchase, I may receive a small commission at no extra cost to
+              you. All product recommendations are based on personal curation
+              and aesthetic fit.
             </p>
           </div>
 

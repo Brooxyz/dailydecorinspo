@@ -67,6 +67,15 @@ async function main() {
   // Format destination link
   const link = `https://dailydecorinspo.vercel.app/room/${room.slug}/`;
 
+  const CATEGORY_HASHTAGS = {
+    'bedroom': '#amazonfinds #bedroomdecor #smallbedroom #cozyroom #budgetdecor #homedecorideas #aesthetic',
+    'reading-nook': '#amazonfinds #readingnook #cozycorner #bouclechair #warmminimalism #homedecorideas #aesthetic',
+    'desktop-setup': '#amazonfinds #desksetup #wfhsetup #aestheticdesk #homeoffice #workspacegoals #budgetdecor',
+    'living-room': '#amazonfinds #livingroomdecor #cozyfall #apartmentdecor #warmminimalism #falldecor #homedecor',
+    'bathroom': '#amazonfinds #bathroomdecor #smallbathroom #spabathroom #bathroomorganization #budgetdecor',
+  };
+  const categoryTags = CATEGORY_HASHTAGS[room.category] || '#amazonfinds #homedecorideas #budgetdecor #shopthelook #aesthetic';
+
   // Select image & metadata based on Pin A or Pin B
   let imageFile = '';
   let title = '';
@@ -75,7 +84,7 @@ async function main() {
   if (typeArg === 'A') {
     imageFile = path.join(root, `public/images/pins/room-${roomNum}-aesthetic.jpg`);
     title = `${room.title} Ideas on a Budget (Amazon Finds)`;
-    description = `Curated Room #${roomNum}: ${room.title} styled with budget-friendly Amazon finds. ${room.subtitle}.\n\n✨ Tap to explore the shoppable room and see exact product links!\n\n#amazonfinds #bedroomdecor #cozyroom #budgetdecor #homedecorideas #aesthetic #interiordesign\n\n#ad As an Amazon Associate, I earn from qualifying purchases.`;
+    description = `Curated Room #${roomNum}: ${room.title} styled with budget-friendly Amazon finds. ${room.subtitle}.\n\n✨ Tap to explore the shoppable room and see exact product links!\n\n${categoryTags}\n\n#ad As an Amazon Associate, I earn from qualifying purchases.`;
   } else {
     imageFile = path.join(root, `public/images/pins/room-${roomNum}-catalog.jpg`);
     title = `Shop the Look: ${room.products.length} Amazon Finds for a ${room.title} (${room.totalPrice})`;
@@ -83,7 +92,7 @@ async function main() {
       .slice(0, 5)
       .map(p => `${p.number}. ${p.name}`)
       .join('\n');
-    description = `Shop the Look Room #${roomNum}! Every numbered item is curated from Amazon with 4.3+ star ratings:\n\n${productList}\n\n👉 Tap the pin to get direct Amazon links & real-time prices!\n\n#shopthelook #amazonhome #bedroommakeover #affiliate #budgetfinds #roomdecor\n\n#ad As an Amazon Associate, I earn from qualifying purchases.`;
+    description = `Shop the Look Room #${roomNum}! Every numbered item is curated from Amazon with 4.3+ star ratings:\n\n${productList}\n\n👉 Tap the pin to get direct Amazon links & real-time prices!\n\n#shopthelook #amazonhome #affiliate ${categoryTags}\n\n#ad As an Amazon Associate, I earn from qualifying purchases.`;
   }
 
   if (!fs.existsSync(imageFile)) {

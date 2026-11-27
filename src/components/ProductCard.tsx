@@ -6,13 +6,14 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <div
       id={`product-${product.number}`}
-      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-warm-100"
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-warm-100 flex flex-col h-full"
     >
       {/* Product Image */}
-      <div className="relative overflow-hidden aspect-square bg-warm-50">
+      <div className="relative overflow-hidden aspect-square bg-white">
         <img
           src={product.image}
           alt={product.name}
+          decoding="async"
           className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
         />
@@ -31,7 +32,7 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Product Info */}
-      <div className="p-4 space-y-3">
+      <div className="p-4 flex flex-col flex-1 justify-between gap-3">
         <div>
           <h3 className="font-semibold text-warm-900 text-base leading-snug">
             {product.name}
@@ -41,21 +42,23 @@ export function ProductCard({ product }: { product: Product }) {
           </p>
         </div>
 
-        <div className="flex items-center justify-between">
-          <span className="font-display text-lg font-bold text-warm-800">
-            {product.priceRange}
-          </span>
-        </div>
+        <div className="mt-auto space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="font-display text-lg font-bold text-warm-800">
+              {product.priceRange}
+            </span>
+          </div>
 
-        {/* Amazon CTA Button */}
-        <a
-          href={product.amazonUrl}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-          className="block w-full text-center py-3 px-4 rounded-xl bg-gradient-to-r from-warm-700 to-warm-800 text-white font-semibold text-sm hover:from-warm-800 hover:to-warm-900 transition-all shadow-md hover:shadow-lg active:scale-[0.98]"
-        >
-          Shop on Amazon →
-        </a>
+          {/* Amazon CTA Button */}
+          <a
+            href={product.amazonUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="block w-full text-center py-3 px-4 rounded-xl bg-gradient-to-r from-warm-700 to-warm-800 text-white font-semibold text-sm hover:from-warm-800 hover:to-warm-900 transition-all shadow-md hover:shadow-lg active:scale-[0.98]"
+          >
+            Shop on Amazon →
+          </a>
+        </div>
       </div>
     </div>
   );

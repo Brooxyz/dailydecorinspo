@@ -18,9 +18,8 @@ build/
 *.pem
 .env*.local
 .vercel
+reports/
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-.vercel

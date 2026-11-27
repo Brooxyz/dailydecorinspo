@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "audit": "python scripts/audit_storefront.py",
+    "audit:online": "python scripts/audit_storefront.py --online",
+    "optimize:images": "python scripts/optimize_images.py",
+    "feeds": "python scripts/generate_pinterest_feeds.py",
+    "pipeline": "python scripts/daily_pipeline.py --build"
   },
   "dependencies": {
     "next": "^15.1.0",
