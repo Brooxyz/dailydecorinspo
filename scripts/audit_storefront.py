@@ -219,10 +219,18 @@ def main() -> int:
         seen_hashes: dict[str, int] = {}
         prod_reports: list[dict] = []
         for p in room.get("products", []):
-            url = p.get("amazonUrl", "")
-            tag_ok = (AFFILIATE_TAG in url) or url.startswith("https://amzn.to/")
-            if not tag_ok:
-                critical_issues.append(f"Room #{room_num} #{p['number']} missing tag {AFFILIATE_TAG}")
+            is_etsy = p.get("store") == "etsy"
+            if is_etsy:
+                # Own-shop handmade item: clean etsy.com listing link, no Amazon tag needed
+                url = p.get("shopUrl", "")
+                tag_ok = url.startswith("https://www.etsy.com/listing/") and "?" not in url
+                if not tag_ok:
+                    critical_issues.append(f"Room #{room_num} #{p['number']} bad Etsy shopUrl (use clean https://www.etsy.com/listing/ID)")
+            else:
+                url = p.get("amazonUrl", "")
+                tag_ok = (AFFILIATE_TAG in url) or url.startswith("https://amzn.to/")
+                if not tag_ok:
+                    critical_issues.append(f"Room #{room_num} #{p['number']} missing tag {AFFILIATE_TAG}")
 
             img_rel = p["image"].lstrip("/")
             img_path = PUBLIC_DIR / img_rel
@@ -264,7 +272,8 @@ def main() -> int:
                     "duplicateOf": duplicate_of,
                 }
             )
-            if args.online:
+            # Etsy blocks automated checks; own-shop listings are verified manually
+            if args.online and not is_etsy:
                 online_tasks.append((room["id"], p["number"], url, p.get("priceRange", "")))
 
         room_reports.append(

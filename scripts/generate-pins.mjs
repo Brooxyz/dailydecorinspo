@@ -151,7 +151,7 @@ async function generatePinB({
           <text x="${cardWidth - 46}" y="28" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#834c2d" text-anchor="middle">${escapeXml(p.priceRange)}</text>
 
           <text x="12" y="195" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#24170e">${escapeXml(p.name.slice(0, 18))}</text>
-          <text x="12" y="216" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#c37539">Amazon Prime ★ ${p.rating}</text>
+          <text x="12" y="216" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#c37539">${p.store === 'etsy' ? 'Handmade • Our Etsy Shop' : `Amazon Prime ★ ${p.rating}`}</text>
         </g>
       `;
     }).join('\n')}

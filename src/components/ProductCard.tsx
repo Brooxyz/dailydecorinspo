@@ -1,8 +1,19 @@
-import roomsData from "@/data/rooms.json";
-
-type Product = (typeof roomsData.rooms)[number]["products"][number];
+export type Product = {
+  number: number;
+  name: string;
+  description: string;
+  image: string;
+  priceRange: string;
+  rating?: number;
+  amazonUrl?: string;
+  // "etsy" marks a handmade piece from our own Etsy shop (BestMarble)
+  store?: "amazon" | "etsy";
+  shopUrl?: string;
+};
 
 export function ProductCard({ product }: { product: Product }) {
+  const isEtsy = product.store === "etsy";
+  const href = isEtsy ? product.shopUrl : product.amazonUrl;
   return (
     <div
       id={`product-${product.number}`}
@@ -23,12 +34,18 @@ export function ProductCard({ product }: { product: Product }) {
           {product.number}
         </div>
 
-        {/* Rating badge */}
-        <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 shadow-sm">
-          <span className="text-xs font-semibold text-warm-700">
-            ★ {product.rating}
-          </span>
-        </div>
+        {/* Rating / handmade badge */}
+        {isEtsy ? (
+          <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 shadow-sm">
+            <span className="text-xs font-semibold text-warm-700">Handmade</span>
+          </div>
+        ) : product.rating ? (
+          <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 shadow-sm">
+            <span className="text-xs font-semibold text-warm-700">
+              ★ {product.rating}
+            </span>
+          </div>
+        ) : null}
       </div>
 
       {/* Product Info */}
@@ -40,6 +57,11 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="text-sm text-warm-500 mt-1 line-clamp-2">
             {product.description}
           </p>
+          {isEtsy && (
+            <p className="text-xs text-warm-600 mt-2 italic">
+              From our own handmade Etsy shop
+            </p>
+          )}
         </div>
 
         <div className="mt-auto space-y-3">
@@ -49,14 +71,14 @@ export function ProductCard({ product }: { product: Product }) {
             </span>
           </div>
 
-          {/* Amazon CTA Button */}
+          {/* Shop CTA Button */}
           <a
-            href={product.amazonUrl}
+            href={href}
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel={isEtsy ? "noopener noreferrer" : "noopener noreferrer nofollow sponsored"}
             className="block w-full text-center py-3 px-4 rounded-xl bg-gradient-to-r from-warm-700 to-warm-800 text-white font-semibold text-sm hover:from-warm-800 hover:to-warm-900 transition-all shadow-md hover:shadow-lg active:scale-[0.98]"
           >
-            Shop on Amazon →
+            {isEtsy ? "Shop on Etsy →" : "Shop on Amazon →"}
           </a>
         </div>
       </div>

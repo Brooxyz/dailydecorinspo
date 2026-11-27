@@ -1,5 +1,5 @@
 import roomsData from "@/data/rooms.json";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductCard, type Product } from "@/components/ProductCard";
 import { notFound } from "next/navigation";
 
 type Room = (typeof roomsData.rooms)[number];
@@ -182,7 +182,7 @@ export default async function RoomPage({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {room.products.map((product) => (
-            <ProductCard key={product.number} product={product} />
+            <ProductCard key={product.number} product={product as Product} />
           ))}
         </div>
 
@@ -190,9 +190,12 @@ export default async function RoomPage({
         <div className="mt-10 bg-warm-100 rounded-xl p-5">
           <p className="text-xs text-warm-600 leading-relaxed">
             <strong>#ad</strong> — As an Amazon Associate, I earn from
-            qualifying purchases. Prices may vary. Product images are from
-            Amazon.com. All recommendations are based on personal curation and
-            aesthetic fit. Last updated: {room.createdAt}.
+            qualifying purchases. Prices may vary. Product images are
+            illustrative; check each listing for exact details.
+            {room.products.some((p) => (p as Product).store === "etsy") &&
+              " Items marked \"Handmade\" are sold by our own Etsy shop, so we earn from those sales."}{" "}
+            All recommendations are based on personal curation and aesthetic
+            fit. Last updated: {room.createdAt}.
           </p>
         </div>
       </section>

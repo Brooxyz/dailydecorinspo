@@ -55,7 +55,7 @@ def optimize_room_image(path: Path, dry_run: bool) -> tuple[bool, int, int, str]
             )
         new_data = encode_jpeg(rgb, quality=86)
         new_bytes = len(new_data)
-        if not needs_resize and new_bytes >= orig_bytes:
+        if not needs_resize and new_bytes >= orig_bytes * 0.95:
             return False, orig_bytes, orig_bytes, "already-optimal"
 
         if not dry_run:
@@ -78,7 +78,7 @@ def optimize_product_image(path: Path, dry_run: bool) -> tuple[bool, int, int, s
             rgb.thumbnail((PRODUCT_MAX_DIM, PRODUCT_MAX_DIM), Image.Resampling.LANCZOS)
         new_data = encode_jpeg(rgb, quality=88)
         new_bytes = len(new_data)
-        if not needs_resize and new_bytes >= orig_bytes:
+        if not needs_resize and new_bytes >= orig_bytes * 0.95:
             return False, orig_bytes, orig_bytes, "already-optimal"
 
         if not dry_run:

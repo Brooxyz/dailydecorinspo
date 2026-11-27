@@ -16,6 +16,14 @@ PUBLIC_DIR = STOREFRONT_ROOT / "public"
 FEEDS_DIR = PUBLIC_DIR / "feeds"
 DOMAIN = "https://dailydecorinspo.vercel.app"
 DISCLOSURE = "#ad As an Amazon Associate, I earn from qualifying purchases."
+ETSY_NOTE = "Includes a handmade piece from our own Etsy shop."
+
+
+def room_disclosure(room: dict) -> str:
+    """Amazon #ad line, plus own-shop material-connection note when an Etsy item is in the room."""
+    if any(p.get("store") == "etsy" for p in room.get("products", [])):
+        return f"{ETSY_NOTE} {DISCLOSURE}"
+    return DISCLOSURE
 
 CATEGORY_META: dict[str, dict[str, str]] = {
     "bedroom": {
@@ -108,7 +116,7 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
                 desc = (
                     f"Curated Room #{room_num}: {room['title']} — {room['subtitle']}. "
                     f"Tap to shop all {len(room['products'])} Amazon finds ({room['totalPrice']}).\n\n"
-                    f"{meta['tags']}\n\n{DISCLOSURE}"
+                    f"{meta['tags']}\n\n{room_disclosure(room)}"
                 )
                 pub_dt = base_dt
             else:
@@ -128,7 +136,7 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
                         f"Shop the Look Room #{room_num}! Curated Amazon pieces:\n\n"
                         + "\n".join(shown)
                         + "\n\nTap to visit Daily Decor Inspo for direct links!\n\n"
-                        f"{meta['tags']}\n\n{DISCLOSURE}"
+                        f"{meta['tags']}\n\n{room_disclosure(room)}"
                     )
                     if len(desc) <= 500 or len(item_lines) <= 2:
                         break
