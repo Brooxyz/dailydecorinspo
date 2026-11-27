@@ -165,7 +165,13 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
                     "keywords": meta["keywords"],
                     "title": title,
                     "description": desc,
-                    "link": room_url,
+                    # Unique link per pin: Pinterest bulk create skips rows whose destination URL
+                    # repeats (only Pin A survived when A and B shared the room URL). UTM params
+                    # also let us see which pin drives clicks.
+                    "link": (
+                        f"{room_url}?utm_source=pinterest&utm_medium=social"
+                        f"&utm_campaign=room-{room_num}&utm_content={file_suffix}"
+                    ),
                     "media_url": pin_url,
                     "media_bytes": file_bytes,
                     "guid": f"dailydecorinspo-{room['id']}-pin-{short_key}",
