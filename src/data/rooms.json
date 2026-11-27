@@ -676,6 +676,89 @@
           "rating": 4.5
         }
       ]
+    },
+    {
+      "id": "cozy-sage-coffee-bar-10",
+      "slug": "cozy-sage-coffee-bar-10",
+      "title": "Cozy Sage Coffee Bar Corner",
+      "subtitle": "Sage stoneware, warm wood shelves & a small-space coffee station",
+      "category": "coffee-bar",
+      "tags": ["coffee bar ideas", "coffee station", "small kitchen", "sage green", "amazon finds"],
+      "roomImage": "/images/rooms/room-10.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$195-238",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 41.3, "y": 65.7},
+          "name": "SWTYMIKI Farmhouse Coffee Bar Cabinet (White)",
+          "description": "Compact white & black-metal coffee station with open shelf, fabric drawer & see-through mesh door",
+          "image": "/images/products/room-10/cabinet.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FXWMMK49?tag=dailydecorins-20",
+          "priceRange": "$58-66",
+          "rating": 4.4
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 52.5, "y": 37.8},
+          "name": "BAYKA Rustic Brown Floating Shelves (Set of 2)",
+          "description": "22.5\" wall-mount wood shelves for mugs, jars & coffee syrups",
+          "image": "/images/products/room-10/shelves.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DZWXJ9VZ?tag=dailydecorins-20",
+          "priceRange": "$24-30",
+          "rating": 4.5
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 67.8, "y": 50.6},
+          "name": "Glass Coffee Canisters with Wood Stand (2 x 40oz)",
+          "description": "Airtight clear glass jars with rose-gold clasps & copper scoops on a wooden display stand",
+          "image": "/images/products/room-10/canisters.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0C9JFF1YJ?tag=dailydecorins-20",
+          "priceRange": "$35-42",
+          "rating": 4.5
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 40.1, "y": 33.6},
+          "name": "Ava Nord Sage Stoneware Coffee Mugs (Set of 4)",
+          "description": "12 oz matte sage-green speckled stoneware mugs, dishwasher & microwave safe",
+          "image": "/images/products/room-10/mugs.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DPGF2NX7?tag=dailydecorins-20",
+          "priceRange": "$25-32",
+          "rating": 4.6
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 51.3, "y": 49.1},
+          "name": "MyLifeUNIT Wooden Mug Tree Holder",
+          "description": "Brown wood countertop mug tree with 6 hooks, anti-slip base",
+          "image": "/images/products/room-10/mugtree.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CHVD1NXP?tag=dailydecorins-20",
+          "priceRange": "$15-20",
+          "rating": 4.7
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 72.5, "y": 11.9},
+          "name": "Vintage Coffee & Flowers Wall Art (Set of 3)",
+          "description": "12x16\" framed retro café prints with folk florals for kitchen or coffee nook",
+          "image": "/images/products/room-10/art.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DSHZ3HQX?tag=dailydecorins-20",
+          "priceRange": "$24-30",
+          "rating": 4.5
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 36, "y": 22.9},
+          "name": "Faux Eucalyptus Stems in Glass Vase",
+          "description": "13.5\" artificial eucalyptus with faux water, zero-care greenery",
+          "image": "/images/products/room-10/eucalyptus.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DS7T4JJZ?tag=dailydecorins-20",
+          "priceRange": "$14-18",
+          "rating": 4.8
+        }
+      ]
     }
   ]
 }
