@@ -477,6 +477,73 @@
           "rating": 4.6
         }
       ]
+    },
+    {
+      "id": "nero-marquina-black-marble-bathroom-08",
+      "slug": "nero-marquina-black-marble-bathroom-08",
+      "title": "Black Marble & Warm Oak Bathroom",
+      "subtitle": "Handmade fluted Nero Marquina sink, brushed gold wall faucet & matte black accents",
+      "category": "bathroom",
+      "tags": ["black marble", "modern bathroom", "fluted sink", "oak vanity", "matte black"],
+      "roomImage": "/images/rooms/room-08.jpg",
+      "createdAt": "2026-11-27",
+      "totalPrice": "$465-749",
+      "products": [
+        {
+          "number": 1,
+          "name": "Nero Marquina Fluted Marble Sink & Oak Vanity",
+          "description": "Handmade black marble basin with fluted edge and backsplash; oak vanity cabinet available as an option",
+          "image": "/images/products/room-08/sink.jpg",
+          "store": "etsy",
+          "shopUrl": "https://www.etsy.com/listing/4618820008",
+          "priceRange": "$257-515"
+        },
+        {
+          "number": 2,
+          "name": "SITGES Brushed Gold Wall-Mount Faucet",
+          "description": "Two-handle wall-mounted bathroom sink faucet with cross handles and straight spout",
+          "image": "/images/products/room-08/faucet.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07QCCVS5G?tag=dailydecorins-20",
+          "priceRange": "$95-105",
+          "rating": 4.4
+        },
+        {
+          "number": 3,
+          "name": "HARRITPURE 24x36 Arched Black Mirror",
+          "description": "Tall arch-top vanity mirror with slim matte black metal frame",
+          "image": "/images/products/room-08/mirror.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09GJN7F7L?tag=dailydecorins-20",
+          "priceRange": "$38-42",
+          "rating": 4.6
+        },
+        {
+          "number": 4,
+          "name": "Matte Black Glass Wall Sconces (Set of 2)",
+          "description": "Modern vanity sconces with clear cylinder glass shades",
+          "image": "/images/products/room-08/sconces.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DS8GSP2M?tag=dailydecorins-20",
+          "priceRange": "$32-37",
+          "rating": 4.7
+        },
+        {
+          "number": 5,
+          "name": "JQK 27-Inch Matte Black Towel Bar",
+          "description": "Thick 304 stainless steel wall towel bar in matte black",
+          "image": "/images/products/room-08/towelbar.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07VR4YLJC?tag=dailydecorins-20",
+          "priceRange": "$27-31",
+          "rating": 4.7
+        },
+        {
+          "number": 6,
+          "name": "Yimobra White Chenille Bath Mat",
+          "description": "Ultra-soft 32x20 noodle bath rug, non-slip and machine washable",
+          "image": "/images/products/room-08/mat.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B06XD5LYNR?tag=dailydecorins-20",
+          "priceRange": "$16-19",
+          "rating": 4.5
+        }
+      ]
     }
   ]
 }

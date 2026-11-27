@@ -268,6 +268,13 @@ async function main() {
       { number: 6, x: 650, y: 1140 }, // Checkered bath mat (mostly below the Pin B crop)
       { number: 7, x: 585, y: 540 }, // Fluted glass soap dispenser
     ],
+    '08': [
+      { number: 1, x: 483, y: 705 }, // BestMarble Nero Marquina fluted sink + oak vanity (Etsy)
+      { number: 2, x: 495, y: 555 }, // SITGES brushed gold wall faucet
+      { number: 3, x: 492, y: 300 }, // HARRITPURE arched black mirror
+      { number: 4, x: 263, y: 245 }, // Matte black glass sconces
+      { number: 5, x: 867, y: 620 }, // JQK matte black towel bar
+    ],
   };
 
   for (let index = 0; index < data.rooms.length; index++) {
