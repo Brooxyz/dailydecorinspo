@@ -54,6 +54,12 @@ CATEGORY_META: dict[str, dict[str, str]] = {
         "tags": "#livingroomdecor #cozyfall #apartmentdecor #warmminimalism #amazonfinds #falldecor",
         "keywords": "living room decor, cozy fall apartment, warm minimalism, autumn decor, amazon finds",
     },
+    "entryway": {
+        "board": "Entryway Decor Ideas",
+        "title": "Entryway Decor Ideas",
+        "tags": "#entrywaydecor #smallentryway #farmhousedecor #mudroom #amazonfinds #homedecorideas",
+        "keywords": "entryway decor, small entryway ideas, farmhouse entryway, drop zone, amazon finds",
+    },
     "bathroom": {
         "board": "Small Bathroom Hacks",
         "title": "Small Bathroom Hacks",

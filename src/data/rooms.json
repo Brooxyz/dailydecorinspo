@@ -593,6 +593,89 @@
           "rating": 4.5
         }
       ]
+    },
+    {
+      "id": "warm-farmhouse-entryway-09",
+      "slug": "warm-farmhouse-entryway-09",
+      "title": "Warm Farmhouse Entryway Nook",
+      "subtitle": "Rustic wood, matte black accents & a grab-and-go drop zone",
+      "category": "entryway",
+      "tags": ["entryway decor", "small entryway", "farmhouse", "drop zone", "amazon finds"],
+      "roomImage": "/images/rooms/room-09.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$199-259",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 48.3, "y": 66.5},
+          "name": "HOOBRO Industrial 3-Tier Shoe Storage Bench",
+          "description": "29.5\" entry bench with rustic brown wood-grain top, black steel frame & 2 mesh shoe shelves",
+          "image": "/images/products/room-09/bench.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0B8CMDLBT?tag=dailydecorins-20",
+          "priceRange": "$35-45",
+          "rating": 4.6
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 38.9, "y": 27.3},
+          "name": "Rustic Wood Coat Rack with Shelf & 5 Hooks",
+          "description": "Wall-mounted rustic brown shelf on black brackets with 5 black metal double hooks for coats, bags & keys",
+          "image": "/images/products/room-09/hooks.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09N3QWBLK?tag=dailydecorins-20",
+          "priceRange": "$20-28",
+          "rating": 4.5
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 75, "y": 46},
+          "name": "Sweetcrispy 24x36 Arched Black Wall Mirror",
+          "description": "Thin matte black metal frame arched mirror with shatter-proof HD glass",
+          "image": "/images/products/room-09/mirror.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FN3Z911R?tag=dailydecorins-20",
+          "priceRange": "$26-35",
+          "rating": 4.7
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 85.8, "y": 32.4},
+          "name": "Plug-In Wood & Black Cage Wall Sconces (Set of 2)",
+          "description": "Farmhouse wall lamps with natural wood plates, wire cage shades & on/off plug-in cord, no wiring needed",
+          "image": "/images/products/room-09/sconces.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0D1XNH7LR?tag=dailydecorins-20",
+          "priceRange": "$28-36",
+          "rating": 4.7
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 35, "y": 85.4},
+          "name": "Vintage Washable Runner Rug 2x6 (Beige)",
+          "description": "Distressed beige medallion runner with non-slip backing, machine washable for busy entries",
+          "image": "/images/products/room-09/runner.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0D89V1RX1?tag=dailydecorins-20",
+          "priceRange": "$14-20",
+          "rating": 4.6
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 80.2, "y": 81.5},
+          "name": "Best Choice Products Seagrass Storage Baskets (Set of 4)",
+          "description": "Handwoven natural seagrass stackable baskets with cut-out handles for shoes, scarves & mail",
+          "image": "/images/products/room-09/baskets.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B077L7PD74?tag=dailydecorins-20",
+          "priceRange": "$36-45",
+          "rating": 4.7
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 17.7, "y": 44.3},
+          "name": "VIVATREES 5ft Faux Olive Tree in White Planter",
+          "description": "Lifelike artificial olive tree with natural wood trunk in a tall white planter, zero upkeep greenery",
+          "image": "/images/products/room-09/tree.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0D5HK2KHW?tag=dailydecorins-20",
+          "priceRange": "$40-50",
+          "rating": 4.5
+        }
+      ]
     }
   ]
 }

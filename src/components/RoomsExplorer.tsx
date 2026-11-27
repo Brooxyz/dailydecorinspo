@@ -13,6 +13,7 @@ const CATEGORIES = [
   { id: "desktop-setup", label: "Desk Setups" },
   { id: "living-room", label: "Living Rooms" },
   { id: "bathroom", label: "Bathrooms" },
+  { id: "entryway", label: "Entryways" },
 ];
 
 export function RoomsExplorer({ initialRooms }: { initialRooms: Room[] }) {
