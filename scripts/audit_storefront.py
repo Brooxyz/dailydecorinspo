@@ -127,7 +127,16 @@ def check_single_link(room_id: str, prod_num: int, url: str, price_range: str) -
             if "validatecaptcha" in lower or ("captcha" in lower and len(html) < 20000):
                 result["onlineStatus"] = "CAPTCHA_SKIPPED"
                 return result
-            if "currently unavailable." in lower:
+            oos_block = re.search(
+                r'id="(?:outOfStock|availabilityInsideBuyBox_feature_div|availability_feature_div)"[^>]*>(.*?)</div>',
+                html,
+                re.S | re.I,
+            )
+            oos_text = re.sub(r"<[^>]+>", " ", oos_block.group(1)).lower() if oos_block else ""
+            if (
+                "we don't know when or if this item will be back in stock" in lower
+                or "currently unavailable" in oos_text
+            ):
                 result["onlineStatus"] = "OUT_OF_STOCK"
                 return result
 
