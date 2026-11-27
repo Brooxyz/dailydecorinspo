@@ -9,7 +9,7 @@
       "tags": ["minimalist", "cozy", "budget", "amazon finds", "neutral tones"],
       "roomImage": "/images/rooms/room-01.jpg",
       "createdAt": "2026-11-04",
-      "totalPrice": "$130-180",
+      "totalPrice": "$115-165",
       "products": [
         {
           "number": 1,
@@ -40,21 +40,21 @@
         },
         {
           "number": 4,
-          "name": "White Knit Throw Blanket",
-          "description": "Chunky cable knit decorative throw, couch/bed accent",
+          "name": "Bedsure GentleSoft White Throw Blanket",
+          "description": "Ultra-soft ribbed plush fleece throw blanket in off-white, cozy bed & couch accent",
           "image": "/images/products/room-01/blanket.jpg",
           "amazonUrl": "https://amzn.to/4hDFEes",
-          "priceRange": "$20-30",
-          "rating": 4.5
+          "priceRange": "$12-20",
+          "rating": 4.6
         },
         {
           "number": 5,
           "name": "White Cube Bookshelf",
-          "description": "3-tier open shelf organizer, stackable, modern design",
+          "description": "5-cube open shelf bookcase organizer, stackable clean white modern design",
           "image": "/images/products/room-01/bookshelf.jpg",
           "amazonUrl": "https://amzn.to/3U89GNJ",
-          "priceRange": "$30-45",
-          "rating": 4.3
+          "priceRange": "$25-35",
+          "rating": 4.5
         }
       ]
     },
@@ -67,7 +67,7 @@
       "tags": ["moody bedroom", "earth tone", "navy duvet", "budget decor", "amazon finds"],
       "roomImage": "/images/rooms/room-02.jpg",
       "createdAt": "2026-11-04",
-      "totalPrice": "$220-310",
+      "totalPrice": "$620-720",
       "products": [
         {
           "number": 1,
@@ -75,7 +75,7 @@
           "description": "Washed cotton duvet cover set with pillow shams, breathable navy tone",
           "image": "/images/products/room-02/comforter.jpg",
           "amazonUrl": "https://amzn.to/4xTmPZE",
-          "priceRange": "$35-45",
+          "priceRange": "$75-85",
           "rating": 4.6
         },
         {
@@ -84,7 +84,7 @@
           "description": "Matte black ceramic bottle-shaped lamp with natural linen drum shade",
           "image": "/images/products/room-02/lamp.jpg",
           "amazonUrl": "https://amzn.to/4wZdrmw",
-          "priceRange": "$35-50",
+          "priceRange": "$70-85",
           "rating": 4.7
         },
         {
@@ -99,10 +99,10 @@
         {
           "number": 4,
           "name": "Textured Wool Area Rug",
-          "description": "Hand-tufted low-pile wool rug in neutral grey-taupe weave",
+          "description": "Hand-tufted low-pile wool area rug in warm neutral beige-cream weave",
           "image": "/images/products/room-02/rug.jpg",
           "amazonUrl": "https://amzn.to/4qzBqXP",
-          "priceRange": "$60-90",
+          "priceRange": "$350-380",
           "rating": 4.4
         },
         {
@@ -143,16 +143,16 @@
       "tags": ["reading nook", "boucle chair", "cozy corner", "warm minimalism", "amazon finds"],
       "roomImage": "/images/rooms/room-03.jpg",
       "createdAt": "2026-11-04",
-      "totalPrice": "$280-380",
+      "totalPrice": "$440-530",
       "products": [
         {
           "number": 1,
-          "name": "CHITA Swivel Bouclé Barrel Chair",
-          "description": "Plush textured bouclé curved accent barrel chair with 360-degree swivel base",
+          "name": "FriFurne Swivel Bouclé Barrel Chair",
+          "description": "Plush textured beige-cream bouclé curved accent barrel armchair with 360-degree swivel base",
           "image": "/images/products/room-03/chair.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B0CCSC2FN7?tag=dailydecorins-20",
-          "priceRange": "$140-180",
-          "rating": 4.6
+          "amazonUrl": "https://www.amazon.com/dp/B0DMSZ9KPC?tag=dailydecorins-20",
+          "priceRange": "$280-310",
+          "rating": 4.9
         },
         {
           "number": 2,
@@ -174,12 +174,12 @@
         },
         {
           "number": 4,
-          "name": "Bedsure 100% Cotton Waffle Blanket",
-          "description": "Natural soft chunky waffle weave throw blanket with fringe detail",
+          "name": "Exclusivo Mezcla 100% Cotton Waffle Blanket",
+          "description": "Soft breathable 100% cotton waffle weave throw blanket in warm burnt orange terracotta",
           "image": "/images/products/room-03/blanket.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B0BJDHFYPK?tag=dailydecorins-20",
-          "priceRange": "$22-32",
-          "rating": 4.6
+          "amazonUrl": "https://www.amazon.com/dp/B0GFTJJD3N?tag=dailydecorins-20",
+          "priceRange": "$24-28",
+          "rating": 4.5
         },
         {
           "number": 5,
@@ -192,12 +192,12 @@
         },
         {
           "number": 6,
-          "name": "Nearly Natural Faux Olive Tree",
-          "description": "Realistic tall artificial olive tree with natural wood trunk & lush green leaves",
+          "name": "Alupssuc 5ft Artificial Faux Olive Tree",
+          "description": "Realistic 5-foot potted faux olive tree with slim wood trunk, lifelike leaves, fruits & moss",
           "image": "/images/products/room-03/tree.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B07MWSRTYR?tag=dailydecorins-20",
-          "priceRange": "$45-65",
-          "rating": 4.6
+          "amazonUrl": "https://www.amazon.com/dp/B0G1VVWGBS?tag=dailydecorins-20",
+          "priceRange": "$42-56",
+          "rating": 4.5
         }
       ]
     },
@@ -210,52 +210,52 @@
       "tags": ["desk setup", "wfh setup", "aesthetic desk", "home office", "amazon finds"],
       "roomImage": "/images/rooms/room-04.jpg",
       "createdAt": "2026-11-05",
-      "totalPrice": "$160-230",
+      "totalPrice": "$185-240",
       "products": [
         {
           "number": 1,
-          "name": "OLIXIS Armless Criss Cross Desk Chair",
-          "description": "Ergonomic wide seat swivel office chair with caramel brown upholstery & black star base",
+          "name": "DUMOS Armless Criss Cross Desk Chair",
+          "description": "Ergonomic wide-seat swivel office chair in caramel brown faux leather with matte black no-wheel base",
           "image": "/images/products/room-04/chair.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B0BVYRVWZK?tag=dailydecorins-20",
-          "priceRange": "$50-70",
-          "rating": 4.5
+          "amazonUrl": "https://www.amazon.com/dp/B0HMCJRL93?tag=dailydecorins-20",
+          "priceRange": "$55-68",
+          "rating": 4.6
         },
         {
           "number": 2,
-          "name": "SUPERJARE Dual Monitor Stand Riser",
-          "description": "Adjustable rustic brown wood dual-monitor stand riser with storage space underneath",
+          "name": "Aothia 43\" Black Walnut Dual Monitor Stand",
+          "description": "43-inch dark walnut finish dual-monitor stand riser with natural cork legs & open keyboard storage",
           "image": "/images/products/room-04/riser.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B07NPJZGVR?tag=dailydecorins-20",
-          "priceRange": "$28-38",
-          "rating": 4.6
+          "amazonUrl": "https://www.amazon.com/dp/B08P1V75GB?tag=dailydecorins-20",
+          "priceRange": "$50-60",
+          "rating": 4.5
         },
         {
           "number": 3,
-          "name": "Globe Electric 32\" Architect Desk Lamp",
-          "description": "Matte black metal cantilever swing-arm architect lamp casting 2700K warm vintage glow",
+          "name": "TEEM 24\" Swing-Arm Architect Desk Lamp",
+          "description": "Matte black metal articulated swing-arm architect desk lamp with round weighted base & optional clamp",
           "image": "/images/products/room-04/lamp.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B01BTRYW9W?tag=dailydecorins-20",
-          "priceRange": "$22-30",
-          "rating": 4.6
+          "amazonUrl": "https://www.amazon.com/dp/B08V5HM1VR?tag=dailydecorins-20",
+          "priceRange": "$24-30",
+          "rating": 4.7
         },
         {
           "number": 4,
-          "name": "Aothia Vegan Leather Desk Pad",
-          "description": "Waterproof saddle tan brown PU leather desk blotter mat with non-slip backing",
+          "name": "Aothia Vegan Leather Desk Pad (Brown)",
+          "description": "Waterproof saddle-tan brown PU leather desk blotter mat (31.5\" x 15.7\") with non-slip backing",
           "image": "/images/products/room-04/pad.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B082F615S3?tag=dailydecorins-20",
-          "priceRange": "$14-20",
+          "amazonUrl": "https://www.amazon.com/dp/B082F5CMGG?tag=dailydecorins-20",
+          "priceRange": "$12-16",
           "rating": 4.6
         },
         {
           "number": 5,
-          "name": "Ecjiuyi Matte Black Wire Wall Grid Organizer",
-          "description": "Wall-mounted metal mesh display panel with clips for polaroids, notes & aesthetic prints",
+          "name": "ODOXIA Matte Black Wire Wall Grid Panel Set",
+          "description": "2-pack matte black metal wire grid wall organizer panels with wooden clips, S-hooks & hanging display",
           "image": "/images/products/room-04/grid.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B07FNLF9XS?tag=dailydecorins-20",
-          "priceRange": "$16-24",
-          "rating": 4.5
+          "amazonUrl": "https://www.amazon.com/dp/B081QFYRVF?tag=dailydecorins-20",
+          "priceRange": "$15-20",
+          "rating": 4.7
         },
         {
           "number": 6,
@@ -277,60 +277,60 @@
       "tags": ["fall living room", "cozy apartment", "warm minimalism", "autumn decor", "amazon finds"],
       "roomImage": "/images/rooms/room-05.jpg",
       "createdAt": "2026-11-05",
-      "totalPrice": "$170-240",
+      "totalPrice": "$175-235",
       "products": [
         {
           "number": 1,
-          "name": "Sweet Water Decor Warm and Cozy Soy Candle",
-          "description": "Amber glass jar candle with wooden crackling wick, orange peel, cinnamon & pine scent",
+          "name": "Sweet Water Decor Farmhouse Amber Jar Candle",
+          "description": "9oz amber glass jar soy wax candle with black lid, warm apple, clove, cinnamon & orange fall scent",
           "image": "/images/products/room-05/candle.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B07Y5KB9M6?tag=dailydecorins-20",
-          "priceRange": "$20-25",
+          "amazonUrl": "https://www.amazon.com/dp/B0C28QF7P9?tag=dailydecorins-20",
+          "priceRange": "$16-22",
           "rating": 4.6
         },
         {
           "number": 2,
-          "name": "Bedsure Burnt Orange Chunky Knit Throw Blanket",
-          "description": "Super soft chunky chenille cable knit decorative couch throw blanket in rich autumn rust",
+          "name": "Bigacogo Burnt Orange Chunky Knit Throw Blanket",
+          "description": "40x60 inch jumbo hand-knit chenille cable-knit couch throw blanket in warm burnt orange",
           "image": "/images/products/room-05/blanket.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B099K1DYV8?tag=dailydecorins-20",
-          "priceRange": "$24-34",
-          "rating": 4.6
-        },
-        {
-          "number": 3,
-          "name": "Dripex Rustic Round Wood Coffee Table",
-          "description": "2-tier circular reclaimed oak accent table with open storage shelf & matte black steel legs",
-          "image": "/images/products/room-05/table.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B08HMRG35B?tag=dailydecorins-20",
-          "priceRange": "$65-85",
+          "amazonUrl": "https://www.amazon.com/dp/B0BNGDF3ZF?tag=dailydecorins-20",
+          "priceRange": "$35-45",
           "rating": 4.5
         },
         {
+          "number": 3,
+          "name": "Vanrohe 23.5\" Rustic Round 2-Tier Coffee Table",
+          "description": "2-tier circular rustic dark brown wood coffee table with open lower storage shelf & black metal legs",
+          "image": "/images/products/room-05/table.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09LCYLJM1?tag=dailydecorins-20",
+          "priceRange": "$64-90",
+          "rating": 4.6
+        },
+        {
           "number": 4,
-          "name": "Eywamage Flameless Flickering LED Pillar Candles Set",
-          "description": "Set of 3 real paraffin wax cylinder candles with remote & 2700K warm flickering LED wick",
+          "name": "Eywamage Clear Glass LED Pillar Candles Set of 3",
+          "description": "Set of 3 staggered clear glass cylinder real-wax flickering LED pillar candles with remote & timer",
           "image": "/images/products/room-05/candles.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B08BRT7K2K?tag=dailydecorins-20",
-          "priceRange": "$23-32",
+          "amazonUrl": "https://www.amazon.com/dp/B09N9BYKV8?tag=dailydecorins-20",
+          "priceRange": "$22-28",
           "rating": 4.6
         },
         {
           "number": 5,
-          "name": "Bsezen Ceramic Matte Donut Vase Set of 2",
-          "description": "Nordic minimalist off-white circular ceramic vases with ribbed texture for dried floral display",
+          "name": "Snuggle Hollow Ceramic Donut Vase Set of 2",
+          "description": "Nordic matte milky-white hollow circular ceramic donut vase pair for dried pampas & florals",
           "image": "/images/products/room-05/vases.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B0B8SBFYDF?tag=dailydecorins-20",
-          "priceRange": "$22-30",
+          "amazonUrl": "https://www.amazon.com/dp/B0C7WH88W7?tag=dailydecorins-20",
+          "priceRange": "$23-30",
           "rating": 4.7
         },
         {
           "number": 6,
-          "name": "Sunm Boutique Faux Fall Eucalyptus & Pampas Grass",
-          "description": "Fluffy natural dried pampas plumes with warm terracotta eucalyptus stems for tabletop vase",
+          "name": "Kocat Natural Dried Pampas & Eucalyptus Bouquet",
+          "description": "Fluffy natural dried pampas grass, bunny tails, eucalyptus & autumn stems tied with twine",
           "image": "/images/products/room-05/pampas.jpg",
-          "amazonUrl": "https://www.amazon.com/dp/B09CLL3C7B?tag=dailydecorins-20",
-          "priceRange": "$15-22",
+          "amazonUrl": "https://www.amazon.com/dp/B0DPC5KD18?tag=dailydecorins-20",
+          "priceRange": "$14-18",
           "rating": 4.5
         }
       ]
