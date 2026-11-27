@@ -36,7 +36,7 @@ async function main() {
   if (room.category === 'desktop-setup') {
     boardName = 'Aesthetic Desk Setups';
   } else if (room.category === 'living-room') {
-    boardName = 'Cozy Fall Apartment Inspo';
+    boardName = 'Cozy Fall Apartment Decor';
   } else if (room.category === 'reading-nook') {
     boardName = 'Cozy Reading Nooks & Corners';
   } else if (room.category === 'bathroom') {

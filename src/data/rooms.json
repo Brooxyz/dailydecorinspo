@@ -334,6 +334,73 @@
           "rating": 4.5
         }
       ]
+    },
+    {
+      "id": "small-bathroom-hacks-spa-06",
+      "slug": "small-bathroom-hacks-spa-06",
+      "title": "Small Bathroom Hacks & Spa Inspo",
+      "subtitle": "Natural bamboo storage, amber glass & warm organic spa minimalism",
+      "category": "bathroom",
+      "tags": ["small bathroom", "spa bathroom", "bamboo storage", "organic modern", "amazon finds"],
+      "roomImage": "/images/rooms/room-06.jpg",
+      "createdAt": "2026-11-27",
+      "totalPrice": "$155-195",
+      "products": [
+        {
+          "number": 1,
+          "name": "Amber Glass Soap Dispenser Set with Silicone Tray",
+          "description": "Two 16.8oz dark amber glass pump bottles with matte black stainless pumps on a matte black silicone tray",
+          "image": "/images/products/room-06/dispenser.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DPGJQDN2?tag=dailydecorins-20",
+          "priceRange": "$28-34",
+          "rating": 4.6
+        },
+        {
+          "number": 2,
+          "name": "AmazerBath 3-Tier Bamboo Over-the-Toilet Storage Rack",
+          "description": "Freestanding slatted natural light-bamboo 3-tier vertical bathroom organizer shelf above toilet",
+          "image": "/images/products/room-06/shelf.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0B6J6SF3T?tag=dailydecorins-20",
+          "priceRange": "$62-72",
+          "rating": 4.6
+        },
+        {
+          "number": 3,
+          "name": "Tbestmax 4-Pack Acrylic Apothecary Jars with Bamboo Lids",
+          "description": "Set of 4 clear 10oz cylindrical organizer canisters with round knobbed bamboo lids for swabs & cotton rounds",
+          "image": "/images/products/room-06/jars.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09LCDLPJW?tag=dailydecorins-20",
+          "priceRange": "$11-15",
+          "rating": 4.4
+        },
+        {
+          "number": 4,
+          "name": "LUMI Plush Non-Slip Microfiber Bath Mat Rug",
+          "description": "Soft neutral beige 16x24 absorbent microfiber bathroom floor rug with subtle ribbed border frame",
+          "image": "/images/products/room-06/rug.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DGBSZKCL?tag=dailydecorins-20",
+          "priceRange": "$15-20",
+          "rating": 4.4
+        },
+        {
+          "number": 5,
+          "name": "PÜSKÜL Natural Turkish Cotton Waffle Hand Towels (3-Pack)",
+          "description": "Raw-undyed cream 100% Turkish cotton 32x16 honeycomb waffle-weave spa hand towel set",
+          "image": "/images/products/room-06/towels.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0HCJ86PL5?tag=dailydecorins-20",
+          "priceRange": "$28-32",
+          "rating": 4.4
+        },
+        {
+          "number": 6,
+          "name": "EUDELE 5-Pack Adhesive Matte Black Shower Caddies",
+          "description": "Rustproof powder-coated stainless steel floating wire shower organizer baskets with razor hooks",
+          "image": "/images/products/room-06/caddy.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BLSCY6PR?tag=dailydecorins-20",
+          "priceRange": "$18-24",
+          "rating": 4.4
+        }
+      ]
     }
   ]
 }

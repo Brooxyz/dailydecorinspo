@@ -37,7 +37,7 @@ CATEGORY_META: dict[str, dict[str, str]] = {
         "keywords": "desk setup, wfh setup, aesthetic desk, home office, amazon finds",
     },
     "living-room": {
-        "board": "Cozy Fall Apartment Inspo",
+        "board": "Cozy Fall Apartment Decor",
         "title": "Cozy Fall Apartment Inspo",
         "tags": "#livingroomdecor #cozyfall #apartmentdecor #warmminimalism #amazonfinds #falldecor",
         "keywords": "living room decor, cozy fall apartment, warm minimalism, autumn decor, amazon finds",
@@ -113,16 +113,26 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
                 pub_dt = base_dt
             else:
                 title = f"Shop the Look: {len(room['products'])} Amazon Finds for {room['title']} ({room['totalPrice']})"
-                top_items = "\n".join(
+                # Pinterest truncates descriptions over 500 chars, which would cut the
+                # #ad disclosure at the end — drop list items until it fits.
+                item_lines = [
                     f"{p['number']}. {p['name']} ({p['priceRange']})"
                     for p in room["products"][:6]
-                )
-                desc = (
-                    f"Shop the Look Room #{room_num}! Curated Amazon pieces:\n\n"
-                    f"{top_items}\n\n"
-                    f"Tap to visit Daily Decor Inspo for direct links!\n\n"
-                    f"{meta['tags']}\n\n{DISCLOSURE}"
-                )
+                ]
+                total = len(room["products"])
+                while True:
+                    shown = item_lines[:]
+                    if len(shown) < total:
+                        shown.append(f"+ {total - len(shown)} more on the site")
+                    desc = (
+                        f"Shop the Look Room #{room_num}! Curated Amazon pieces:\n\n"
+                        + "\n".join(shown)
+                        + "\n\nTap to visit Daily Decor Inspo for direct links!\n\n"
+                        f"{meta['tags']}\n\n{DISCLOSURE}"
+                    )
+                    if len(desc) <= 500 or len(item_lines) <= 2:
+                        break
+                    item_lines.pop()
                 pub_dt = base_dt + timedelta(minutes=10)
 
             publish_date = (tomorrow_utc + timedelta(days=schedule_idx)).strftime("%Y-%m-%dT%H:%M:%S")
