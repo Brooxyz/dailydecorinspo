@@ -142,9 +142,13 @@ def check_single_link(room_id: str, prod_num: int, url: str, price_range: str) -
 
             result["onlineStatus"] = "LIVE"
             # Attempt best-effort USD buybox price extraction
-            pm = re.search(r'"priceToPay"[^}]*?"value"\s*:\s*(\d+(?:\.\d+)?)', html)
-            if not pm:
-                pm = re.search(r'class="a-offscreen">\s*\$(\d+(?:,\d{3})*(?:\.\d{2})?)\s*<', html)
+            # Read only the main buybox block: page-wide regexes picked up carousel/sponsored
+            # prices (e.g. $10999.0 for a $38 throw) and raised false "price drift" warnings.
+            pm = None
+            core = re.search(r'id="(?:corePrice_feature_div|corePriceDisplay_desktop_feature_div)"', html)
+            if core:
+                block = html[core.start(): core.start() + 6000]
+                pm = re.search(r'class="a-offscreen">\s*\$(\d+(?:,\d{3})*(?:\.\d{2})?)\s*<', block)
             if pm:
                 price_val = float(pm.group(1).replace(",", ""))
                 result["observedPrice"] = price_val

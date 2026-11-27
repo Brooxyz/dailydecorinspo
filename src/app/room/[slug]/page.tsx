@@ -29,10 +29,10 @@ export async function generateMetadata({
 
   return {
     title: `${room.title} — Daily Decor Inspo`,
-    description: `Shop ${room.products.length} budget-friendly Amazon finds from this ${categoryLabel(room.category).toLowerCase()} design. ${room.subtitle}. Total: ${room.totalPrice}`,
+    description: `Shop ${room.products.length} ${(room.products as Product[]).some((p) => p.store === "etsy") ? "curated" : "budget-friendly Amazon"} finds from this ${categoryLabel(room.category).toLowerCase()} design. ${room.subtitle}. Total: ${room.totalPrice}`,
     openGraph: {
       title: `${room.title} — Shop the Look`,
-      description: `${room.products.length} curated Amazon finds • ${room.totalPrice}`,
+      description: `${room.products.length} curated finds • ${room.totalPrice}`,
       images: [{ url: room.roomImage }],
     },
   };
@@ -131,7 +131,7 @@ export default async function RoomPage({
                   key={tag}
                   className="px-3 py-1 rounded-full bg-warm-100 text-warm-500 text-xs font-medium"
                 >
-                  #{tag}
+                  #{tag.replace(/\s+/g, "")}
                 </span>
               ))}
             </div>

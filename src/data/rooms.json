@@ -401,6 +401,82 @@
           "rating": 4.4
         }
       ]
+    },
+    {
+      "id": "calacatta-viola-marble-powder-room-07",
+      "slug": "calacatta-viola-marble-powder-room-07",
+      "title": "Calacatta Viola Marble Powder Room",
+      "subtitle": "Handmade fluted marble console sink, brushed gold fixtures & warm limewash calm",
+      "category": "bathroom",
+      "tags": ["powder room", "marble sink", "fluted console", "brass bathroom", "guest bathroom"],
+      "roomImage": "/images/rooms/room-07.jpg",
+      "createdAt": "2026-11-27",
+      "totalPrice": "$427-715",
+      "products": [
+        {
+          "number": 1,
+          "name": "Calacatta Viola Fluted Marble Console Sink",
+          "description": "Handmade Calacatta Viola marble basin with fluted front, curved backsplash and gold metal console legs",
+          "image": "/images/products/room-07/sink.jpg",
+          "store": "etsy",
+          "shopUrl": "https://www.etsy.com/listing/4618805299",
+          "priceRange": "$257-515"
+        },
+        {
+          "number": 2,
+          "name": "Hurran Brushed Gold Centerset Bathroom Faucet",
+          "description": "4-inch centerset two-handle high-arc faucet in brushed gold, lead-free",
+          "image": "/images/products/room-07/faucet.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0B2LJ5KN7?tag=dailydecorins-20",
+          "priceRange": "$28-34",
+          "rating": 4.5
+        },
+        {
+          "number": 3,
+          "name": "LOAAO 22x30 Gold Bathroom Mirror",
+          "description": "Rounded-rectangle vanity mirror with slim gold metal frame",
+          "image": "/images/products/room-07/mirror.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BJPD3FHR?tag=dailydecorins-20",
+          "priceRange": "$48-55",
+          "rating": 4.5
+        },
+        {
+          "number": 4,
+          "name": "Vintage Brass Globe Wall Sconce",
+          "description": "Antique brass sconce with adjustable arm and 5.9-inch milk-white glass globe",
+          "image": "/images/products/room-07/sconce.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B074W2B2YR?tag=dailydecorins-20",
+          "priceRange": "$50-56",
+          "rating": 4.6
+        },
+        {
+          "number": 5,
+          "name": "Brushed Gold Towel Ring",
+          "description": "Round wall-mounted hand towel ring in brushed gold stainless steel",
+          "image": "/images/products/room-07/ring.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DXVPN9DX?tag=dailydecorins-20",
+          "priceRange": "$13-16",
+          "rating": 4.7
+        },
+        {
+          "number": 6,
+          "name": "Uphome Black & White Checkered Bath Mat",
+          "description": "Soft tufted checkerboard bath rug, non-slip and machine washable",
+          "image": "/images/products/room-07/mat.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09NCXNMBS?tag=dailydecorins-20",
+          "priceRange": "$17-22",
+          "rating": 4.4
+        },
+        {
+          "number": 7,
+          "name": "JASAI Fluted Glass Soap Dispensers (2-Pack)",
+          "description": "18oz clear ribbed glass pump bottles with rust-proof gold pumps",
+          "image": "/images/products/room-07/soap.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DDQ31HTJ?tag=dailydecorins-20",
+          "priceRange": "$14-17",
+          "rating": 4.6
+        }
+      ]
     }
   ]
 }

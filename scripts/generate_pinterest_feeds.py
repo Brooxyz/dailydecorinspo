@@ -19,9 +19,13 @@ DISCLOSURE = "#ad As an Amazon Associate, I earn from qualifying purchases."
 ETSY_NOTE = "Includes a handmade piece from our own Etsy shop."
 
 
+def has_etsy(room: dict) -> bool:
+    return any(p.get("store") == "etsy" for p in room.get("products", []))
+
+
 def room_disclosure(room: dict) -> str:
     """Amazon #ad line, plus own-shop material-connection note when an Etsy item is in the room."""
-    if any(p.get("store") == "etsy" for p in room.get("products", [])):
+    if has_etsy(room):
         return f"{ETSY_NOTE} {DISCLOSURE}"
     return DISCLOSURE
 
@@ -112,15 +116,22 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
             file_bytes = pin_path.stat().st_size
 
             if short_key == "a":
-                title = f"{room['title']} Ideas on a Budget (Amazon Finds)"
+                # Rooms with an own-shop Etsy anchor are not "budget Amazon finds"
+                finds = "finds" if has_etsy(room) else "Amazon finds"
+                title = (
+                    f"{room['title']} Ideas (Shop the Look)"
+                    if has_etsy(room)
+                    else f"{room['title']} Ideas on a Budget (Amazon Finds)"
+                )
                 desc = (
                     f"Curated Room #{room_num}: {room['title']} — {room['subtitle']}. "
-                    f"Tap to shop all {len(room['products'])} Amazon finds ({room['totalPrice']}).\n\n"
+                    f"Tap to shop all {len(room['products'])} {finds} ({room['totalPrice']}).\n\n"
                     f"{meta['tags']}\n\n{room_disclosure(room)}"
                 )
                 pub_dt = base_dt
             else:
-                title = f"Shop the Look: {len(room['products'])} Amazon Finds for {room['title']} ({room['totalPrice']})"
+                amazon_word = "" if has_etsy(room) else "Amazon "
+                title = f"Shop the Look: {len(room['products'])} {amazon_word}Finds for {room['title']} ({room['totalPrice']})"
                 # Pinterest truncates descriptions over 500 chars, which would cut the
                 # #ad disclosure at the end — drop list items until it fits.
                 item_lines = [
@@ -133,7 +144,7 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
                     if len(shown) < total:
                         shown.append(f"+ {total - len(shown)} more on the site")
                     desc = (
-                        f"Shop the Look Room #{room_num}! Curated Amazon pieces:\n\n"
+                        f"Shop the Look Room #{room_num}! Curated {amazon_word}pieces:\n\n"
                         + "\n".join(shown)
                         + "\n\nTap to visit Daily Decor Inspo for direct links!\n\n"
                         f"{meta['tags']}\n\n{room_disclosure(room)}"

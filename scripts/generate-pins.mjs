@@ -124,7 +124,7 @@ async function generatePinB({
     <rect x="0" y="${PHOTO_HEIGHT}" width="${WIDTH}" height="${STRIP_HEIGHT}" fill="#fffaf5" />
     <line x1="0" y1="${PHOTO_HEIGHT}" x2="${WIDTH}" y2="${PHOTO_HEIGHT}" stroke="#e8c49e" stroke-width="2" />
 
-    <text x="32" y="${PHOTO_HEIGHT + 38}" font-family="'Inter', sans-serif" font-size="15" font-weight="bold" fill="#6b3f28" letter-spacing="1">EXACT AMAZON FINDS IN THIS ROOM</text>
+    <text x="32" y="${PHOTO_HEIGHT + 38}" font-family="'Inter', sans-serif" font-size="15" font-weight="bold" fill="#6b3f28" letter-spacing="1">${products.some(p => p.store === 'etsy') ? 'SHOP EVERY ITEM IN THIS ROOM' : 'EXACT AMAZON FINDS IN THIS ROOM'}</text>
     <text x="${WIDTH - 32}" y="${PHOTO_HEIGHT + 38}" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#a35e30" text-anchor="end">🔗 Tap Pin for Direct Links</text>
 
     ${products.slice(0, maxProducts).map((p, i) => {
@@ -258,6 +258,15 @@ async function main() {
       { number: 4, x: 575, y: 1090 }, // Beige Microfiber Bath Mat Rug
       { number: 5, x: 455, y: 200 }, // Cream Turkish Waffle Hand Towels
       { number: 6, x: 880, y: 300 }, // Matte Black Wire Shower Caddies
+    ],
+    '07': [
+      { number: 1, x: 450, y: 680 }, // BestMarble Calacatta Viola fluted console sink (Etsy)
+      { number: 2, x: 405, y: 515 }, // Hurran brushed gold centerset faucet
+      { number: 3, x: 390, y: 260 }, // LOAAO gold mirror
+      { number: 4, x: 640, y: 225 }, // Vintage brass globe sconce
+      { number: 5, x: 825, y: 430 }, // Brushed gold towel ring
+      { number: 6, x: 650, y: 1140 }, // Checkered bath mat (mostly below the Pin B crop)
+      { number: 7, x: 585, y: 540 }, // Fluted glass soap dispenser
     ],
   };
 
