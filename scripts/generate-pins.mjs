@@ -213,69 +213,19 @@ async function main() {
   const roomsPath = path.join(root, 'src/data/rooms.json');
   const data = JSON.parse(fs.readFileSync(roomsPath, 'utf8'));
 
-  // Calibrated badge positions per room
-  const badgeMap = {
-    '01': [
-      { number: 1, x: 410, y: 350 },
-      { number: 2, x: 190, y: 340 },
-      { number: 3, x: 620, y: 680 },
-      { number: 4, x: 740, y: 730 },
-      { number: 5, x: 880, y: 440 },
-    ],
-    '02': [
-      { number: 1, x: 500, y: 620 }, // Navy Duvet
-      { number: 2, x: 940, y: 480 }, // Black Lamp
-      { number: 3, x: 180, y: 190 }, // Curtain Rod
-      { number: 4, x: 280, y: 780 }, // Wool Rug
-      { number: 5, x: 260, y: 380 }, // Linen Blackout Curtains
-    ],
-    '03': [
-      { number: 1, x: 420, y: 740 }, // Boucle Chair
-      { number: 2, x: 350, y: 280 }, // Arched Lamp
-      { number: 3, x: 680, y: 680 }, // C-Table
-      { number: 4, x: 230, y: 640 }, // Terracotta Blanket
-      { number: 5, x: 580, y: 320 }, // Picture Ledges
-    ],
-    '04': [
-      { number: 1, x: 480, y: 880 }, // Criss Cross Chair
-      { number: 2, x: 500, y: 640 }, // Walnut Monitor Riser
-      { number: 3, x: 800, y: 520 }, // Architect Lamp
-      { number: 4, x: 480, y: 760 }, // Leather Desk Pad
-      { number: 5, x: 220, y: 320 }, // Wire Wall Grid
-    ],
-    '05': [
-      { number: 1, x: 590, y: 920 }, // Amber Soy Candle
-      { number: 2, x: 300, y: 670 }, // Burnt Orange Throw
-      { number: 3, x: 500, y: 1020 }, // Round Wood Coffee Table
-      { number: 4, x: 470, y: 850 }, // LED Pillar Candles
-      { number: 5, x: 340, y: 800 }, // Donut Vases
-      { number: 6, x: 320, y: 620 }, // Pampas Grass
-    ],
-    '06': [
-      { number: 1, x: 130, y: 600 }, // Amber Glass Soap Dispensers & Tray
-      { number: 2, x: 615, y: 390 }, // 3-Tier Bamboo Over-Toilet Rack
-      { number: 3, x: 495, y: 485 }, // Clear Acrylic Apothecary Jars
-      { number: 4, x: 575, y: 1090 }, // Beige Microfiber Bath Mat Rug
-      { number: 5, x: 455, y: 200 }, // Cream Turkish Waffle Hand Towels
-      { number: 6, x: 880, y: 300 }, // Matte Black Wire Shower Caddies
-    ],
-    '07': [
-      { number: 1, x: 450, y: 680 }, // BestMarble Calacatta Viola fluted console sink (Etsy)
-      { number: 2, x: 405, y: 515 }, // Hurran brushed gold centerset faucet
-      { number: 3, x: 390, y: 260 }, // LOAAO gold mirror
-      { number: 4, x: 640, y: 225 }, // Vintage brass globe sconce
-      { number: 5, x: 825, y: 430 }, // Brushed gold towel ring
-      { number: 6, x: 650, y: 1140 }, // Checkered bath mat (mostly below the Pin B crop)
-      { number: 7, x: 585, y: 540 }, // Fluted glass soap dispenser
-    ],
-    '08': [
-      { number: 1, x: 483, y: 705 }, // BestMarble Nero Marquina fluted sink + oak vanity (Etsy)
-      { number: 2, x: 495, y: 555 }, // SITGES brushed gold wall faucet
-      { number: 3, x: 492, y: 300 }, // HARRITPURE arched black mirror
-      { number: 4, x: 263, y: 245 }, // Matte black glass sconces
-      { number: 5, x: 867, y: 620 }, // JQK matte black towel bar
-    ],
-  };
+  // Pin B badges come from each product's site hotspot (% of the 1000x1500 hero).
+  // Pin B shows a 1000x1180 centre crop (160px cut top & bottom), so convert and
+  // drop badges that would fall under the title card or outside the photo.
+  const PIN_CROP_TOP = 160;
+  const badgesFor = (room) =>
+    room.products
+      .filter(p => p.hotspot)
+      .map(p => ({
+        number: p.number,
+        x: Math.round(p.hotspot.x * 10),
+        y: Math.round(p.hotspot.y * 15 - PIN_CROP_TOP),
+      }))
+      .filter(b => b.y >= 180 && b.y <= 1150 && b.x >= 30 && b.x <= 970);
 
   for (let index = 0; index < data.rooms.length; index++) {
     const room = data.rooms[index];
@@ -307,7 +257,7 @@ async function main() {
       roomNumber: roomNum,
       totalPrice: room.totalPrice,
       products: mappedProducts,
-      badges: badgeMap[roomNum] || [],
+      badges: badgesFor(room),
       outputPath: pinBDir,
     });
   }
