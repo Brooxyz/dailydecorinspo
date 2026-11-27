@@ -251,6 +251,14 @@ async function main() {
       { number: 5, x: 340, y: 800 }, // Donut Vases
       { number: 6, x: 320, y: 620 }, // Pampas Grass
     ],
+    '06': [
+      { number: 1, x: 130, y: 600 }, // Amber Glass Soap Dispensers & Tray
+      { number: 2, x: 615, y: 390 }, // 3-Tier Bamboo Over-Toilet Rack
+      { number: 3, x: 495, y: 485 }, // Clear Acrylic Apothecary Jars
+      { number: 4, x: 575, y: 1090 }, // Beige Microfiber Bath Mat Rug
+      { number: 5, x: 455, y: 200 }, // Cream Turkish Waffle Hand Towels
+      { number: 6, x: 880, y: 300 }, // Matte Black Wire Shower Caddies
+    ],
   };
 
   for (let index = 0; index < data.rooms.length; index++) {
