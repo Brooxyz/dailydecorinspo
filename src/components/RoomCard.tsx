@@ -1,4 +1,5 @@
 import roomsData from "@/data/rooms.json";
+import { categoryLabel } from "@/lib/categories";
 
 type Room = (typeof roomsData.rooms)[number];
 
@@ -23,7 +24,7 @@ export function RoomCard({ room }: { room: Room }) {
         {/* Category badge */}
         <div className="absolute top-3 left-3">
           <span className="inline-block px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-semibold text-warm-800 uppercase tracking-wide shadow-sm">
-            {room.category}
+            {categoryLabel(room.category)}
           </span>
         </div>
 

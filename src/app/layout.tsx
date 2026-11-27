@@ -85,10 +85,10 @@ function Header() {
           </div>
         </a>
 
-        <nav className="hidden sm:flex items-center gap-6">
+        <nav className="flex items-center gap-4 sm:gap-6">
           <a
             href="/"
-            className="text-sm font-medium text-warm-700 hover:text-warm-900 transition-colors"
+            className="hidden sm:inline text-sm font-medium text-warm-700 hover:text-warm-900 transition-colors"
           >
             All Rooms
           </a>

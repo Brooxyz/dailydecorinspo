@@ -276,6 +276,18 @@ def main() -> int:
             if args.online and not is_etsy:
                 online_tasks.append((room["id"], p["number"], url, p.get("priceRange", "")))
 
+        # totalPrice must equal the sum of product price ranges (it drifts when items are swapped)
+        lo = hi = 0
+        for p in room.get("products", []):
+            nums = [int(n) for n in re.findall(r"\d+", p.get("priceRange", ""))[:2]]
+            if len(nums) == 2:
+                lo, hi = lo + nums[0], hi + nums[1]
+        expected_total = f"${lo}-{hi}"
+        if room.get("totalPrice") != expected_total:
+            warnings.append(
+                f"Room #{room_num} totalPrice {room.get('totalPrice')} != sum of items {expected_total}"
+            )
+
         room_reports.append(
             {
                 "roomNumber": room_num,

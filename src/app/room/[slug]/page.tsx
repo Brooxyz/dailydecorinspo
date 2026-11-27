@@ -1,8 +1,16 @@
 import roomsData from "@/data/rooms.json";
 import { ProductCard, type Product } from "@/components/ProductCard";
 import { notFound } from "next/navigation";
+import { categoryLabel } from "@/lib/categories";
 
 type Room = (typeof roomsData.rooms)[number];
+
+// Average over rated (Amazon) items only; handmade Etsy items carry no star rating
+function avgRating(products: Product[]): string {
+  const rated = products.filter((p) => typeof p.rating === "number");
+  if (!rated.length) return "—";
+  return (rated.reduce((a, p) => a + (p.rating ?? 0), 0) / rated.length).toFixed(1);
+}
 
 export function generateStaticParams() {
   return roomsData.rooms.map((room) => ({
@@ -21,7 +29,7 @@ export async function generateMetadata({
 
   return {
     title: `${room.title} — Daily Decor Inspo`,
-    description: `Shop ${room.products.length} budget-friendly Amazon finds from this ${room.category} design. ${room.subtitle}. Total: ${room.totalPrice}`,
+    description: `Shop ${room.products.length} budget-friendly Amazon finds from this ${categoryLabel(room.category).toLowerCase()} design. ${room.subtitle}. Total: ${room.totalPrice}`,
     openGraph: {
       title: `${room.title} — Shop the Look`,
       description: `${room.products.length} curated Amazon finds • ${room.totalPrice}`,
@@ -38,6 +46,7 @@ export default async function RoomPage({
   const { slug } = await params;
   const room = roomsData.rooms.find((r) => r.slug === slug);
   if (!room) notFound();
+  const hasEtsy = (room.products as Product[]).some((p) => p.store === "etsy");
 
   return (
     <>
@@ -107,7 +116,7 @@ export default async function RoomPage({
           <div className="space-y-6">
             <div>
               <span className="inline-block px-3 py-1 rounded-full bg-warm-200 text-warm-700 text-xs font-semibold uppercase tracking-wide mb-3">
-                {room.category}
+                {categoryLabel(room.category)}
               </span>
               <h1 className="font-display text-3xl sm:text-4xl font-bold text-warm-900 leading-tight">
                 {room.title}
@@ -145,10 +154,7 @@ export default async function RoomPage({
                 <div>
                   <p className="font-display text-2xl font-bold text-sage-600">
                     ★{" "}
-                    {(
-                      room.products.reduce((a, p) => a + p.rating, 0) /
-                      room.products.length
-                    ).toFixed(1)}
+                    {avgRating(room.products as Product[])}
                   </p>
                   <p className="text-xs text-warm-500 mt-1">Avg Rating</p>
                 </div>
@@ -161,8 +167,8 @@ export default async function RoomPage({
                 Love this room?
               </p>
               <p className="text-warm-200 text-sm mt-1">
-                Every item is linked below. Click any product card to shop it on
-                Amazon.
+                Every item is linked below. Click any product card to shop it on{" "}
+                {hasEtsy ? "Amazon or our Etsy shop" : "Amazon"}.
               </p>
             </div>
           </div>
@@ -192,7 +198,7 @@ export default async function RoomPage({
             <strong>#ad</strong> — As an Amazon Associate, I earn from
             qualifying purchases. Prices may vary. Product images are
             illustrative; check each listing for exact details.
-            {room.products.some((p) => (p as Product).store === "etsy") &&
+            {hasEtsy &&
               " Items marked \"Handmade\" are sold by our own Etsy shop, so we earn from those sales."}{" "}
             All recommendations are based on personal curation and aesthetic
             fit. Last updated: {room.createdAt}.

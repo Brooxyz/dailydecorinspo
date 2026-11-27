@@ -4,12 +4,12 @@
       "id": "cozy-minimalist-bedroom-01",
       "slug": "cozy-minimalist-bedroom-01",
       "title": "Cozy Minimalist Bedroom",
-      "subtitle": "Warm tones meets functional design",
+      "subtitle": "Warm tones meet functional design",
       "category": "bedroom",
       "tags": ["minimalist", "cozy", "budget", "amazon finds", "neutral tones"],
       "roomImage": "/images/rooms/room-01.jpg",
       "createdAt": "2026-11-04",
-      "totalPrice": "$115-165",
+      "totalPrice": "$117-170",
       "products": [
         {
           "number": 1,
@@ -67,7 +67,7 @@
       "tags": ["moody bedroom", "earth tone", "navy duvet", "budget decor", "amazon finds"],
       "roomImage": "/images/rooms/room-02.jpg",
       "createdAt": "2026-11-04",
-      "totalPrice": "$620-720",
+      "totalPrice": "$610-720",
       "products": [
         {
           "number": 1,
@@ -143,7 +143,7 @@
       "tags": ["reading nook", "boucle chair", "cozy corner", "warm minimalism", "amazon finds"],
       "roomImage": "/images/rooms/room-03.jpg",
       "createdAt": "2026-11-04",
-      "totalPrice": "$440-530",
+      "totalPrice": "$444-529",
       "products": [
         {
           "number": 1,
@@ -210,7 +210,7 @@
       "tags": ["desk setup", "wfh setup", "aesthetic desk", "home office", "amazon finds"],
       "roomImage": "/images/rooms/room-04.jpg",
       "createdAt": "2026-11-05",
-      "totalPrice": "$185-240",
+      "totalPrice": "$186-239",
       "products": [
         {
           "number": 1,
@@ -277,7 +277,7 @@
       "tags": ["fall living room", "cozy apartment", "warm minimalism", "autumn decor", "amazon finds"],
       "roomImage": "/images/rooms/room-05.jpg",
       "createdAt": "2026-11-05",
-      "totalPrice": "$175-235",
+      "totalPrice": "$174-233",
       "products": [
         {
           "number": 1,
@@ -344,7 +344,7 @@
       "tags": ["small bathroom", "spa bathroom", "bamboo storage", "organic modern", "amazon finds"],
       "roomImage": "/images/rooms/room-06.jpg",
       "createdAt": "2026-11-27",
-      "totalPrice": "$155-195",
+      "totalPrice": "$162-197",
       "products": [
         {
           "number": 1,
