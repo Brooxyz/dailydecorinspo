@@ -9,6 +9,8 @@ export type Product = {
   // "etsy" marks a handmade piece from our own Etsy shop (BestMarble)
   store?: "amazon" | "etsy";
   shopUrl?: string;
+  /** Position of the product in the room hero image, in % of width/height */
+  hotspot?: { x: number; y: number };
 };
 
 export function ProductCard({ product }: { product: Product }) {

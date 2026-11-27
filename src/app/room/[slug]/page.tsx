@@ -83,11 +83,9 @@ export default async function RoomPage({
             <img
               src={room.roomImage}
               alt={room.title}
-              className="w-full aspect-[3/4] object-cover"
+              className="w-full aspect-[2/3] object-cover"
               loading="eager"
             />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
             {/* Product count badge */}
             <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-md">
@@ -96,20 +94,27 @@ export default async function RoomPage({
               </p>
             </div>
 
-            {/* Number indicators on image */}
-            <div className="absolute bottom-4 left-4 right-4">
-              <div className="flex flex-wrap gap-2">
-                {room.products.map((product) => (
-                  <a
-                    key={product.number}
-                    href={`#product-${product.number}`}
-                    className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-sm font-bold text-warm-800 shadow-md hover:bg-white hover:scale-110 transition-all"
-                  >
+            {/* Shoppable hotspots placed on each product in the photo */}
+            {(room.products as Product[]).map((product) =>
+              product.hotspot ? (
+                <a
+                  key={product.number}
+                  href={`#product-${product.number}`}
+                  aria-label={`${product.number}. ${product.name} — ${product.priceRange}`}
+                  title={`${product.name} • ${product.priceRange}`}
+                  style={{ left: `${product.hotspot.x}%`, top: `${product.hotspot.y}%` }}
+                  className="group/hs absolute -translate-x-1/2 -translate-y-1/2 z-10"
+                >
+                  <span className="absolute inset-0 rounded-full bg-white/70 animate-ping opacity-60" />
+                  <span className="relative w-9 h-9 rounded-full bg-warm-700 ring-[3px] ring-white flex items-center justify-center text-sm font-bold text-white shadow-lg group-hover/hs:scale-110 group-hover/hs:bg-warm-800 transition-transform">
                     {product.number}
-                  </a>
-                ))}
-              </div>
-            </div>
+                  </span>
+                  <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-warm-900/90 px-2 py-1 text-xs font-medium text-white opacity-0 group-hover/hs:opacity-100 transition-opacity hidden sm:block">
+                    {product.name} • {product.priceRange}
+                  </span>
+                </a>
+              ) : null
+            )}
           </div>
 
           {/* Room Info */}

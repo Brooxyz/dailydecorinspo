@@ -13,6 +13,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 40, "y": 32},
           "name": "Natural Linen Curtains",
           "description": "Light-filtering linen blend curtains, rod pocket, 2 panels",
           "image": "/images/products/room-01/curtain.jpg",
@@ -22,6 +23,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 10, "y": 42},
           "name": "Felt Bulletin Board",
           "description": "Modular design pin board for photos and notes",
           "image": "/images/products/room-01/board.jpg",
@@ -31,6 +33,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 66, "y": 69},
           "name": "Beige Comforter Set",
           "description": "Washed microfiber comforter, ultra-soft, all-season",
           "image": "/images/products/room-01/bedset.jpg",
@@ -40,6 +43,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 90, "y": 70},
           "name": "Bedsure GentleSoft White Throw Blanket",
           "description": "Ultra-soft ribbed plush fleece throw blanket in off-white, cozy bed & couch accent",
           "image": "/images/products/room-01/blanket.jpg",
@@ -49,6 +53,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 94, "y": 36},
           "name": "White Cube Bookshelf",
           "description": "5-cube open shelf bookcase organizer, stackable clean white modern design",
           "image": "/images/products/room-01/bookshelf.jpg",
@@ -71,6 +76,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 50, "y": 52},
           "name": "Navy Blue Comforter Cover",
           "description": "Washed cotton duvet cover set with pillow shams, breathable navy tone",
           "image": "/images/products/room-02/comforter.jpg",
@@ -80,6 +86,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 94, "y": 42},
           "name": "Black Ceramic Table Lamp",
           "description": "Matte black ceramic bottle-shaped lamp with natural linen drum shade",
           "image": "/images/products/room-02/lamp.jpg",
@@ -89,6 +96,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 20, "y": 11},
           "name": "Matte Black Curtain Rod",
           "description": "Heavy-duty 1-inch curtain rod with minimalist cylindrical finials",
           "image": "/images/products/room-02/rod.jpg",
@@ -98,6 +106,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 60, "y": 84},
           "name": "Textured Wool Area Rug",
           "description": "Hand-tufted low-pile wool area rug in warm neutral beige-cream weave",
           "image": "/images/products/room-02/rug.jpg",
@@ -107,6 +116,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 27, "y": 36},
           "name": "Linen Total Blackout Curtains",
           "description": "Thick textured linen blackout curtain panels, noise reducing",
           "image": "/images/products/room-02/curtains.jpg",
@@ -116,6 +126,7 @@
         },
         {
           "number": 6,
+          "hotspot": {"x": 93, "y": 56},
           "name": "Nightstand Set of 2",
           "description": "Industrial modern black bedside tables with 2 fabric drawers & open shelf",
           "image": "/images/products/room-02/nightstands.jpg",
@@ -125,6 +136,7 @@
         },
         {
           "number": 7,
+          "hotspot": {"x": 45, "y": 29},
           "name": "Corner Wall Display Shelves",
           "description": "4-tier radial corner floating shelves in rustic black wood",
           "image": "/images/products/room-02/shelves.jpg",
@@ -147,6 +159,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 45, "y": 70},
           "name": "FriFurne Swivel Bouclé Barrel Chair",
           "description": "Plush textured beige-cream bouclé curved accent barrel armchair with 360-degree swivel base",
           "image": "/images/products/room-03/chair.jpg",
@@ -156,6 +169,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 53, "y": 24},
           "name": "Brightech Mason Arc Floor Lamp",
           "description": "Modern arched standing floor lamp with textured neutral drum shade & weighted base",
           "image": "/images/products/room-03/lamp.jpg",
@@ -165,6 +179,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 72, "y": 62},
           "name": "VASAGLE C-Shaped Side Table",
           "description": "Minimalist wood & steel end table sliding under chair for coffee, laptop & books",
           "image": "/images/products/room-03/table.jpg",
@@ -174,6 +189,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 22, "y": 69},
           "name": "Exclusivo Mezcla 100% Cotton Waffle Blanket",
           "description": "Soft breathable 100% cotton waffle weave throw blanket in warm burnt orange terracotta",
           "image": "/images/products/room-03/blanket.jpg",
@@ -183,6 +199,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 40, "y": 38.5},
           "name": "Command Picture Ledge Display Shelf",
           "description": "Damage-free wall-mounted picture ledge floating display shelf for books & art",
           "image": "/images/products/room-03/shelves.jpg",
@@ -192,6 +209,7 @@
         },
         {
           "number": 6,
+          "hotspot": {"x": 88, "y": 40},
           "name": "Alupssuc 5ft Artificial Faux Olive Tree",
           "description": "Realistic 5-foot potted faux olive tree with slim wood trunk, lifelike leaves, fruits & moss",
           "image": "/images/products/room-03/tree.jpg",
@@ -214,6 +232,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 32, "y": 64},
           "name": "DUMOS Armless Criss Cross Desk Chair",
           "description": "Ergonomic wide-seat swivel office chair in caramel brown faux leather with matte black no-wheel base",
           "image": "/images/products/room-04/chair.jpg",
@@ -223,6 +242,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 56, "y": 48.5},
           "name": "Aothia 43\" Black Walnut Dual Monitor Stand",
           "description": "43-inch dark walnut finish dual-monitor stand riser with natural cork legs & open keyboard storage",
           "image": "/images/products/room-04/riser.jpg",
@@ -232,6 +252,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 70, "y": 27},
           "name": "TEEM 24\" Swing-Arm Architect Desk Lamp",
           "description": "Matte black metal articulated swing-arm architect desk lamp with round weighted base & optional clamp",
           "image": "/images/products/room-04/lamp.jpg",
@@ -241,6 +262,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 55, "y": 57},
           "name": "Aothia Vegan Leather Desk Pad (Brown)",
           "description": "Waterproof saddle-tan brown PU leather desk blotter mat (31.5\" x 15.7\") with non-slip backing",
           "image": "/images/products/room-04/pad.jpg",
@@ -250,6 +272,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 68, "y": 17},
           "name": "ODOXIA Matte Black Wire Wall Grid Panel Set",
           "description": "2-pack matte black metal wire grid wall organizer panels with wooden clips, S-hooks & hanging display",
           "image": "/images/products/room-04/grid.jpg",
@@ -259,6 +282,7 @@
         },
         {
           "number": 6,
+          "hotspot": {"x": 49, "y": 31.5},
           "name": "Quntis Eye-Care Computer Monitor Light Bar",
           "description": "Touch-control dimmable horizontal screen bar providing glare-free warm downward ambient light",
           "image": "/images/products/room-04/lightbar.jpg",
@@ -281,6 +305,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 60, "y": 72.7},
           "name": "Sweet Water Decor Farmhouse Amber Jar Candle",
           "description": "9oz amber glass jar soy wax candle with black lid, warm apple, clove, cinnamon & orange fall scent",
           "image": "/images/products/room-05/candle.jpg",
@@ -290,6 +315,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 40, "y": 66},
           "name": "Bigacogo Burnt Orange Chunky Knit Throw Blanket",
           "description": "40x60 inch jumbo hand-knit chenille cable-knit couch throw blanket in warm burnt orange",
           "image": "/images/products/room-05/blanket.jpg",
@@ -299,6 +325,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 50, "y": 78.7},
           "name": "Vanrohe 23.5\" Rustic Round 2-Tier Coffee Table",
           "description": "2-tier circular rustic dark brown wood coffee table with open lower storage shelf & black metal legs",
           "image": "/images/products/room-05/table.jpg",
@@ -308,6 +335,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 76, "y": 65},
           "name": "Eywamage Clear Glass LED Pillar Candles Set of 3",
           "description": "Set of 3 staggered clear glass cylinder real-wax flickering LED pillar candles with remote & timer",
           "image": "/images/products/room-05/candles.jpg",
@@ -317,6 +345,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 61, "y": 66},
           "name": "Snuggle Hollow Ceramic Donut Vase Set of 2",
           "description": "Nordic matte milky-white hollow circular ceramic donut vase pair for dried pampas & florals",
           "image": "/images/products/room-05/vases.jpg",
@@ -326,6 +355,7 @@
         },
         {
           "number": 6,
+          "hotspot": {"x": 62, "y": 55},
           "name": "Kocat Natural Dried Pampas & Eucalyptus Bouquet",
           "description": "Fluffy natural dried pampas grass, bunny tails, eucalyptus & autumn stems tied with twine",
           "image": "/images/products/room-05/pampas.jpg",
@@ -348,6 +378,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 13, "y": 50.7},
           "name": "Amber Glass Soap Dispenser Set with Silicone Tray",
           "description": "Two 16.8oz dark amber glass pump bottles with matte black stainless pumps on a matte black silicone tray",
           "image": "/images/products/room-06/dispenser.jpg",
@@ -357,6 +388,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 61.5, "y": 36.7},
           "name": "AmazerBath 3-Tier Bamboo Over-the-Toilet Storage Rack",
           "description": "Freestanding slatted natural light-bamboo 3-tier vertical bathroom organizer shelf above toilet",
           "image": "/images/products/room-06/shelf.jpg",
@@ -366,6 +398,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 49.5, "y": 43},
           "name": "Tbestmax 4-Pack Acrylic Apothecary Jars with Bamboo Lids",
           "description": "Set of 4 clear 10oz cylindrical organizer canisters with round knobbed bamboo lids for swabs & cotton rounds",
           "image": "/images/products/room-06/jars.jpg",
@@ -375,6 +408,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 57.5, "y": 83.3},
           "name": "LUMI Plush Non-Slip Microfiber Bath Mat Rug",
           "description": "Soft neutral beige 16x24 absorbent microfiber bathroom floor rug with subtle ribbed border frame",
           "image": "/images/products/room-06/rug.jpg",
@@ -384,6 +418,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 45.5, "y": 24},
           "name": "PÜSKÜL Natural Turkish Cotton Waffle Hand Towels (3-Pack)",
           "description": "Raw-undyed cream 100% Turkish cotton 32x16 honeycomb waffle-weave spa hand towel set",
           "image": "/images/products/room-06/towels.jpg",
@@ -393,6 +428,7 @@
         },
         {
           "number": 6,
+          "hotspot": {"x": 88, "y": 30.7},
           "name": "EUDELE 5-Pack Adhesive Matte Black Shower Caddies",
           "description": "Rustproof powder-coated stainless steel floating wire shower organizer baskets with razor hooks",
           "image": "/images/products/room-06/caddy.jpg",
@@ -415,6 +451,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 45, "y": 56},
           "name": "Calacatta Viola Fluted Marble Console Sink",
           "description": "Handmade Calacatta Viola marble basin with fluted front, curved backsplash and gold metal console legs",
           "image": "/images/products/room-07/sink.jpg",
@@ -424,6 +461,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 40.5, "y": 45},
           "name": "Hurran Brushed Gold Centerset Bathroom Faucet",
           "description": "4-inch centerset two-handle high-arc faucet in brushed gold, lead-free",
           "image": "/images/products/room-07/faucet.jpg",
@@ -433,6 +471,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 39, "y": 28},
           "name": "LOAAO 22x30 Gold Bathroom Mirror",
           "description": "Rounded-rectangle vanity mirror with slim gold metal frame",
           "image": "/images/products/room-07/mirror.jpg",
@@ -442,6 +481,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 64, "y": 25.7},
           "name": "Vintage Brass Globe Wall Sconce",
           "description": "Antique brass sconce with adjustable arm and 5.9-inch milk-white glass globe",
           "image": "/images/products/room-07/sconce.jpg",
@@ -451,6 +491,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 82.5, "y": 39.3},
           "name": "Brushed Gold Towel Ring",
           "description": "Round wall-mounted hand towel ring in brushed gold stainless steel",
           "image": "/images/products/room-07/ring.jpg",
@@ -460,6 +501,7 @@
         },
         {
           "number": 6,
+          "hotspot": {"x": 66, "y": 93},
           "name": "Uphome Black & White Checkered Bath Mat",
           "description": "Soft tufted checkerboard bath rug, non-slip and machine washable",
           "image": "/images/products/room-07/mat.jpg",
@@ -469,6 +511,7 @@
         },
         {
           "number": 7,
+          "hotspot": {"x": 58.5, "y": 46.7},
           "name": "JASAI Fluted Glass Soap Dispensers (2-Pack)",
           "description": "18oz clear ribbed glass pump bottles with rust-proof gold pumps",
           "image": "/images/products/room-07/soap.jpg",
@@ -491,6 +534,7 @@
       "products": [
         {
           "number": 1,
+          "hotspot": {"x": 48.3, "y": 57.7},
           "name": "Nero Marquina Fluted Marble Sink & Oak Vanity",
           "description": "Handmade black marble basin with fluted edge and backsplash; oak vanity cabinet available as an option",
           "image": "/images/products/room-08/sink.jpg",
@@ -500,6 +544,7 @@
         },
         {
           "number": 2,
+          "hotspot": {"x": 49.5, "y": 47.7},
           "name": "SITGES Brushed Gold Wall-Mount Faucet",
           "description": "Two-handle wall-mounted bathroom sink faucet with cross handles and straight spout",
           "image": "/images/products/room-08/faucet.jpg",
@@ -509,6 +554,7 @@
         },
         {
           "number": 3,
+          "hotspot": {"x": 49.2, "y": 30.7},
           "name": "HARRITPURE 24x36 Arched Black Mirror",
           "description": "Tall arch-top vanity mirror with slim matte black metal frame",
           "image": "/images/products/room-08/mirror.jpg",
@@ -518,6 +564,7 @@
         },
         {
           "number": 4,
+          "hotspot": {"x": 26.3, "y": 27},
           "name": "Matte Black Glass Wall Sconces (Set of 2)",
           "description": "Modern vanity sconces with clear cylinder glass shades",
           "image": "/images/products/room-08/sconces.jpg",
@@ -527,6 +574,7 @@
         },
         {
           "number": 5,
+          "hotspot": {"x": 86.7, "y": 52},
           "name": "JQK 27-Inch Matte Black Towel Bar",
           "description": "Thick 304 stainless steel wall towel bar in matte black",
           "image": "/images/products/room-08/towelbar.jpg",
@@ -536,6 +584,7 @@
         },
         {
           "number": 6,
+          "hotspot": {"x": 50, "y": 95},
           "name": "Yimobra White Chenille Bath Mat",
           "description": "Ultra-soft 32x20 noodle bath rug, non-slip and machine washable",
           "image": "/images/products/room-08/mat.jpg",
