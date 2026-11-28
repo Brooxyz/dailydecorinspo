@@ -1015,6 +1015,89 @@
           "rating": 4.4
         }
       ]
+    },
+    {
+      "id": "welcoming-neutral-guest-room-13",
+      "slug": "welcoming-neutral-guest-room-13",
+      "title": "Welcoming Neutral Guest Bedroom",
+      "subtitle": "Channel-tufted headboard, soft greige bedding & a luggage rack ready for holiday guests",
+      "category": "bedroom",
+      "tags": ["guest room ideas", "guest bedroom", "neutral bedroom", "holiday guests", "amazon finds"],
+      "roomImage": "/images/rooms/room-13.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$287-341",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 55.4, "y": 39.6},
+          "name": "Channel-Tufted Upholstered Headboard (Queen, Beige)",
+          "description": "Linen-look vertical channel headboard with adjustable wall-mount legs",
+          "image": "/images/products/room-13/headboard.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FVF4L44G?tag=dailydecorins-20",
+          "priceRange": "$76-90",
+          "rating": 4.4
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 42, "y": 80},
+          "name": "Bedsure Prewashed Duvet Cover Set (Light Greige)",
+          "description": "Soft washed microfiber duvet cover with 2 matching shams",
+          "image": "/images/products/room-13/duvet.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09YM372LR?tag=dailydecorins-20",
+          "priceRange": "$24-30",
+          "rating": 4.5
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 50.7, "y": 63.3},
+          "name": "PHF Cotton Waffle Knit Throw Blanket (Beige)",
+          "description": "Lightweight 100% cotton waffle throw with fringed ends",
+          "image": "/images/products/room-13/throw.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09VYXT3ZC?tag=dailydecorins-20",
+          "priceRange": "$21-26",
+          "rating": 4.5
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 86, "y": 64.9},
+          "name": "Lerliuo Rattan Nightstand with Drawer",
+          "description": "Natural wood side table with open shelf, cane-front drawer & tapered legs",
+          "image": "/images/products/room-13/nightstand.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BRQBVKBB?tag=dailydecorins-20",
+          "priceRange": "$34-42",
+          "rating": 4.3
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 84.3, "y": 50.6},
+          "name": "PoKat Ribbed Ceramic Table Lamp",
+          "description": "Textured off-white ceramic base with a beige linen drum shade",
+          "image": "/images/products/room-13/lamp.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0C4SZBN64?tag=dailydecorins-20",
+          "priceRange": "$56-65",
+          "rating": 4.6
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 93.2, "y": 46.5},
+          "name": "Winlyn Faux Eucalyptus in White Pots (Set of 2)",
+          "description": "Small artificial eucalyptus plants in dotted ceramic pots",
+          "image": "/images/products/room-13/plants.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CSVNYZYQ?tag=dailydecorins-20",
+          "priceRange": "$19-23",
+          "rating": 4.8
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 14.2, "y": 70.4},
+          "name": "Bamboo Folding Luggage Rack with Shoe Shelf",
+          "description": "Fully assembled walnut-tone suitcase stand for the guest room",
+          "image": "/images/products/room-13/luggagerack.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0C1YJS8W6?tag=dailydecorins-20",
+          "priceRange": "$57-65",
+          "rating": 4.8
+        }
+      ]
     }
   ]
 }
