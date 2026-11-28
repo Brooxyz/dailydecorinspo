@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { liveFindTypes } from "@/lib/finds";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dailydecorinspo.vercel.app"),
@@ -64,6 +65,8 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        {/* Vercel Web Analytics (free Hobby tier: collection pauses at the limit, never billed) */}
+        <Analytics />
       </body>
     </html>
   );

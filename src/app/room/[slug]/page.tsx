@@ -53,7 +53,8 @@ export default async function RoomPage({
     .map((p) => (p.amazonUrl || "").match(/\/dp\/([A-Z0-9]{10})/)?.[1])
     .filter((a): a is string => Boolean(a));
   const cartUrl =
-    "https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=dailydecorins-20&tag=dailydecorins-20&" +
+    // dailydecorcart-20 = separate Associates tracking ID so cart-button sales show up on their own
+    "https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=dailydecorcart-20&tag=dailydecorcart-20&" +
     cartAsins.map((a, i) => `ASIN.${i + 1}=${a}&Quantity.${i + 1}=1`).join("&");
 
   const jsonLd = {

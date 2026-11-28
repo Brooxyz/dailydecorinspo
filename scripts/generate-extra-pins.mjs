@@ -130,7 +130,8 @@ async function main() {
       const f = `room-${num}-p${p.number}.jpg`;
       await productPin(room, p, path.join(OUT, f));
       manifest.push({ ...base, id: `r${num}-p${p.number}`, type: 'product', image: `/images/pins/extra/${f}`,
-        link: p.amazonUrl, // tagged amazon.com/dp/ASIN?tag=dailydecorins-20 (clear Amazon URL, allowed on Pinterest)
+        // clear amazon.com/dp/ASIN URL (allowed on Pinterest) with the separate pin tracking ID
+        link: p.amazonUrl.replace('tag=dailydecorins-20', 'tag=dailydecorpin-20'),
         title: clip(`${p.name} | ${p.priceRange} Amazon Find`, 100),
         description: clip(`${p.description}. As seen in our ${room.title}: ${roomUrl}`, 330) + `\n\n${tags}\n\n${DISCLOSURE}` });
     }
