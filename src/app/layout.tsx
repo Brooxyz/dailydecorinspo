@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Daily Decor Inspo",
   },
+  // Google Search Console ownership (keep it, Google re-checks)
+  verification: { google: "LT8aprsiHA1NiYDKkI2QVjEA0LpztWQO4D-IMMGCFkc" },
   other: {
     // Pinterest domain verification
     "p:domain_verify": "63275721639a1ac70a4eedda202d5668",
