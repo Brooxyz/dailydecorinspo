@@ -1347,6 +1347,89 @@
           "rating": 4.7
         }
       ]
+    },
+    {
+      "id": "soft-pink-makeup-vanity-17",
+      "slug": "soft-pink-makeup-vanity-17",
+      "title": "Soft Pink & Gold Makeup Vanity Corner",
+      "subtitle": "A white and gold desk, a glowing Hollywood mirror & a velvet stool for a getting-ready spot you will love",
+      "category": "vanity",
+      "tags": ["makeup vanity ideas", "vanity setup", "glam vanity", "bedroom vanity corner", "amazon finds"],
+      "roomImage": "/images/rooms/room-17.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$266-293",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 54.2, "y": 37.2},
+          "name": "Hollywood Vanity Mirror with Lights, 23 x 18 (White)",
+          "description": "Tabletop mirror ringed with dimmable bulbs plus a 10x magnifier and USB charging",
+          "image": "/images/products/room-17/mirror.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CD7C162B?tag=dailydecorins-20",
+          "priceRange": "$43-47",
+          "rating": 4.4
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 81.4, "y": 44.3},
+          "name": "Faux White Tulips in Glass Vase",
+          "description": "Real-touch white tulip bouquet already arranged in a tall clear vase",
+          "image": "/images/products/room-17/tulips.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0D2MFQJ2S?tag=dailydecorins-20",
+          "priceRange": "$30-33",
+          "rating": 4.6
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 28.9, "y": 50.6},
+          "name": "Vtopmart 3 Tier Clear Makeup Organizer with Drawers",
+          "description": "Clear acrylic caddy for brushes and lipsticks with two pull-out drawers",
+          "image": "/images/products/room-17/organizer.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0D3KNHBZV?tag=dailydecorins-20",
+          "priceRange": "$17-19",
+          "rating": 4.8
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 71.9, "y": 53.8},
+          "name": "Gold Mirrored Glass Vanity Tray",
+          "description": "Octagon perfume tray with a gold frame and mirror base",
+          "image": "/images/products/room-17/tray.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07T4GDPPW?tag=dailydecorins-20",
+          "priceRange": "$18-20",
+          "rating": 4.7
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 35.4, "y": 58.5},
+          "name": "SUPERJARE White and Gold Vanity Desk with Drawers, 47 in",
+          "description": "Glossy white desk with two drawers, brass knobs and a slim gold frame",
+          "image": "/images/products/room-17/desk.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B09J7Q3VCY?tag=dailydecorins-20",
+          "priceRange": "$110-121",
+          "rating": 4.4
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 51.9, "y": 71.2},
+          "name": "Pink Velvet Vanity Stool with Gold Legs",
+          "description": "Round padded velvet stool on gold hairpin legs",
+          "image": "/images/products/room-17/stool.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BDRWCYM6?tag=dailydecorins-20",
+          "priceRange": "$29-32",
+          "rating": 4.6
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 23.6, "y": 86.2},
+          "name": "Round Ivory Fuzzy Area Rug, 4 ft",
+          "description": "Soft cream shag circle rug that warms up the floor under the stool",
+          "image": "/images/products/room-17/rug.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B085C9H5LX?tag=dailydecorins-20",
+          "priceRange": "$19-21",
+          "rating": 4.5
+        }
+      ]
     }
   ]
 }
