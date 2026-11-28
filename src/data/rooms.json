@@ -1181,6 +1181,89 @@
           "rating": 4.5
         }
       ]
+    },
+    {
+      "id": "japandi-home-office-corner-15",
+      "slug": "japandi-home-office-corner-15",
+      "title": "Calm Japandi Home Office Corner",
+      "subtitle": "Light oak desk, a cream channel chair & a paper lantern glow for a focused new year",
+      "category": "desktop-setup",
+      "tags": ["home office ideas", "japandi decor", "small home office", "desk setup", "amazon finds"],
+      "roomImage": "/images/rooms/room-15.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$455-504",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 38.9, "y": 60.1},
+          "name": "Solid Wood Writing Desk with Drawers (Natural)",
+          "description": "Light wood desk with two slim drawers & tapered legs for small spaces",
+          "image": "/images/products/room-15/desk.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DY7J553J?tag=dailydecorins-20",
+          "priceRange": "$136-150",
+          "rating": 4.3
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 70.8, "y": 64.9},
+          "name": "Wide Armless Criss-Cross Desk Chair (Beige)",
+          "description": "Channel-tufted fabric seat on a rolling 5-star base, height adjustable",
+          "image": "/images/products/room-15/chair.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0D6QX1MRC?tag=dailydecorins-20",
+          "priceRange": "$63-70",
+          "rating": 4.4
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 64.9, "y": 22.8},
+          "name": "Round Linen Pendant Lantern Shade (20 in)",
+          "description": "Off-white handmade lantern shade; pairs with a pendant cord kit",
+          "image": "/images/products/room-15/lamp.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0F2ZSRBM5?tag=dailydecorins-20",
+          "priceRange": "$26-30",
+          "rating": 4.4
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 33.6, "y": 25.3},
+          "name": "Thick Oak Floating Shelves, Set of 2 (24 in)",
+          "description": "Chunky natural wood wall shelves with hidden brackets",
+          "image": "/images/products/room-15/shelves.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DC6S57HV?tag=dailydecorins-20",
+          "priceRange": "$41-46",
+          "rating": 4.5
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 11.8, "y": 67.2},
+          "name": "Fake Snake Plant in White Pot (3 ft)",
+          "description": "Realistic tall faux sansevieria, no watering needed",
+          "image": "/images/products/room-15/plant.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0GF7QBS5G?tag=dailydecorins-20",
+          "priceRange": "$80-88",
+          "rating": 4.6
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 38.9, "y": 87},
+          "name": "Natural Braided Jute Rug (4x6)",
+          "description": "Hand-woven honey-beige jute that grounds the desk area",
+          "image": "/images/products/room-15/rug.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CG3LKFHS?tag=dailydecorins-20",
+          "priceRange": "$54-60",
+          "rating": 4.3
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 70.8, "y": 35.6},
+          "name": "3D Textured Wave Wall Art, Set of 2",
+          "description": "White minimalist relief prints in thin natural wood frames",
+          "image": "/images/products/room-15/art.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FL78DV6G?tag=dailydecorins-20",
+          "priceRange": "$55-60",
+          "rating": 4.6
+        }
+      ]
     }
   ]
 }
