@@ -842,6 +842,89 @@
           "rating": 4.4
         }
       ]
+    },
+    {
+      "id": "warm-cafe-dining-nook-12",
+      "slug": "warm-cafe-dining-nook-12",
+      "title": "Warm Cafe-Style Dining Nook",
+      "subtitle": "Walnut tulip table, cane chairs & a glowing rattan pendant for small spaces",
+      "category": "dining-nook",
+      "tags": ["dining nook ideas", "small dining room", "breakfast nook", "rattan decor", "amazon finds"],
+      "roomImage": "/images/rooms/room-12.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$306-355",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 56, "y": 66},
+          "name": "Tulip Round Pedestal Dining Table (Faux Walnut)",
+          "description": "Mid-century tulip table with wipe-clean walnut-look top, sized for small nooks",
+          "image": "/images/products/room-12/table.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FG7SC33Y?tag=dailydecorins-20",
+          "priceRange": "$90-100",
+          "rating": 4.7
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 79, "y": 75.3},
+          "name": "BedsPick Rattan Cane Dining Chairs, Set of 2 (Brown)",
+          "description": "Wingback cane-back chairs with brown boucle seats & black metal legs",
+          "image": "/images/products/room-12/chairs.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DZBM5YYY?tag=dailydecorins-20",
+          "priceRange": "$119-135",
+          "rating": 4.5
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 55, "y": 24.7},
+          "name": "Boho Rattan Plug-In Pendant Light",
+          "description": "Woven double-drum wicker shade with plug-in cord & dimmer, no hardwiring",
+          "image": "/images/products/room-12/pendant.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CF8LBQ4W?tag=dailydecorins-20",
+          "priceRange": "$32-38",
+          "rating": 4.6
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 9, "y": 46.7},
+          "name": "MYSKY HOME Natural Linen Curtains, 84\" (2 Panels)",
+          "description": "Semi-sheer grommet panels that soften daylight in an oatmeal tone",
+          "image": "/images/products/room-12/curtains.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0C1S8332K?tag=dailydecorins-20",
+          "priceRange": "$16-20",
+          "rating": 4.7
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 51.5, "y": 61.3},
+          "name": "Rustic Cream Ceramic Vase (6.3\")",
+          "description": "Hand-finished textured farmhouse vase for dried stems or branches",
+          "image": "/images/products/room-12/vase.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DYNB5K2V?tag=dailydecorins-20",
+          "priceRange": "$18-22",
+          "rating": 4.7
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 64, "y": 57.3},
+          "name": "Brass Gold Taper Candlestick Holders, Set of 3",
+          "description": "Slim vintage-modern candlesticks in three heights for the table",
+          "image": "/images/products/room-12/candles.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07W554ZNB?tag=dailydecorins-20",
+          "priceRange": "$12-16",
+          "rating": 4.6
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 77, "y": 40},
+          "name": "Vintage Lemon Bowl Still Life Framed Art (12x16\")",
+          "description": "European-style fruit oil painting print in an ornate gold frame",
+          "image": "/images/products/room-12/art.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FP4FVS44?tag=dailydecorins-20",
+          "priceRange": "$19-24",
+          "rating": 4.6
+        }
+      ]
     }
   ]
 }

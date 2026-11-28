@@ -54,6 +54,12 @@ CATEGORY_META: dict[str, dict[str, str]] = {
         "tags": "#livingroomdecor #cozyfall #apartmentdecor #warmminimalism #amazonfinds #falldecor",
         "keywords": "living room decor, cozy fall apartment, warm minimalism, autumn decor, amazon finds",
     },
+    "dining-nook": {
+        "board": "Dining Nook Ideas",
+        "title": "Dining Nook Ideas",
+        "tags": "#diningnook #breakfastnook #smalldiningroom #diningroomdecor #amazonfinds #homedecorideas",
+        "keywords": "dining nook ideas, breakfast nook, small dining room, dining room decor, rattan pendant, amazon finds",
+    },
     "kids-room": {
         "board": "Kids Room Ideas",
         "title": "Kids Room Ideas",

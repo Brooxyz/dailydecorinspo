@@ -16,6 +16,7 @@ const CATEGORIES = [
   { id: "entryway", label: "Entryways" },
   { id: "coffee-bar", label: "Coffee Bars" },
   { id: "kids-room", label: "Kids Rooms" },
+  { id: "dining-nook", label: "Dining Nooks" },
 ];
 
 export function RoomsExplorer({ initialRooms }: { initialRooms: Room[] }) {

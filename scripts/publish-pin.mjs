@@ -41,6 +41,8 @@ async function main() {
     boardName = 'Cozy Reading Nooks & Corners';
   } else if (room.category === 'bathroom') {
     boardName = 'Small Bathroom Hacks';
+  } else if (room.category === 'dining-nook') {
+    boardName = 'Dining Nook Ideas';
   } else if (room.category === 'kids-room') {
     boardName = 'Kids Room Ideas';
   } else if (room.category === 'coffee-bar') {
@@ -78,6 +80,7 @@ async function main() {
     'reading-nook': '#amazonfinds #readingnook #cozycorner #bouclechair #warmminimalism #homedecorideas #aesthetic',
     'desktop-setup': '#amazonfinds #desksetup #wfhsetup #aestheticdesk #homeoffice #workspacegoals #budgetdecor',
     'living-room': '#amazonfinds #livingroomdecor #cozyfall #apartmentdecor #warmminimalism #falldecor #homedecor',
+    'dining-nook': '#amazonfinds #diningnook #breakfastnook #smalldiningroom #diningroomdecor #budgetdecor',
     'kids-room': '#amazonfinds #kidsroom #readingnook #kidsroomdecor #bohonursery #budgetdecor',
     'coffee-bar': '#amazonfinds #coffeebar #coffeestation #coffeebarideas #kitchendecor #budgetdecor',
     'entryway': '#amazonfinds #entrywaydecor #smallentryway #farmhousedecor #mudroom #budgetdecor',
