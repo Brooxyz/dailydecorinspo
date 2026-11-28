@@ -7,6 +7,7 @@ export const CATEGORY_LABELS: Record<string, string> = {
   bathroom: "Bathroom",
   entryway: "Entryway",
   "coffee-bar": "Coffee Bar",
+  "kids-room": "Kids Room",
 };
 
 export function categoryLabel(slug: string): string {

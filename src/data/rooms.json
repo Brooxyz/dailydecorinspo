@@ -759,6 +759,89 @@
           "rating": 4.8
         }
       ]
+    },
+    {
+      "id": "boho-kids-reading-nook-11",
+      "slug": "boho-kids-reading-nook-11",
+      "title": "Dreamy Boho Kids Reading Nook",
+      "subtitle": "Pom pom canopy, star lights & face-out book ledges for little readers",
+      "category": "kids-room",
+      "tags": ["kids reading nook", "kids room ideas", "boho nursery", "reading corner", "amazon finds"],
+      "roomImage": "/images/rooms/room-11.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$187-230",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 42.5, "y": 26},
+          "name": "OldPAPA Pom Pom Hanging Canopy (White)",
+          "description": "Cotton canopy tent with pom pom trim, 98\" tall, hangs from one ceiling hook",
+          "image": "/images/products/room-11/canopy.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07DR6B7LZ?tag=dailydecorins-20",
+          "priceRange": "$35-42",
+          "rating": 4.7
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 84, "y": 55},
+          "name": "Fixwal Nursery Book Ledges, Set of 3 (Natural)",
+          "description": "16.5\" floating wood shelves with front lip for face-out picture books",
+          "image": "/images/products/room-11/shelves.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0C6T957TW?tag=dailydecorins-20",
+          "priceRange": "$19-26",
+          "rating": 4.5
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 39, "y": 77},
+          "name": "MAXYOYO 3-in-1 Kids Bean Bag Chair (Beige)",
+          "description": "Foam-filled floor sofa that folds out into a lounger, removable cover",
+          "image": "/images/products/room-11/beanbag.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DNZBR2DJ?tag=dailydecorins-20",
+          "priceRange": "$51-58",
+          "rating": 4.4
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 17.7, "y": 87},
+          "name": "Lahome Sylvie 4 ft Round Floral Rug (Beige)",
+          "description": "Soft low-pile washable circle rug with non-slip backing",
+          "image": "/images/products/room-11/rug.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DC64M2YN?tag=dailydecorins-20",
+          "priceRange": "$26-32",
+          "rating": 4.6
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 85, "y": 85.5},
+          "name": "INDRESSME XXXL Woven Rope Basket",
+          "description": "90L cotton rope basket for plush toys & blankets, with handles",
+          "image": "/images/products/room-11/basket.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B085HFHW42?tag=dailydecorins-20",
+          "priceRange": "$18-24",
+          "rating": 4.8
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 75.5, "y": 30},
+          "name": "Boho Sun, Moon & Leaf Wall Art, Set of 3",
+          "description": "12x16\" neutral canvas prints in terracotta & mustard tones",
+          "image": "/images/products/room-11/art.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BZKH62S1?tag=dailydecorins-20",
+          "priceRange": "$29-35",
+          "rating": 4.7
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 30, "y": 35.6},
+          "name": "Minetom 50 LED Star String Lights",
+          "description": "17 ft warm white battery fairy lights with timer, soft star glow",
+          "image": "/images/products/room-11/lights.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CRKCYNZX?tag=dailydecorins-20",
+          "priceRange": "$9-13",
+          "rating": 4.4
+        }
+      ]
     }
   ]
 }
