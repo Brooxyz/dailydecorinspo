@@ -147,9 +147,17 @@ async function renderRoom(room, num) {
         ${text('Tap for every link', { font: 'sansBold', size: 30, x: W / 2, y: H - 87, anchor: 'middle', fill: C.walnut })}
       </g>
     </svg>`;
-    const frame = await sharp(base)
-      .extract({ left: Math.round(cx), top: Math.round(cy), width: Math.round(cw), height: Math.round(ch) })
-      .resize(W, H)
+    // Sub-pixel camera: crop on whole pixels, then scale + shift the fraction with bicubic interpolation.
+    // (Rounding the crop each frame made the slow push-in step by a pixel now and then, which read as jitter.)
+    const ix = Math.floor(cx), iy = Math.floor(cy), ox = cx - ix, oy = cy - iy;
+    const ew = Math.min(W - ix, Math.ceil(cw + ox) + 1), eh = Math.min(H - iy, Math.ceil(ch + oy) + 1);
+    const moved = await sharp(base)
+      .extract({ left: ix, top: iy, width: ew, height: eh })
+      .affine([z, 0, 0, z], { odx: -ox * z, ody: -oy * z, interpolator: sharp.interpolators.bicubic })
+      .toBuffer({ resolveWithObject: true });
+    if (f === 0 && (moved.info.width < W || moved.info.height < H)) throw new Error(`affine output ${moved.info.width}x${moved.info.height} < ${W}x${H}`);
+    const frame = await sharp(moved.data)
+      .extract({ left: 0, top: 0, width: W, height: H })
       .composite([{ input: Buffer.from(svg), top: 0, left: 0 }])
       .removeAlpha()
       .raw()
