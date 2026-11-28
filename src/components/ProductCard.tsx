@@ -1,3 +1,5 @@
+import { SaveButton } from "@/components/SaveButton";
+
 export type Product = {
   number: number;
   name: string;
@@ -44,6 +46,8 @@ export function ProductCard({ product }: { product: Product }) {
             ★ {product.rating}
           </span>
         ) : null}
+        {/* Saved by packshot path: unique per product, the same on room and roundup pages */}
+        <SaveButton kind="products" id={product.image} label={product.name} className="absolute bottom-3 right-3" />
       </div>
 
       <div className="p-4 flex flex-col flex-1 justify-between gap-4">

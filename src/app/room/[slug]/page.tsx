@@ -1,4 +1,5 @@
 import { RoomHotspots } from "@/components/RoomHotspots";
+import { SaveButton } from "@/components/SaveButton";
 import roomsData from "@/data/rooms.json";
 import { ProductCard, type Product } from "@/components/ProductCard";
 import { notFound } from "next/navigation";
@@ -100,9 +101,12 @@ export default async function RoomPage({
           {/* Room Info */}
           <div className="space-y-6 lg:pt-4">
             <div>
-              <span className="inline-block px-3 py-1 rounded-full bg-surface-2 text-ink-2 text-xs font-semibold mb-4">
-                {categoryLabel(room.category)}
-              </span>
+              <div className="flex items-center justify-between gap-3 mb-4">
+                <span className="inline-block px-3 py-1 rounded-full bg-surface-2 text-ink-2 text-xs font-semibold">
+                  {categoryLabel(room.category)}
+                </span>
+                <SaveButton kind="rooms" id={room.slug} label={room.title} variant="pill" />
+              </div>
               <h1 className="font-display text-4xl sm:text-5xl font-medium text-ink leading-[1.05] tracking-tight">
                 {room.title}
               </h1>

@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { liveFindTypes } from "@/lib/finds";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { SavedLink } from "@/components/SaveButton";
+import { KeepHandy } from "@/components/KeepHandy";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dailydecorinspo.vercel.app"),
@@ -31,6 +33,13 @@ export const metadata: Metadata = {
     // Pinterest domain verification
     "p:domain_verify": "63275721639a1ac70a4eedda202d5668",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf6f0" },
+    { media: "(prefers-color-scheme: dark)", color: "#17120f" },
+  ],
 };
 
 // Runs before paint: saved choice wins, otherwise follow the system setting (no light flash at night).
@@ -96,6 +105,7 @@ function Header() {
           <a href="/#shop-by-piece" className="hidden sm:inline text-sm font-medium text-ink-2 hover:text-ink transition-colors">
             Shop by piece
           </a>
+          <SavedLink />
           <a
             href="https://pinterest.com/dailydecorinspo_"
             target="_blank"
@@ -145,6 +155,7 @@ function Footer() {
               </a>
             ))}
           </nav>
+          <KeepHandy />
           <div className="flex items-center gap-5 pt-2 text-xs text-muted">
             <a href="/privacy/" className="hover:text-ink underline underline-offset-2 transition-colors">
               Privacy Policy

@@ -4,6 +4,7 @@ import { useState } from "react";
 import roomsData from "@/data/rooms.json";
 import { RoomCard } from "@/components/RoomCard";
 import categoryData from "@/data/categories.json";
+import { KeepHandy } from "@/components/KeepHandy";
 
 type Room = (typeof roomsData.rooms)[number];
 
@@ -21,6 +22,16 @@ export function RoomsExplorer({ initialRooms }: { initialRooms: Room[] }) {
       .filter(([id]) => counts[id])
       .map(([id, c]) => ({ id, label: c.tab, count: counts[id] })),
   ];
+
+  // "New": the three newest rooms, if they were added within a week of the latest one
+  const latest = Math.max(...initialRooms.map((r) => Date.parse(r.createdAt)));
+  const newSlugs = new Set(
+    [...initialRooms]
+      .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
+      .slice(0, 3)
+      .filter((r) => latest - Date.parse(r.createdAt) <= 7 * 864e5)
+      .map((r) => r.slug)
+  );
 
   const filteredRooms = initialRooms.filter(
     (room) => selectedCategory === "all" || room.category === selectedCategory
@@ -59,22 +70,22 @@ export function RoomsExplorer({ initialRooms }: { initialRooms: Room[] }) {
       <section className="max-w-6xl mx-auto px-4 pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredRooms.map((room) => (
-            <RoomCard key={room.id} room={room} />
+            <RoomCard key={room.id} room={room} isNew={newSlugs.has(room.slug)} />
           ))}
 
-          <a
-            href="https://pinterest.com/dailydecorinspo_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-2xl border border-dashed border-line flex items-center justify-center min-h-[320px] bg-surface-2 p-8 hover:border-muted transition-colors"
-          >
-            <div className="text-center max-w-xs">
+          <div className="rounded-2xl border border-dashed border-line flex items-center justify-center min-h-[320px] bg-surface-2 p-8">
+            <div className="text-center max-w-xs flex flex-col items-center">
               <p className="font-display text-2xl text-ink">A new room every few days</p>
               <p className="text-sm text-ink-2 mt-3 leading-relaxed">
-                Follow @dailydecorinspo_ on Pinterest to see new rooms first.
+                Keep the site handy to see each new room first, or follow{" "}
+                <a href="https://pinterest.com/dailydecorinspo_" target="_blank" rel="noopener noreferrer" className="text-ink underline underline-offset-4">
+                  @dailydecorinspo_
+                </a>{" "}
+                on Pinterest.
               </p>
+              <KeepHandy className="mt-5 items-center" />
             </div>
-          </a>
+          </div>
         </div>
       </section>
     </>

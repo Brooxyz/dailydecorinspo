@@ -1,6 +1,7 @@
 import roomsData from "@/data/rooms.json";
 import { RoomsExplorer } from "@/components/RoomsExplorer";
 import { HeroCarousel, type HeroRoom } from "@/components/HeroCarousel";
+import { NewSinceVisit } from "@/components/NewSinceVisit";
 import { findsBySlug, liveFindTypes } from "@/lib/finds";
 import type { Product } from "@/components/ProductCard";
 
@@ -47,9 +48,12 @@ export default function HomePage() {
         <HeroCarousel rooms={heroRooms} />
       </section>
 
+      {/* Returning visitors: what was added since they last came */}
+      <NewSinceVisit rooms={heroRooms.map(({ slug, title, roomImage }) => ({ slug, title, roomImage }))} />
+
       {/* Rooms */}
       <div id="rooms" className="scroll-mt-20">
-        <RoomsExplorer initialRooms={rooms} />
+        <RoomsExplorer initialRooms={[...rooms].reverse()} />
       </div>
 
       {/* Shop by piece: roundup pages built from every room */}
