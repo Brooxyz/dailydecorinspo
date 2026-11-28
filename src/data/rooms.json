@@ -1264,6 +1264,89 @@
           "rating": 4.6
         }
       ]
+    },
+    {
+      "id": "minimal-home-workout-corner-16",
+      "slug": "minimal-home-workout-corner-16",
+      "title": "Calm Minimal Home Workout Corner",
+      "subtitle": "A cork mat, an arched mirror & pretty weights for a new-year routine that fits a small apartment",
+      "category": "home-gym",
+      "tags": ["home workout corner", "home gym ideas", "small home gym", "workout space", "amazon finds"],
+      "roomImage": "/images/rooms/room-16.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$228-252",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 43.6, "y": 50.6},
+          "name": "Arched Full Length Floor Mirror with Stand (Black)",
+          "description": "64x21 arched mirror with a thin black metal frame; leans or stands on its own",
+          "image": "/images/products/room-16/mirror.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0GSZ2R8PN?tag=dailydecorins-20",
+          "priceRange": "$48-53",
+          "rating": 4.7
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 67.0, "y": 49.0},
+          "name": "Artificial Fiddle Leaf Fig Tree, 4 ft",
+          "description": "Lifelike faux fiddle leaf fig in a plain white pot, zero watering",
+          "image": "/images/products/room-16/fig.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0B8SBXTBD?tag=dailydecorins-20",
+          "priceRange": "$48-53",
+          "rating": 4.4
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 75.5, "y": 70.4},
+          "name": "Fabric Resistance Bands, Set of 4",
+          "description": "Non-slip booty bands in four strengths: aqua, pink, grey & black",
+          "image": "/images/products/room-16/bands.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B088396TM2?tag=dailydecorins-20",
+          "priceRange": "$19-21",
+          "rating": 4.8
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 90.0, "y": 70.0},
+          "name": "Large Cotton Rope Storage Basket with Handles",
+          "description": "Tan & black woven basket with leather-tab handles to hide mats & bands",
+          "image": "/images/products/room-16/basket.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B07QRGMX2L?tag=dailydecorins-20",
+          "priceRange": "$27-30",
+          "rating": 4.6
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 24.0, "y": 80.0},
+          "name": "Gaiam Cork Yoga Mat, 5mm",
+          "description": "Natural cork top with a grippy black base; non-slip even when you sweat",
+          "image": "/images/products/room-16/yoga-mat.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B079W4FX8B?tag=dailydecorins-20",
+          "priceRange": "$27-30",
+          "rating": 4.4
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 39.0, "y": 78.7},
+          "name": "Amazon Basics High Density Foam Roller",
+          "description": "Firm black speckled roller for stretching & muscle recovery",
+          "image": "/images/products/room-16/foam-roller.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B072J37MQF?tag=dailydecorins-20",
+          "priceRange": "$17-19",
+          "rating": 4.6
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 86.0, "y": 85.0},
+          "name": "Amazon Basics Neoprene Dumbbell Set with Stand",
+          "description": "3, 5 & 8 lb pairs in purple, lime & yellow on a compact rack",
+          "image": "/images/products/room-16/dumbbells.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B01LR5SM74?tag=dailydecorins-20",
+          "priceRange": "$42-46",
+          "rating": 4.7
+        }
+      ]
     }
   ]
 }
