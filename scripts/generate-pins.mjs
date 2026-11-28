@@ -1,9 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
+import { text, wrap } from './pin-text.mjs';
 
 const WIDTH = 1000;
 const HEIGHT = 1500;
+
+// Palette and type match the website (src/app/globals.css): linen, walnut, amber lamp glow;
+// Fraunces for headings, Instrument Sans for labels (vector paths via scripts/pin-text.mjs).
+const C = { linen: '#faf6f0', oat: '#f3ebe0', ink: '#2b1d14', ink2: '#5e4636', muted: '#8a7261', line: '#e6d8c6', walnut: '#7a4a2b', amber: '#e2aa6c', sage: '#5f7357', night: '#1d1612' };
 
 async function generatePinA({
   roomImageSrc,
@@ -16,53 +21,33 @@ async function generatePinA({
     .resize(WIDTH, HEIGHT, { fit: 'cover', position: 'center' })
     .toBuffer();
 
+  const titleLines = wrap(title, { font: 'display', size: 54, maxWidth: 800, maxLines: 2 });
+  const subLines = wrap(subtitle, { font: 'sans', size: 22, maxWidth: 800, maxLines: 2 });
+  const cardH = 70 + titleLines.length * 60 + subLines.length * 30 + 26;
+
   const svgOverlay = `
   <svg width="${WIDTH}" height="${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="topShadow" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#140f0c" stop-opacity="0.8" />
-        <stop offset="60%" stop-color="#140f0c" stop-opacity="0.35" />
-        <stop offset="100%" stop-color="#140f0c" stop-opacity="0" />
-      </linearGradient>
-
       <linearGradient id="bottomShadow" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#140f0c" stop-opacity="0" />
-        <stop offset="40%" stop-color="#140f0c" stop-opacity="0.55" />
-        <stop offset="100%" stop-color="#140f0c" stop-opacity="0.95" />
+        <stop offset="0%" stop-color="${C.night}" stop-opacity="0" />
+        <stop offset="100%" stop-color="${C.night}" stop-opacity="0.75" />
       </linearGradient>
-
-      <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-        <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+      <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000" flood-opacity="0.28"/>
       </filter>
     </defs>
+    <rect x="0" y="${HEIGHT - 330}" width="${WIDTH}" height="330" fill="url(#bottomShadow)" />
 
-    <rect x="0" y="0" width="${WIDTH}" height="320" fill="url(#topShadow)" />
-    <rect x="0" y="${HEIGHT - 380}" width="${WIDTH}" height="380" fill="url(#bottomShadow)" />
-
-    <!-- Top Badge Header Card -->
-    <g transform="translate(60, 48)" filter="url(#cardShadow)">
-      <rect x="0" y="0" width="880" height="155" rx="22" fill="#fffaf5" fill-opacity="0.96" stroke="#e8c49e" stroke-width="2" />
-      
-      <rect x="32" y="24" width="130" height="32" rx="16" fill="#a35e30" />
-      <text x="97" y="45" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">ROOM #${roomNumber}</text>
-
-      <text x="180" y="46" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#834c2d" letter-spacing="2.5">DAILY DECOR INSPO</text>
-
-      <text x="32" y="104" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="bold" fill="#24170e">${escapeXml(title)}</text>
-      <text x="32" y="134" font-family="'Inter', sans-serif" font-size="17" fill="#6b3f28">${escapeXml(subtitle)}</text>
+    <g transform="translate(60, 52)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="880" height="${cardH}" rx="26" fill="${C.linen}" fill-opacity="0.97" />
     </g>
+    ${text(`Room ${Number(roomNumber)} by Daily Decor Inspo`, { font: 'sans', size: 19, x: 100, y: 108, fill: C.muted })}
+    ${titleLines.map((l, i) => text(l, { font: 'display', size: 54, x: 98, y: 172 + i * 60, fill: C.ink })).join('')}
+    ${subLines.map((l, i) => text(l, { font: 'sans', size: 22, x: 100, y: 172 + (titleLines.length - 1) * 60 + 44 + i * 30, fill: C.ink2 })).join('')}
 
-    <!-- Bottom CTA Card -->
-    <g transform="translate(70, ${HEIGHT - 210})" filter="url(#cardShadow)">
-      <rect x="0" y="0" width="860" height="145" rx="26" fill="#1c1612" fill-opacity="0.95" stroke="#dca672" stroke-width="2" />
-      
-      <circle cx="70" cy="72" r="38" fill="#d18b4e" />
-      <text x="70" y="83" font-size="30" text-anchor="middle">🛍️</text>
-
-      <text x="135" y="62" font-family="'Playfair Display', Georgia, serif" font-size="27" font-weight="bold" fill="#ffffff">Shop Every Item From This Room</text>
-      <text x="135" y="95" font-family="'Inter', sans-serif" font-size="18" font-weight="500" fill="#f2dcc5">Tap pin to visit dailydecorinspo.vercel.app</text>
-      <text x="135" y="120" font-family="'Inter', sans-serif" font-size="13" fill="#a3a3a3">Curated Amazon Finds • Direct Links &amp; Real Prices</text>
-    </g>
+    <rect x="${WIDTH / 2 - 300}" y="${HEIGHT - 190}" width="600" height="84" rx="42" fill="${C.linen}" />
+    ${text('Shop every item in this room', { font: 'sansBold', size: 28, x: WIDTH / 2, y: HEIGHT - 138, anchor: 'middle', fill: C.walnut })}
+    ${text('dailydecorinspo.vercel.app', { font: 'sans', size: 20, x: WIDTH / 2, y: HEIGHT - 66, anchor: 'middle', fill: '#f3e9dc' })}
   </svg>
   `;
 
@@ -93,47 +78,43 @@ async function generatePinB({
 
   const badgesSvg = (badges || []).map(b => `
     <g transform="translate(${b.x}, ${b.y})" filter="url(#badgeGlow)">
-      <circle cx="0" cy="0" r="30" fill="#ffffff" fill-opacity="0.5" />
-      <circle cx="0" cy="0" r="23" fill="#c37539" stroke="#ffffff" stroke-width="3.5" />
-      <text x="0" y="8" font-family="'Inter', sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">${b.number}</text>
+      <circle cx="0" cy="0" r="27" fill="#ffffff" fill-opacity="0.55" />
+      <circle cx="0" cy="0" r="22" fill="${C.walnut}" stroke="#ffffff" stroke-width="3.5" />
     </g>
+    ${text(String(b.number), { font: 'sansBold', size: 22, x: b.x, y: b.y + 8, anchor: 'middle', fill: '#ffffff' })}
   `).join('\n');
 
-  const cardWidth = Math.floor((WIDTH - 64 - (maxProducts - 1) * 12) / maxProducts);
   const cardGap = 12;
+  const cardWidth = Math.floor((WIDTH - 64 - (maxProducts - 1) * cardGap) / maxProducts);
+  const isEtsy = products.some(p => p.store === 'etsy');
 
   const stripBgSvg = `
   <svg width="${WIDTH}" height="${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <filter id="badgeGlow" x="-50%" y="-50%" width="200%" height="200%">
-        <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#000" flood-opacity="0.6"/>
+        <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.45"/>
       </filter>
-      <filter id="headerShadow" x="-10%" y="-10%" width="120%" height="120%">
-        <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+      <filter id="headerShadow" x="-10%" y="-10%" width="120%" height="140%">
+        <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
       </filter>
     </defs>
 
     <g transform="translate(50, 36)" filter="url(#headerShadow)">
-      <rect x="0" y="0" width="900" height="115" rx="20" fill="#18120e" fill-opacity="0.95" stroke="#dca672" stroke-width="2" />
-      <text x="450" y="44" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" fill="#dca672" text-anchor="middle" letter-spacing="3.5">SHOP THE LOOK • ROOM #${roomNumber}</text>
-      <text x="450" y="86" font-family="'Playfair Display', Georgia, serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">${escapeXml(title)} • ${escapeXml(totalPrice)}</text>
+      <rect x="0" y="0" width="900" height="118" rx="24" fill="${C.night}" fill-opacity="0.94" />
     </g>
+    ${text(`Shop the look, room ${Number(roomNumber)}`, { font: 'sans', size: 19, x: 500, y: 80, anchor: 'middle', fill: C.amber })}
+    ${text(`${title}  ${totalPrice}`, { font: 'display', size: 36, x: 500, y: 128, anchor: 'middle', fill: '#f3e9dc', maxWidth: 840 })}
 
     ${badgesSvg}
 
-    <rect x="0" y="${PHOTO_HEIGHT}" width="${WIDTH}" height="${STRIP_HEIGHT}" fill="#fffaf5" />
-    <line x1="0" y1="${PHOTO_HEIGHT}" x2="${WIDTH}" y2="${PHOTO_HEIGHT}" stroke="#e8c49e" stroke-width="2" />
-
-    <text x="32" y="${PHOTO_HEIGHT + 38}" font-family="'Inter', sans-serif" font-size="15" font-weight="bold" fill="#6b3f28" letter-spacing="1">${products.some(p => p.store === 'etsy') ? 'SHOP EVERY ITEM IN THIS ROOM' : 'EXACT AMAZON FINDS IN THIS ROOM'}</text>
-    <text x="${WIDTH - 32}" y="${PHOTO_HEIGHT + 38}" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#a35e30" text-anchor="end">🔗 Tap Pin for Direct Links</text>
+    <rect x="0" y="${PHOTO_HEIGHT}" width="${WIDTH}" height="${STRIP_HEIGHT}" fill="${C.linen}" />
+    <line x1="0" y1="${PHOTO_HEIGHT}" x2="${WIDTH}" y2="${PHOTO_HEIGHT}" stroke="${C.line}" stroke-width="2" />
+    ${text(isEtsy ? 'Every item in this room' : 'The Amazon finds in this room', { font: 'display', size: 24, x: 32, y: PHOTO_HEIGHT + 40, fill: C.ink })}
+    ${text('Tap the pin for every link', { font: 'sans', size: 16, x: WIDTH - 32, y: PHOTO_HEIGHT + 39, anchor: 'end', fill: C.muted })}
 
     ${products.slice(0, maxProducts).map((p, i) => {
       const x = 32 + i * (cardWidth + cardGap);
-      return `
-        <g transform="translate(${x}, ${PHOTO_HEIGHT + 52})">
-          <rect x="0" y="0" width="${cardWidth}" height="235" rx="14" fill="#ffffff" stroke="#e8c49e" stroke-width="1.2" />
-        </g>
-      `;
+      return `<rect x="${x}" y="${PHOTO_HEIGHT + 56}" width="${cardWidth}" height="238" rx="16" fill="#ffffff" stroke="${C.line}" stroke-width="1.2" />`;
     }).join('\n')}
   </svg>
   `;
@@ -142,17 +123,14 @@ async function generatePinB({
   <svg width="${WIDTH}" height="${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
     ${products.slice(0, maxProducts).map((p, i) => {
       const x = 32 + i * (cardWidth + cardGap);
+      const y0 = PHOTO_HEIGHT + 56;
       return `
-        <g transform="translate(${x}, ${PHOTO_HEIGHT + 52})">
-          <circle cx="24" cy="24" r="14" fill="#c37539" />
-          <text x="24" y="29" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">${p.number}</text>
-
-          <rect x="${cardWidth - 82}" y="12" width="72" height="24" rx="12" fill="#fdf8f3" stroke="#e8c49e" stroke-width="1" />
-          <text x="${cardWidth - 46}" y="28" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#834c2d" text-anchor="middle">${escapeXml(p.priceRange)}</text>
-
-          <text x="12" y="195" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#24170e">${escapeXml(p.name.slice(0, 18))}</text>
-          <text x="12" y="216" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#c37539">${p.store === 'etsy' ? 'Handmade • Our Etsy Shop' : `Amazon Prime ★ ${p.rating}`}</text>
-        </g>
+        <circle cx="${x + 24}" cy="${y0 + 24}" r="14" fill="${C.walnut}" />
+        ${text(String(p.number), { font: 'sansBold', size: 15, x: x + 24, y: y0 + 29, anchor: 'middle', fill: '#ffffff' })}
+        <rect x="${x + cardWidth - 92}" y="${y0 + 11}" width="82" height="26" rx="13" fill="${C.oat}" />
+        ${text(p.priceRange, { font: 'sansBold', size: 14, x: x + cardWidth - 51, y: y0 + 29, anchor: 'middle', fill: C.ink, maxWidth: 74 })}
+        ${text(wrap(p.name, { font: 'sansBold', size: 14, maxWidth: cardWidth - 24, maxLines: 1 })[0], { font: 'sansBold', size: 14, x: x + 12, y: y0 + 200, fill: C.ink })}
+        ${text(p.store === 'etsy' ? 'Handmade, our Etsy shop' : (p.rating ? `Rated ${p.rating} on Amazon` : 'On Amazon'), { font: 'sans', size: 13, x: x + 12, y: y0 + 222, fill: C.sage })}
       `;
     }).join('\n')}
   </svg>
@@ -163,24 +141,16 @@ async function generatePinB({
   for (let i = 0; i < maxProducts; i++) {
     const p = products[i];
     const cardX = 32 + i * (cardWidth + cardGap);
-    const thumbX = cardX + 18;
-    const thumbY = PHOTO_HEIGHT + 52 + 42;
-
     if (fs.existsSync(p.image)) {
       const thumbBuf = await sharp(p.image)
         .resize(thumbWidth, 130, { fit: 'contain', background: '#ffffff' })
         .toBuffer();
-      productThumbOverlays.push({ input: thumbBuf, top: thumbY, left: thumbX });
+      productThumbOverlays.push({ input: thumbBuf, top: PHOTO_HEIGHT + 56 + 44, left: cardX + 18 });
     }
   }
 
   await sharp({
-    create: {
-      width: WIDTH,
-      height: HEIGHT,
-      channels: 4,
-      background: '#fffaf5',
-    },
+    create: { width: WIDTH, height: HEIGHT, channels: 4, background: C.linen },
   })
     .composite([
       { input: roomResized, top: 0, left: 0 },

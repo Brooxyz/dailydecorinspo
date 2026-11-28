@@ -8,6 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 import { fileURLToPath } from 'url';
+import { text, wrap } from './pin-text.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'public/images/pins/extra');
@@ -19,13 +20,8 @@ const esc = s => String(s).replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;',
 const clip = (s, n) => (s.length <= n ? s : s.slice(0, n - 3).trimEnd() + '...');
 const low = p => parseInt((p.priceRange.match(/\d+/) || ['0'])[0], 10);
 
-// wrap a title into lines of at most `max` chars
-function wrap(text, max) {
-  const words = text.split(/\s+/); const lines = []; let cur = '';
-  for (const w of words) { if ((cur + ' ' + w).trim().length > max) { lines.push(cur.trim()); cur = w; } else cur += ' ' + w; }
-  if (cur.trim()) lines.push(cur.trim());
-  return lines;
-}
+// Same palette and type as the website (see scripts/generate-pins.mjs)
+const C = { linen: '#faf6f0', oat: '#f3ebe0', ink: '#2b1d14', ink2: '#5e4636', muted: '#8a7261', line: '#e6d8c6', walnut: '#7a4a2b', amber: '#e2aa6c', sage: '#5f7357', night: '#1d1612' };
 
 async function packshot(file, size) {
   return sharp(file).resize(size, size, { fit: 'contain', background: '#ffffff' }).toBuffer();
@@ -34,7 +30,7 @@ async function packshot(file, size) {
 async function collagePin(room, num, products, out) {
   const n = products.length;
   const cols = 2, rows = Math.ceil(n / cols);
-  const top = 230, bottom = 150, gap = 18;
+  const top = 250, bottom = 150, gap = 18;
   const cellH = Math.floor((H - top - bottom - (rows - 1) * gap) / rows);
   const cellW = Math.floor((W - 80 - gap) / cols);
   const img = Math.min(cellH - 66, cellW - 30);
@@ -43,22 +39,23 @@ async function collagePin(room, num, products, out) {
   for (let i = 0; i < n; i++) {
     const p = products[i];
     const x = 40 + (i % cols) * (cellW + gap), y = top + Math.floor(i / cols) * (cellH + gap);
-    cards += `<rect x="${x}" y="${y}" width="${cellW}" height="${cellH}" rx="18" fill="#ffffff" stroke="#e8c49e" stroke-width="1.5"/>
-      <circle cx="${x + 30}" cy="${y + 30}" r="19" fill="#c37539"/><text x="${x + 30}" y="${y + 37}" font-family="Inter, sans-serif" font-size="19" font-weight="bold" fill="#fff" text-anchor="middle">${p.number}</text>
-      <rect x="${x + cellW - 128}" y="${y + 13}" width="114" height="34" rx="17" fill="#fbf3ea" stroke="#e8c49e"/><text x="${x + cellW - 71}" y="${y + 36}" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#6b3f28" text-anchor="middle">${esc(p.priceRange)}</text>
-`;
+    cards += `<rect x="${x}" y="${y}" width="${cellW}" height="${cellH}" rx="20" fill="#ffffff" stroke="${C.line}" stroke-width="1.5"/>
+      <circle cx="${x + 30}" cy="${y + 30}" r="18" fill="${C.walnut}"/>
+      ${text(String(p.number), { font: 'sansBold', size: 19, x: x + 30, y: y + 37, anchor: 'middle', fill: '#ffffff' })}
+      <rect x="${x + cellW - 134}" y="${y + 13}" width="120" height="34" rx="17" fill="${C.oat}"/>
+      ${text(p.priceRange, { font: 'sansBold', size: 18, x: x + cellW - 74, y: y + 36, anchor: 'middle', fill: C.ink, maxWidth: 108 })}`;
     comps.push({ input: await packshot(path.join(ROOT, 'public', p.image), img), left: Math.round(x + (cellW - img) / 2), top: Math.round(y + 52) });
   }
-  const titleLines = wrap(room.title, 30).slice(0, 2);
+  const titleLines = wrap(room.title, { font: 'display', size: 50, maxWidth: 880, maxLines: 2 });
   const svg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
-    <rect width="${W}" height="${H}" fill="#f7efe6"/>
-    <text x="${W / 2}" y="70" font-family="Inter, sans-serif" font-size="20" font-weight="bold" fill="#a35e30" text-anchor="middle" letter-spacing="4">GET THE LOOK • ${n} AMAZON FINDS</text>
-    ${titleLines.map((l, i) => `<text x="${W / 2}" y="${128 + i * 50}" font-family="'Playfair Display', Georgia, serif" font-size="44" font-weight="bold" fill="#24170e" text-anchor="middle">${esc(l)}</text>`).join('')}
+    <rect width="${W}" height="${H}" fill="${C.linen}"/>
+    ${text(`Get the look with ${n} Amazon finds`, { font: 'sans', size: 24, x: W / 2, y: 78, anchor: 'middle', fill: C.walnut })}
+    ${titleLines.map((l, i) => text(l, { font: 'display', size: 50, x: W / 2, y: 142 + i * 56, anchor: 'middle', fill: C.ink })).join('')}
     ${cards}
-    <rect x="70" y="${H - 120}" width="${W - 140}" height="84" rx="42" fill="#1c1612"/>
-    <text x="${W / 2}" y="${H - 68}" font-family="Inter, sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Total ${esc(room.totalPrice)} • Tap for every link</text>
+    <rect x="70" y="${H - 120}" width="${W - 140}" height="84" rx="42" fill="${C.walnut}"/>
+    ${text(`Whole look ${room.totalPrice}. Tap for every link`, { font: 'sansBold', size: 27, x: W / 2, y: H - 68, anchor: 'middle', fill: '#fff8f0', maxWidth: W - 200 })}
   </svg>`;
-  await sharp({ create: { width: W, height: H, channels: 3, background: '#f7efe6' } })
+  await sharp({ create: { width: W, height: H, channels: 3, background: C.linen } })
     .composite([{ input: Buffer.from(svg), top: 0, left: 0 }, ...comps]).jpeg({ quality: 90 }).toFile(out);
 }
 
@@ -72,30 +69,32 @@ async function zoomPin(room, num, out) {
   const left = Math.max(0, Math.min(meta.width - cw, Math.round(cx - cw / 2)));
   const topY = Math.max(0, Math.min(meta.height - ch, Math.round(cy - ch / 2)));
   const base = await sharp(hero).extract({ left, top: topY, width: cw, height: ch }).resize(W, H).sharpen().toBuffer();
-  const lines = wrap(room.title, 26).slice(0, 2);
+  const lines = wrap(room.title, { font: 'display', size: 62, maxWidth: 880, maxLines: 2 });
+  const kind = room.products.some(p => p.store === 'etsy') ? 'curated' : 'Amazon';
   const svg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140f0c" stop-opacity="0"/><stop offset="1" stop-color="#140f0c" stop-opacity="0.85"/></linearGradient></defs>
-    <rect x="0" y="${H - 470}" width="${W}" height="470" fill="url(#g)"/>
-    <text x="60" y="${H - 290}" font-family="Inter, sans-serif" font-size="22" font-weight="bold" fill="#f2c79b" letter-spacing="3">SAVE THIS IDEA</text>
-    ${lines.map((l, i) => `<text x="60" y="${H - 225 + i * 62}" font-family="'Playfair Display', Georgia, serif" font-size="56" font-weight="bold" fill="#ffffff">${esc(l)}</text>`).join('')}
-    <text x="60" y="${H - 70}" font-family="Inter, sans-serif" font-size="24" fill="#f2dcc5">${room.products.length} ${room.products.some(p => p.store === 'etsy') ? 'curated' : 'Amazon'} finds • ${esc(room.totalPrice)} • dailydecorinspo</text>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.night}" stop-opacity="0"/><stop offset="0.32" stop-color="${C.night}" stop-opacity="0.62"/><stop offset="1" stop-color="${C.night}" stop-opacity="0.92"/></linearGradient></defs>
+    <rect x="0" y="${H - 560}" width="${W}" height="560" fill="url(#g)"/>
+    ${text('Save this idea', { font: 'sans', size: 26, x: 60, y: H - 300, fill: C.amber })}
+    ${lines.map((l, i) => text(l, { font: 'display', size: 62, x: 58, y: H - 228 + i * 68, fill: '#f6eee3' })).join('')}
+    ${text(`${room.products.length} ${kind} finds, ${room.totalPrice} for the whole look`, { font: 'sans', size: 25, x: 60, y: H - 66, fill: '#e2d3c1', maxWidth: 880 })}
   </svg>`;
   await sharp(base).composite([{ input: Buffer.from(svg), top: 0, left: 0 }]).jpeg({ quality: 90 }).toFile(out);
 }
 
 async function productPin(room, p, out) {
   const img = await packshot(path.join(ROOT, 'public', p.image), 820);
-  const lines = wrap(p.name, 30).slice(0, 3);
+  const lines = wrap(p.name, { font: 'display', size: 50, maxWidth: 860, maxLines: 3 });
+  const pillY = 1112 + lines.length * 58;
   const svg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
-    <rect width="${W}" height="${H}" fill="#f7efe6"/>
-    <rect x="70" y="150" width="860" height="860" rx="30" fill="#ffffff" stroke="#e8c49e" stroke-width="2"/>
-    <text x="${W / 2}" y="95" font-family="Inter, sans-serif" font-size="22" font-weight="bold" fill="#a35e30" text-anchor="middle" letter-spacing="4">AMAZON FIND${p.rating ? ' • ★ ' + p.rating : ''}</text>
-    ${lines.map((l, i) => `<text x="${W / 2}" y="${1095 + i * 54}" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="bold" fill="#24170e" text-anchor="middle">${esc(l)}</text>`).join('')}
-    <rect x="${W / 2 - 150}" y="${1110 + lines.length * 54}" width="300" height="72" rx="36" fill="#1c1612"/>
-    <text x="${W / 2}" y="${1158 + lines.length * 54}" font-family="Inter, sans-serif" font-size="34" font-weight="bold" fill="#ffffff" text-anchor="middle">${esc(p.priceRange)}</text>
-    <text x="${W / 2}" y="${H - 40}" font-family="Inter, sans-serif" font-size="22" fill="#6b3f28" text-anchor="middle">As seen in: ${esc(clip(room.title, 44))}</text>
+    <rect width="${W}" height="${H}" fill="${C.linen}"/>
+    <rect x="70" y="150" width="860" height="860" rx="32" fill="#ffffff" stroke="${C.line}" stroke-width="2"/>
+    ${text(p.rating ? `Amazon find, rated ${p.rating}` : 'Amazon find', { font: 'sans', size: 26, x: W / 2, y: 104, anchor: 'middle', fill: C.walnut })}
+    ${lines.map((l, i) => text(l, { font: 'display', size: 50, x: W / 2, y: 1098 + i * 58, anchor: 'middle', fill: C.ink })).join('')}
+    <rect x="${W / 2 - 150}" y="${pillY}" width="300" height="74" rx="37" fill="${C.walnut}"/>
+    ${text(p.priceRange, { font: 'sansBold', size: 34, x: W / 2, y: pillY + 49, anchor: 'middle', fill: '#fff8f0' })}
+    ${text(`As seen in our ${room.title}`, { font: 'sans', size: 23, x: W / 2, y: H - 44, anchor: 'middle', fill: C.muted, maxWidth: 880 })}
   </svg>`;
-  await sharp({ create: { width: W, height: H, channels: 3, background: '#f7efe6' } })
+  await sharp({ create: { width: W, height: H, channels: 3, background: C.linen } })
     .composite([{ input: Buffer.from(svg), top: 0, left: 0 }, { input: img, left: 90, top: 170 }]).jpeg({ quality: 90 }).toFile(out);
 }
 
