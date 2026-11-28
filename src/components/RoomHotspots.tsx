@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/components/ProductCard";
 
-/** Numbered dots on the room photo. Clicking one opens a small card beside it with the product's
+/** Numbered dots on the room photo. Clicking one opens a small card beside it (it may reach past the
+ *  photo's edge and sits on top of the page) with the product's
  *  name, note, price, rating and the shop button (same link and rel as the product list below).
  *  On phones the card docks to the bottom of the photo so it always fits. */
 export function RoomHotspots({ products }: { products: Product[] }) {
@@ -80,7 +81,7 @@ function HotspotCard({ p, onClose }: { p: Product; onClose: () => void }) {
       role="dialog"
       aria-label={p.name}
       style={{ ...pos, pointerEvents: "auto" }}
-      className="hero-tag absolute rounded-2xl bg-surface border border-line shadow-2xl p-4 text-left"
+      className="hero-tag absolute z-30 rounded-2xl bg-surface border border-line shadow-2xl p-4 text-left"
     >
       <div className="flex items-start gap-3">
         <span className="w-7 h-7 shrink-0 rounded-full bg-[#7a4a2b] text-white text-xs font-semibold flex items-center justify-center">

@@ -19,7 +19,8 @@
           "image": "/images/products/room-01/curtain.jpg",
           "amazonUrl": "https://amzn.to/3SinWCQ",
           "priceRange": "$25-35",
-          "rating": 4.5
+          "rating": 4.5,
+          "asin": "B0BWJDW3BX"
         },
         {
           "number": 2,
@@ -29,7 +30,8 @@
           "image": "/images/products/room-01/board.jpg",
           "amazonUrl": "https://amzn.to/4hHToF9",
           "priceRange": "$20-30",
-          "rating": 4.4
+          "rating": 4.4,
+          "asin": "B0F52WR1MC"
         },
         {
           "number": 3,
@@ -39,7 +41,8 @@
           "image": "/images/products/room-01/bedset.jpg",
           "amazonUrl": "https://amzn.to/45wB5vj",
           "priceRange": "$35-50",
-          "rating": 4.6
+          "rating": 4.6,
+          "asin": "B0CGLPC42G"
         },
         {
           "number": 4,
@@ -49,7 +52,8 @@
           "image": "/images/products/room-01/blanket.jpg",
           "amazonUrl": "https://amzn.to/4hDFEes",
           "priceRange": "$12-20",
-          "rating": 4.6
+          "rating": 4.6,
+          "asin": "B0BPLB81LX"
         },
         {
           "number": 5,
@@ -59,7 +63,8 @@
           "image": "/images/products/room-01/bookshelf.jpg",
           "amazonUrl": "https://amzn.to/3U89GNJ",
           "priceRange": "$25-35",
-          "rating": 4.5
+          "rating": 4.5,
+          "asin": "B074NH61RT"
         },
         {
           "number": 6,
@@ -112,7 +117,8 @@
           "image": "/images/products/room-02/comforter.jpg",
           "amazonUrl": "https://amzn.to/4xTmPZE",
           "priceRange": "$75-85",
-          "rating": 4.6
+          "rating": 4.6,
+          "asin": "B0833W4SBD"
         },
         {
           "number": 2,
@@ -122,7 +128,8 @@
           "image": "/images/products/room-02/lamp.jpg",
           "amazonUrl": "https://amzn.to/4wZdrmw",
           "priceRange": "$70-85",
-          "rating": 4.7
+          "rating": 4.7,
+          "asin": "B0DTQCY7XW"
         },
         {
           "number": 3,
@@ -132,7 +139,8 @@
           "image": "/images/products/room-02/rod.jpg",
           "amazonUrl": "https://amzn.to/4hOrozD",
           "priceRange": "$20-30",
-          "rating": 4.5
+          "rating": 4.5,
+          "asin": "B0F6LM95F2"
         },
         {
           "number": 4,
@@ -142,7 +150,8 @@
           "image": "/images/products/room-02/rug.jpg",
           "amazonUrl": "https://amzn.to/4qzBqXP",
           "priceRange": "$350-380",
-          "rating": 4.4
+          "rating": 4.4,
+          "asin": "B0H3VNCFKT"
         },
         {
           "number": 5,
@@ -152,7 +161,8 @@
           "image": "/images/products/room-02/curtains.jpg",
           "amazonUrl": "https://amzn.to/4zC9nuR",
           "priceRange": "$30-45",
-          "rating": 4.6
+          "rating": 4.6,
+          "asin": "B0BR3STN87"
         },
         {
           "number": 6,
@@ -162,7 +172,8 @@
           "image": "/images/products/room-02/nightstands.jpg",
           "amazonUrl": "https://amzn.to/4iuUPqB",
           "priceRange": "$40-60",
-          "rating": 4.3
+          "rating": 4.3,
+          "asin": "B0FD9VTQWV"
         },
         {
           "number": 7,
@@ -172,7 +183,8 @@
           "image": "/images/products/room-02/shelves.jpg",
           "amazonUrl": "https://amzn.to/4xkufoK",
           "priceRange": "$25-35",
-          "rating": 4.5
+          "rating": 4.5,
+          "asin": "B0C9QHK4HS"
         }
       ]
     },

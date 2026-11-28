@@ -6,6 +6,8 @@ export type Product = {
   priceRange: string;
   rating?: number;
   amazonUrl?: string;
+  /** Set for amzn.to short links, whose URL hides the ASIN (used by the add-all-to-cart button) */
+  asin?: string;
   // "etsy" marks a handmade piece from our own Etsy shop (BestMarble)
   store?: "amazon" | "etsy";
   shopUrl?: string;

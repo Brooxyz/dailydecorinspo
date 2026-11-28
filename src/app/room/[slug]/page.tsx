@@ -51,7 +51,8 @@ export default async function RoomPage({
   // Amazon "Add to Cart" form (documented for Associates): puts every Amazon item of the room
   // into the shopper's cart in one tap, attributed to our tag.
   const cartAsins = (room.products as Product[])
-    .map((p) => (p.amazonUrl || "").match(/\/dp\/([A-Z0-9]{10})/)?.[1])
+    // ASIN from the /dp/ link; older amzn.to short links carry it in an "asin" field instead
+    .map((p) => (p.store === "etsy" ? undefined : p.asin || (p.amazonUrl || "").match(/\/dp\/([A-Z0-9]{10})/)?.[1]))
     .filter((a): a is string => Boolean(a));
   const cartUrl =
     // dailydecorcart-20 = separate Associates tracking ID so cart-button sales show up on their own
@@ -89,8 +90,9 @@ export default async function RoomPage({
       <section className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Room Image with shoppable hotspots */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl lg:sticky lg:top-24">
-            <img src={room.roomImage} alt={room.title} className="w-full aspect-[2/3] object-cover" loading="eager" />
+          {/* No overflow-hidden here: the product card may reach past the photo's edge */}
+          <div className="relative z-20 rounded-2xl shadow-xl lg:sticky lg:top-24">
+            <img src={room.roomImage} alt={room.title} className="w-full aspect-[2/3] object-cover rounded-2xl" loading="eager" />
 
             <RoomHotspots products={room.products as Product[]} />
           </div>
