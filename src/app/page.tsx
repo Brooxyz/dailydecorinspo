@@ -6,7 +6,6 @@ import type { Product } from "@/components/ProductCard";
 
 export default function HomePage() {
   const rooms = roomsData.rooms;
-  const productCount = rooms.reduce((acc, r) => acc + r.products.length, 0);
   // Hero collage pages through every room, newest first; each room offers the products whose tag
   // sits in the readable middle of its photo, and the tagged one changes on every step
   const heroRooms: HeroRoom[] = [...rooms].reverse().map((r) => {
@@ -26,8 +25,8 @@ export default function HomePage() {
             Rooms you can buy, piece by piece.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-ink-2 max-w-[34rem]">
-            {rooms.length} styled corners and {productCount} well-reviewed Amazon finds. Open a room
-            to see every item in the photo with its price and a direct link.
+            Cozy, livable corners styled with well-reviewed Amazon finds. Open one to see every piece in the photo,
+            what it costs and where to get it, one item at a time.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
