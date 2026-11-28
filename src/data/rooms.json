@@ -68,7 +68,7 @@
         },
         {
           "number": 6,
-          "hotspot": {"x": 86, "y": 40},
+          "hotspot": {"x": 85, "y": 52},
           "name": "5-Tier Rustic Wooden Blanket Ladder (5.3 ft)",
           "description": "Leaning wood quilt ladder for throws & towels, no wall mounting",
           "image": "/images/products/room-01/ladder.jpg",
@@ -294,7 +294,7 @@
         },
         {
           "number": 3,
-          "hotspot": {"x": 70, "y": 27},
+          "hotspot": {"x": 72, "y": 29},
           "name": "TEEM 24\" Swing-Arm Architect Desk Lamp",
           "description": "Matte black metal articulated swing-arm architect desk lamp with round weighted base & optional clamp",
           "image": "/images/products/room-04/lamp.jpg",
@@ -304,7 +304,7 @@
         },
         {
           "number": 4,
-          "hotspot": {"x": 55, "y": 57},
+          "hotspot": {"x": 63, "y": 57.5},
           "name": "Aothia Vegan Leather Desk Pad (Brown)",
           "description": "Waterproof saddle-tan brown PU leather desk blotter mat (31.5\" x 15.7\") with non-slip backing",
           "image": "/images/products/room-04/pad.jpg",
@@ -314,7 +314,7 @@
         },
         {
           "number": 5,
-          "hotspot": {"x": 68, "y": 24},
+          "hotspot": {"x": 57, "y": 24},
           "name": "ODOXIA Matte Black Wire Wall Grid Panel Set",
           "description": "2-pack matte black metal wire grid wall organizer panels with wooden clips, S-hooks & hanging display",
           "image": "/images/products/room-04/grid.jpg",
@@ -324,7 +324,7 @@
         },
         {
           "number": 6,
-          "hotspot": {"x": 49, "y": 31.5},
+          "hotspot": {"x": 42, "y": 31.5},
           "name": "Quntis Eye-Care Computer Monitor Light Bar",
           "description": "Touch-control dimmable horizontal screen bar providing glare-free warm downward ambient light",
           "image": "/images/products/room-04/lightbar.jpg",
@@ -397,7 +397,7 @@
         },
         {
           "number": 5,
-          "hotspot": {"x": 61, "y": 66},
+          "hotspot": {"x": 57.5, "y": 63},
           "name": "Snuggle Hollow Ceramic Donut Vase Set of 2",
           "description": "Nordic matte milky-white hollow circular ceramic donut vase pair for dried pampas & florals",
           "image": "/images/products/room-05/vases.jpg",
@@ -948,7 +948,7 @@
       "products": [
         {
           "number": 1,
-          "hotspot": {"x": 51.9, "y": 63.3},
+          "hotspot": {"x": 51.5, "y": 76},
           "name": "Tulip Round Pedestal Dining Table (Walnut Top, Black Base)",
           "description": "Mid-century tulip table with wipe-clean walnut-look top, sized for small nooks",
           "image": "/images/products/room-12/table.jpg",
@@ -1081,7 +1081,7 @@
         },
         {
           "number": 5,
-          "hotspot": {"x": 84.3, "y": 50.6},
+          "hotspot": {"x": 82, "y": 44},
           "name": "PoKat Ribbed Ceramic Table Lamp",
           "description": "Textured off-white ceramic base with a beige linen drum shade",
           "image": "/images/products/room-13/lamp.jpg",
@@ -1091,7 +1091,7 @@
         },
         {
           "number": 6,
-          "hotspot": {"x": 93.2, "y": 46.5},
+          "hotspot": {"x": 94, "y": 53},
           "name": "Winlyn Faux Eucalyptus in White Pots (Set of 2)",
           "description": "Small artificial eucalyptus plants in dotted ceramic pots",
           "image": "/images/products/room-13/plants.jpg",

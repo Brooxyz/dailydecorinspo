@@ -309,6 +309,14 @@ def main() -> int:
                 warnings.append(f"Room #{room_num} #{p['number']} has no hotspot")
             elif not (0 <= hs.get("x", -1) <= 100 and 0 <= hs.get("y", -1) <= 100):
                 critical_issues.append(f"Room #{room_num} #{p['number']} hotspot outside the photo")
+        # Dots are 36px on a phone (photo ~343x515px): centres closer than 42px overlap and are hard to tap
+        placed = [p for p in products if p.get("hotspot")]
+        for a in range(len(placed)):
+            for b in range(a + 1, len(placed)):
+                pa, pb = placed[a]["hotspot"], placed[b]["hotspot"]
+                dist = (((pa["x"] - pb["x"]) * 3.43) ** 2 + ((pa["y"] - pb["y"]) * 5.15) ** 2) ** 0.5
+                if dist < 42:
+                    warnings.append(f"Room #{room_num} hotspots #{placed[a]['number']} and #{placed[b]['number']} overlap on phones ({dist:.0f}px apart)")
 
         room_reports.append(
             {

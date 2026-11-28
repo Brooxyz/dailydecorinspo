@@ -34,7 +34,7 @@ export function RoomHotspots({ products }: { products: Product[] }) {
             aria-expanded={open === p.number}
             aria-controls="hotspot-card"
             style={{ left: `${p.hotspot.x}%`, top: `${p.hotspot.y}%`, pointerEvents: "auto" }}
-            className="group/hs absolute -translate-x-1/2 -translate-y-1/2"
+            className="group/hs absolute -translate-x-1/2 -translate-y-1/2 hover:z-20 focus-visible:z-20"
           >
             {open === null && <span className="absolute inset-0 rounded-full bg-white/70 animate-ping opacity-50 motion-reduce:hidden" />}
             <span
@@ -44,6 +44,12 @@ export function RoomHotspots({ products }: { products: Product[] }) {
             >
               {p.number}
             </span>
+            {/* Mouse hover: just the product name. Touch screens skip this and open the card on tap. */}
+            {open !== p.number && (
+              <span className="pointer-events-none absolute left-1/2 bottom-full mb-2 -translate-x-1/2 hidden pointer-fine:block opacity-0 group-hover/hs:opacity-100 transition-opacity whitespace-nowrap max-w-[16rem] truncate rounded-lg bg-surface/95 backdrop-blur px-3 py-1.5 text-xs font-semibold text-ink shadow-lg ring-1 ring-line">
+                {p.name}
+              </span>
+            )}
           </a>
         ) : null
       )}
