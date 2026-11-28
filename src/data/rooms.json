@@ -1098,6 +1098,89 @@
           "rating": 4.8
         }
       ]
+    },
+    {
+      "id": "sage-woodland-nursery-14",
+      "slug": "sage-woodland-nursery-14",
+      "title": "Sage Woodland Nursery Corner",
+      "subtitle": "Natural wood crib, cloud mobile & a sage boucle rocker for a calm baby room",
+      "category": "nursery",
+      "tags": ["nursery ideas", "woodland nursery", "sage green nursery", "gender neutral nursery", "amazon finds"],
+      "roomImage": "/images/rooms/room-14.jpg",
+      "createdAt": "2026-11-28",
+      "totalPrice": "$404-461",
+      "products": [
+        {
+          "number": 1,
+          "hotspot": {"x": 23.6, "y": 75.2},
+          "name": "Delta Children Heartland 4-in-1 Convertible Crib (Natural)",
+          "description": "Solid wood crib with simple slats that converts to a toddler & full bed",
+          "image": "/images/products/room-14/crib.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CLWXDQ2G?tag=dailydecorins-20",
+          "priceRange": "$135-150",
+          "rating": 4.7
+        },
+        {
+          "number": 2,
+          "hotspot": {"x": 36.6, "y": 41.1},
+          "name": "Felt Cloud Baby Mobile for Crib",
+          "description": "Wooden ring with six fluffy cream felt clouds, neutral boho style",
+          "image": "/images/products/room-14/mobile.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0B58WG12H?tag=dailydecorins-20",
+          "priceRange": "$16-20",
+          "rating": 4.6
+        },
+        {
+          "number": 3,
+          "hotspot": {"x": 35.4, "y": 61.7},
+          "name": "Konssy Muslin Crib Sheets (2-Pack, Sage & Floral)",
+          "description": "Breathable cotton muslin fitted sheets for standard crib mattresses",
+          "image": "/images/products/room-14/sheets.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DSBFXXCL?tag=dailydecorins-20",
+          "priceRange": "$26-30",
+          "rating": 4.8
+        },
+        {
+          "number": 4,
+          "hotspot": {"x": 35.4, "y": 23.7},
+          "name": "Framed Woodland Nursery Wall Art (Set of 3)",
+          "description": "Watercolor deer, bear & fox forest prints in natural wood frames",
+          "image": "/images/products/room-14/art.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FX9WDRZ2?tag=dailydecorins-20",
+          "priceRange": "$32-36",
+          "rating": 4.8
+        },
+        {
+          "number": 5,
+          "hotspot": {"x": 73.1, "y": 65.7},
+          "name": "SONGMICS Wicker Laundry Hamper with Lid",
+          "description": "Handwoven synthetic rattan hamper with removable liner & handles",
+          "image": "/images/products/room-14/hamper.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BP7KDDYL?tag=dailydecorins-20",
+          "priceRange": "$28-34",
+          "rating": 4.6
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 89.6, "y": 69.6},
+          "name": "Sage Boucle Nursery Rocking Chair",
+          "description": "Upholstered rocker with high back & solid wood rocker legs",
+          "image": "/images/products/room-14/rocker.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0GVD7C8XW?tag=dailydecorins-20",
+          "priceRange": "$150-170",
+          "rating": 4.5
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 64.3, "y": 79.1},
+          "name": "Wooden Mushroom Night Light Lamp",
+          "description": "Rechargeable touch lamp with a walnut-tone dotted cap & warm glow",
+          "image": "/images/products/room-14/nightlight.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0DSLCR6G9?tag=dailydecorins-20",
+          "priceRange": "$17-21",
+          "rating": 4.5
+        }
+      ]
     }
   ]
 }
