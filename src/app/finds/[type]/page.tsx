@@ -41,7 +41,7 @@ export default async function FindsPage({ params }: { params: Promise<{ type: st
       <a href="/" className="text-sm text-warm-500 hover:text-warm-800">← All Rooms</a>
       <h1 className="font-display text-3xl sm:text-4xl font-bold text-warm-900 mt-4">{t.title}</h1>
       <p className="text-warm-600 mt-3 max-w-2xl">
-        {items.length} {t.label.toLowerCase()} we picked for our styled rooms: all well-reviewed on Amazon, sorted by rating.
+        {items.length} {t.label.toLowerCase()} picks from our styled rooms, all well-reviewed on Amazon and sorted by rating.
         Each card shows the room it was styled in, so you can see it in a real space before you buy.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">

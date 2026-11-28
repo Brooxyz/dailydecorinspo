@@ -8,7 +8,7 @@ export const FIND_TYPES = [
   { slug: "rugs", label: "Rugs", title: "Best Amazon Rugs & Runners Under $300", re: /\brug|runner/i },
   { slug: "mirrors", label: "Mirrors", title: "Best Amazon Wall Mirrors for Small Spaces", re: /mirror/i },
   { slug: "wall-art", label: "Wall Art", title: "Best Amazon Wall Art Sets for a Styled Look", re: /wall art|\bart\b|print|canvas|painting|poster|still life/i },
-  { slug: "lighting", label: "Lighting", title: "Best Amazon Lamps, Pendants & Cozy Lighting", re: /lamp|light|sconce|pendant|lantern|candle/i },
+  { slug: "lighting", label: "Lighting", title: "Best Amazon Lamps, Pendants & Cozy Lighting", re: /lamp|\blight(s|ing)?\b(?! (greige|gr[ae]y|blue|pink|wood|beige))|sconce|pendant|lantern|candle/i },
   { slug: "furniture", label: "Furniture", title: "Best Budget Amazon Furniture for Small Rooms", re: /desk(?! pad)|chair|table|bench|nightstand|crib|headboard|sofa|rocker|bean bag|stool|cabinet|ladder|rack|luggage/i },
   { slug: "bedding-throws", label: "Bedding & Throws", title: "Best Amazon Bedding, Throws & Pillows", re: /comforter|duvet|sheet|blanket|throw|pillow|quilt|bedding/i },
   { slug: "storage", label: "Shelves & Storage", title: "Best Amazon Shelves, Baskets & Storage", re: /shel|basket|hamper|ledge|organizer|canister|jar|holder|tree holder|caddy/i },
