@@ -116,14 +116,14 @@ async function main() {
       const f = `room-${num}-collage.jpg`;
       await collagePin(room, num, amazon, path.join(OUT, f));
       manifest.push({ ...base, id: `r${num}-collage`, type: 'collage', image: `/images/pins/extra/${f}`, link: roomLink('collage'),
-        title: clip(`${amazon.length} Amazon Finds to Get This ${room.title} Look (${room.totalPrice})`, 100),
-        description: `Get the look for less: every piece in our ${room.title}, from ${room.products.map(low).sort((a, b) => a - b)[0] ? '$' + Math.min(...room.products.map(low)) : 'budget prices'}. Tap for direct links to all ${room.products.length} items.\n\n${tags}\n\n${DISCLOSURE}` });
+        title: clip(`The Exact ${amazon.length} Amazon Finds in This ${room.title} (${room.totalPrice})`, 100),
+        description: `Not look-alikes: the exact pieces in our ${room.title}, from ${room.products.map(low).sort((a, b) => a - b)[0] ? '$' + Math.min(...room.products.map(low)) : 'budget prices'}. Tap for the exact links to all ${room.products.length} items.\n\n${tags}\n\n${DISCLOSURE}` });
     }
     const zf = `room-${num}-zoom.jpg`;
     await zoomPin(room, num, path.join(OUT, zf));
     manifest.push({ ...base, id: `r${num}-zoom`, type: 'zoom', image: `/images/pins/extra/${zf}`, link: roomLink('zoom'),
-      title: clip(`${room.title} Ideas (Shop the Amazon Finds)`, 100),
-      description: `${room.subtitle}. Save this ${(cat.label || 'room').toLowerCase()} idea and tap to shop all ${room.products.length} pieces (${room.totalPrice}).\n\n${tags}\n\n${DISCLOSURE}` });
+      title: clip(`${room.title} Ideas (Shop the Exact Items)`, 100),
+      description: `${room.subtitle}. Save this ${(cat.label || 'room').toLowerCase()} idea and tap for the exact links to all ${room.products.length} pieces (${room.totalPrice}).\n\n${tags}\n\n${DISCLOSURE}` });
 
     for (const p of amazon) {
       const f = `room-${num}-p${p.number}.jpg`;

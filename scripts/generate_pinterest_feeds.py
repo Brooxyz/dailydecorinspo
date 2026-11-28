@@ -98,13 +98,13 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
                 )
                 desc = (
                     f"Curated Room #{room_num}: {room['title']} — {room['subtitle']}. "
-                    f"Tap to shop all {len(room['products'])} {finds} ({room['totalPrice']}).\n\n"
+                    f"Not look-alikes: tap for the exact links to all {len(room['products'])} {finds} in this photo ({room['totalPrice']}).\n\n"
                     f"{meta['tags']}\n\n{room_disclosure(room)}"
                 )
                 pub_dt = base_dt
             else:
                 amazon_word = "" if has_etsy(room) else "Amazon "
-                title = f"Shop the Look: {len(room['products'])} {amazon_word}Finds for {room['title']} ({room['totalPrice']})"
+                title = f"Shop the Exact Look: {len(room['products'])} {amazon_word}Finds for {room['title']} ({room['totalPrice']})"
                 # Pinterest truncates descriptions over 500 chars, which would cut the
                 # #ad disclosure at the end — drop list items until it fits.
                 item_lines = [
@@ -117,9 +117,9 @@ def build_pin_records(rooms: list[dict], broken_rooms: set[str]) -> list[dict]:
                     if len(shown) < total:
                         shown.append(f"+ {total - len(shown)} more on the site")
                     desc = (
-                        f"Shop the Look Room #{room_num}! Curated {amazon_word}pieces:\n\n"
+                        f"The exact {amazon_word}pieces in Room #{room_num}, not look-alikes:\n\n"
                         + "\n".join(shown)
-                        + "\n\nTap to visit Daily Decor Inspo for direct links!\n\n"
+                        + "\n\nTap the pin for the exact links to every item!\n\n"
                         f"{meta['tags']}\n\n{room_disclosure(room)}"
                     )
                     if len(desc) <= 500 or len(item_lines) <= 2:
