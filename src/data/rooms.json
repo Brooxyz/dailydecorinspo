@@ -9,7 +9,7 @@
       "tags": ["minimalist", "cozy", "budget", "amazon finds", "neutral tones"],
       "roomImage": "/images/rooms/room-01.jpg",
       "createdAt": "2026-11-04",
-      "totalPrice": "$117-170",
+      "totalPrice": "$341-420",
       "products": [
         {
           "number": 1,
@@ -60,6 +60,36 @@
           "amazonUrl": "https://amzn.to/3U89GNJ",
           "priceRange": "$25-35",
           "rating": 4.5
+        },
+        {
+          "number": 6,
+          "hotspot": {"x": 86, "y": 40},
+          "name": "5-Tier Rustic Wooden Blanket Ladder (5.3 ft)",
+          "description": "Leaning wood quilt ladder for throws & towels, no wall mounting",
+          "image": "/images/products/room-01/ladder.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CCYSBM36?tag=dailydecorins-20",
+          "priceRange": "$33-38",
+          "rating": 4.4
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 20, "y": 62.7},
+          "name": "Solid Wood Writing Desk with Drawer",
+          "description": "Light natural wood study desk with slim drawer & tapered legs",
+          "image": "/images/products/room-01/desk.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0H3NJ56T2?tag=dailydecorins-20",
+          "priceRange": "$145-160",
+          "rating": 4.6
+        },
+        {
+          "number": 8,
+          "hotspot": {"x": 56, "y": 86.7},
+          "name": "Cream Ivory White Shag Area Rug (5x8)",
+          "description": "Ultra-soft fluffy faux-fur pile rug for a cozy bedroom floor",
+          "image": "/images/products/room-01/shagrug.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B086L7WKD8?tag=dailydecorins-20",
+          "priceRange": "$46-52",
+          "rating": 4.4
         }
       ]
     },
@@ -228,7 +258,7 @@
       "tags": ["desk setup", "wfh setup", "aesthetic desk", "home office", "amazon finds"],
       "roomImage": "/images/rooms/room-04.jpg",
       "createdAt": "2026-11-05",
-      "totalPrice": "$186-239",
+      "totalPrice": "$204-261",
       "products": [
         {
           "number": 1,
@@ -289,6 +319,16 @@
           "amazonUrl": "https://www.amazon.com/dp/B08DKQ3JG1?tag=dailydecorins-20",
           "priceRange": "$30-45",
           "rating": 4.6
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 80, "y": 46},
+          "name": "CEWOR Faux Pothos Plant in White Pot",
+          "description": "Trailing artificial pothos in a matte white ceramic pot, zero care",
+          "image": "/images/products/room-04/pothos.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BXH1M3C3?tag=dailydecorins-20",
+          "priceRange": "$18-22",
+          "rating": 4.4
         }
       ]
     },
@@ -301,7 +341,7 @@
       "tags": ["fall living room", "cozy apartment", "warm minimalism", "autumn decor", "amazon finds"],
       "roomImage": "/images/rooms/room-05.jpg",
       "createdAt": "2026-11-05",
-      "totalPrice": "$174-233",
+      "totalPrice": "$190-253",
       "products": [
         {
           "number": 1,
@@ -362,6 +402,16 @@
           "amazonUrl": "https://www.amazon.com/dp/B0DPC5KD18?tag=dailydecorins-20",
           "priceRange": "$14-18",
           "rating": 4.5
+        },
+        {
+          "number": 7,
+          "hotspot": {"x": 30, "y": 52.7},
+          "name": "decorUhome Beige Linen Pillow Covers (18x18, Set of 2)",
+          "description": "Textured natural linen covers with a flange edge",
+          "image": "/images/products/room-05/pillows.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FR12VBNY?tag=dailydecorins-20",
+          "priceRange": "$16-20",
+          "rating": 4.6
         }
       ]
     },
@@ -686,7 +736,7 @@
       "tags": ["coffee bar ideas", "coffee station", "small kitchen", "sage green", "amazon finds"],
       "roomImage": "/images/rooms/room-10.jpg",
       "createdAt": "2026-11-28",
-      "totalPrice": "$195-238",
+      "totalPrice": "$252-303",
       "products": [
         {
           "number": 1,
@@ -757,6 +807,16 @@
           "amazonUrl": "https://www.amazon.com/dp/B0DS7T4JJZ?tag=dailydecorins-20",
           "priceRange": "$14-18",
           "rating": 4.8
+        },
+        {
+          "number": 8,
+          "hotspot": {"x": 35, "y": 51.7},
+          "name": "Cuisinart 14-Cup Programmable Coffee Maker",
+          "description": "Brushed stainless drip brewer with glass carafe & digital panel",
+          "image": "/images/products/room-10/coffeemaker.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B00MVWGQX0?tag=dailydecorins-20",
+          "priceRange": "$57-65",
+          "rating": 4.4
         }
       ]
     },
@@ -769,7 +829,7 @@
       "tags": ["kids reading nook", "kids room ideas", "boho nursery", "reading corner", "amazon finds"],
       "roomImage": "/images/rooms/room-11.jpg",
       "createdAt": "2026-11-28",
-      "totalPrice": "$187-230",
+      "totalPrice": "$235-287",
       "products": [
         {
           "number": 1,
@@ -840,6 +900,26 @@
           "amazonUrl": "https://www.amazon.com/dp/B0CRKCYNZX?tag=dailydecorins-20",
           "priceRange": "$9-13",
           "rating": 4.4
+        },
+        {
+          "number": 8,
+          "hotspot": {"x": 76, "y": 80},
+          "name": "LAGRATY Chunky Knit Throw Blanket (Cream, 50x60)",
+          "description": "Thick chenille cable-loop knit throw, soft & washable",
+          "image": "/images/products/room-11/blanket.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0BR728TB6?tag=dailydecorins-20",
+          "priceRange": "$31-36",
+          "rating": 4.4
+        },
+        {
+          "number": 9,
+          "hotspot": {"x": 15, "y": 46.7},
+          "name": "BGment Oatmeal Linen Curtains, 84\" (2 Panels)",
+          "description": "Light-filtering textured linen-look grommet panels",
+          "image": "/images/products/room-11/curtains.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0CJHZYHGB?tag=dailydecorins-20",
+          "priceRange": "$17-21",
+          "rating": 4.7
         }
       ]
     },
@@ -852,7 +932,7 @@
       "tags": ["dining nook ideas", "small dining room", "breakfast nook", "rattan decor", "amazon finds"],
       "roomImage": "/images/rooms/room-12.jpg",
       "createdAt": "2026-11-28",
-      "totalPrice": "$306-355",
+      "totalPrice": "$317-369",
       "products": [
         {
           "number": 1,
@@ -923,6 +1003,16 @@
           "amazonUrl": "https://www.amazon.com/dp/B0FP4FVS44?tag=dailydecorins-20",
           "priceRange": "$19-24",
           "rating": 4.6
+        },
+        {
+          "number": 8,
+          "hotspot": {"x": 64, "y": 51.3},
+          "name": "Everymoment White Taper Candles (10\", 12-Pack)",
+          "description": "Unscented dripless taper candles for brass candlesticks",
+          "image": "/images/products/room-12/tapers.jpg",
+          "amazonUrl": "https://www.amazon.com/dp/B0FQ37V5HJ?tag=dailydecorins-20",
+          "priceRange": "$11-14",
+          "rating": 4.4
         }
       ]
     }
