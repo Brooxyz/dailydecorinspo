@@ -3,20 +3,14 @@
 import { useState } from "react";
 import roomsData from "@/data/rooms.json";
 import { RoomCard } from "@/components/RoomCard";
+import categoryData from "@/data/categories.json";
 
 type Room = (typeof roomsData.rooms)[number];
 
+// Tabs come from src/data/categories.json (single source of truth)
 const CATEGORIES = [
   { id: "all", label: "All Rooms" },
-  { id: "bedroom", label: "Bedrooms" },
-  { id: "reading-nook", label: "Reading Nooks" },
-  { id: "desktop-setup", label: "Desk Setups" },
-  { id: "living-room", label: "Living Rooms" },
-  { id: "bathroom", label: "Bathrooms" },
-  { id: "entryway", label: "Entryways" },
-  { id: "coffee-bar", label: "Coffee Bars" },
-  { id: "kids-room", label: "Kids Rooms" },
-  { id: "dining-nook", label: "Dining Nooks" },
+  ...Object.entries(categoryData).map(([id, c]) => ({ id, label: c.tab })),
 ];
 
 export function RoomsExplorer({ initialRooms }: { initialRooms: Room[] }) {

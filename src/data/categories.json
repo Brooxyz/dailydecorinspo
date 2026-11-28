@@ -1,0 +1,83 @@
+{
+  "bedroom": {
+    "label": "Bedroom",
+    "tab": "Bedrooms",
+    "board": "Small Bedroom Hacks",
+    "feedTitle": "Small Bedroom Hacks",
+    "tags": "#bedroomdecor #smallbedroom #cozybedroom #amazonfinds #budgetdecor #homedecorideas",
+    "keywords": "bedroom decor, small bedroom hacks, amazon finds, budget decor, cozy bedroom",
+    "pinHashtags": "#amazonfinds #bedroomdecor #smallbedroom #cozyroom #budgetdecor #homedecorideas #aesthetic"
+  },
+  "reading-nook": {
+    "label": "Reading Nook",
+    "tab": "Reading Nooks",
+    "board": "Cozy Reading Nooks & Corners",
+    "feedTitle": "Cozy Reading Nooks & Corners",
+    "tags": "#readingnook #cozycorner #bouclechair #amazonfinds #warmminimalism #homedecor",
+    "keywords": "reading nook, cozy corner, boucle chair, warm minimalism, amazon finds",
+    "pinHashtags": "#amazonfinds #readingnook #cozycorner #bouclechair #warmminimalism #homedecorideas #aesthetic"
+  },
+  "desktop-setup": {
+    "label": "Desk Setup",
+    "tab": "Desk Setups",
+    "board": "Aesthetic Desk Setups",
+    "feedTitle": "Aesthetic Desk Setups",
+    "tags": "#desksetup #wfhsetup #aestheticdesk #homeoffice #amazonfinds #workspacegoals",
+    "keywords": "desk setup, wfh setup, aesthetic desk, home office, amazon finds",
+    "pinHashtags": "#amazonfinds #desksetup #wfhsetup #aestheticdesk #homeoffice #workspacegoals #budgetdecor"
+  },
+  "living-room": {
+    "label": "Living Room",
+    "tab": "Living Rooms",
+    "board": "Cozy Fall Apartment Decor",
+    "feedTitle": "Cozy Fall Apartment Inspo",
+    "tags": "#livingroomdecor #cozyfall #apartmentdecor #warmminimalism #amazonfinds #falldecor",
+    "keywords": "living room decor, cozy fall apartment, warm minimalism, autumn decor, amazon finds",
+    "pinHashtags": "#amazonfinds #livingroomdecor #cozyfall #apartmentdecor #warmminimalism #falldecor #homedecor"
+  },
+  "bathroom": {
+    "label": "Bathroom",
+    "tab": "Bathrooms",
+    "board": "Small Bathroom Hacks",
+    "feedTitle": "Small Bathroom Hacks",
+    "tags": "#bathroomdecor #smallbathroom #spabathroom #bathroomorganization #amazonfinds",
+    "keywords": "small bathroom hacks, bathroom organization, spa bathroom, amazon finds",
+    "pinHashtags": "#amazonfinds #bathroomdecor #smallbathroom #spabathroom #bathroomorganization #budgetdecor"
+  },
+  "entryway": {
+    "label": "Entryway",
+    "tab": "Entryways",
+    "board": "Entryway Decor Ideas",
+    "feedTitle": "Entryway Decor Ideas",
+    "tags": "#entrywaydecor #smallentryway #farmhousedecor #mudroom #amazonfinds #homedecorideas",
+    "keywords": "entryway decor, small entryway ideas, farmhouse entryway, drop zone, amazon finds",
+    "pinHashtags": "#amazonfinds #entrywaydecor #smallentryway #farmhousedecor #mudroom #budgetdecor"
+  },
+  "coffee-bar": {
+    "label": "Coffee Bar",
+    "tab": "Coffee Bars",
+    "board": "Coffee Bar Ideas",
+    "feedTitle": "Coffee Bar Ideas",
+    "tags": "#coffeebar #coffeestation #coffeebarideas #kitchendecor #amazonfinds #homedecorideas",
+    "keywords": "coffee bar ideas, coffee station, small kitchen coffee bar, kitchen decor, amazon finds",
+    "pinHashtags": "#amazonfinds #coffeebar #coffeestation #coffeebarideas #kitchendecor #budgetdecor"
+  },
+  "kids-room": {
+    "label": "Kids Room",
+    "tab": "Kids Rooms",
+    "board": "Kids Room Ideas",
+    "feedTitle": "Kids Room Ideas",
+    "tags": "#kidsroom #readingnook #kidsroomdecor #bohonursery #amazonfinds #homedecorideas",
+    "keywords": "kids reading nook, kids room ideas, boho nursery, reading corner, playroom decor, amazon finds",
+    "pinHashtags": "#amazonfinds #kidsroom #readingnook #kidsroomdecor #bohonursery #budgetdecor"
+  },
+  "dining-nook": {
+    "label": "Dining Nook",
+    "tab": "Dining Nooks",
+    "board": "Dining Nook Ideas",
+    "feedTitle": "Dining Nook Ideas",
+    "tags": "#diningnook #breakfastnook #smalldiningroom #diningroomdecor #amazonfinds #homedecorideas",
+    "keywords": "dining nook ideas, breakfast nook, small dining room, dining room decor, rattan pendant, amazon finds",
+    "pinHashtags": "#amazonfinds #diningnook #breakfastnook #smalldiningroom #diningroomdecor #budgetdecor"
+  }
+}

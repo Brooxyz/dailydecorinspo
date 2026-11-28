@@ -31,27 +31,10 @@ async function main() {
   const envLabel = isProd ? 'PRODUCTION' : 'SANDBOX';
   console.log(`\n🚀 Publishing Room #${roomNum} (${typeArg}) to Pinterest [${envLabel}]...`);
 
-  // Target board name based on category (matched to Pinterest profile boards)
-  let boardName = 'Small Bedroom Hacks';
-  if (room.category === 'desktop-setup') {
-    boardName = 'Aesthetic Desk Setups';
-  } else if (room.category === 'living-room') {
-    boardName = 'Cozy Fall Apartment Decor';
-  } else if (room.category === 'reading-nook') {
-    boardName = 'Cozy Reading Nooks & Corners';
-  } else if (room.category === 'bathroom') {
-    boardName = 'Small Bathroom Hacks';
-  } else if (room.category === 'dining-nook') {
-    boardName = 'Dining Nook Ideas';
-  } else if (room.category === 'kids-room') {
-    boardName = 'Kids Room Ideas';
-  } else if (room.category === 'coffee-bar') {
-    boardName = 'Coffee Bar Ideas';
-  } else if (room.category === 'entryway') {
-    boardName = 'Entryway Decor Ideas';
-  } else if (room.category !== 'bedroom') {
-    boardName = 'Aesthetic Home Decor Finds';
-  }
+  // Board + hashtags come from src/data/categories.json (single source of truth)
+  const categories = JSON.parse(fs.readFileSync(path.join(root, 'src/data/categories.json'), 'utf8'));
+  const cat = categories[room.category];
+  const boardName = cat ? cat.board : 'Aesthetic Home Decor Finds';
 
   console.log(`Checking boards for: "${boardName}"...`);
   let boards = await getBoards(isProd);
@@ -75,18 +58,7 @@ async function main() {
   // Format destination link
   const link = `https://dailydecorinspo.vercel.app/room/${room.slug}/`;
 
-  const CATEGORY_HASHTAGS = {
-    'bedroom': '#amazonfinds #bedroomdecor #smallbedroom #cozyroom #budgetdecor #homedecorideas #aesthetic',
-    'reading-nook': '#amazonfinds #readingnook #cozycorner #bouclechair #warmminimalism #homedecorideas #aesthetic',
-    'desktop-setup': '#amazonfinds #desksetup #wfhsetup #aestheticdesk #homeoffice #workspacegoals #budgetdecor',
-    'living-room': '#amazonfinds #livingroomdecor #cozyfall #apartmentdecor #warmminimalism #falldecor #homedecor',
-    'dining-nook': '#amazonfinds #diningnook #breakfastnook #smalldiningroom #diningroomdecor #budgetdecor',
-    'kids-room': '#amazonfinds #kidsroom #readingnook #kidsroomdecor #bohonursery #budgetdecor',
-    'coffee-bar': '#amazonfinds #coffeebar #coffeestation #coffeebarideas #kitchendecor #budgetdecor',
-    'entryway': '#amazonfinds #entrywaydecor #smallentryway #farmhousedecor #mudroom #budgetdecor',
-    'bathroom': '#amazonfinds #bathroomdecor #smallbathroom #spabathroom #bathroomorganization #budgetdecor',
-  };
-  const categoryTags = CATEGORY_HASHTAGS[room.category] || '#amazonfinds #homedecorideas #budgetdecor #shopthelook #aesthetic';
+  const categoryTags = cat ? cat.pinHashtags : '#amazonfinds #homedecorideas #budgetdecor #shopthelook #aesthetic';
 
   // Select image & metadata based on Pin A or Pin B
   let imageFile = '';

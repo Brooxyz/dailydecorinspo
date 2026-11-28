@@ -23,6 +23,8 @@ LAYOUT_PATH = STOREFRONT_ROOT / "src" / "app" / "layout.tsx"
 ROOM_PAGE_PATH = STOREFRONT_ROOT / "src" / "app" / "room" / "[slug]" / "page.tsx"
 REPORTS_DIR = STOREFRONT_ROOT / "reports"
 AFFILIATE_TAG = "dailydecorins-20"
+MAX_PRODUCTS = 10  # user rule: never more than 10 products on one room page
+CATEGORIES_PATH = STOREFRONT_ROOT / "src" / "data" / "categories.json"
 DISCLOSURE_PHRASE = "As an Amazon Associate, I earn from qualifying purchases."
 
 HTTP_HEADERS = {
@@ -176,6 +178,7 @@ def main() -> int:
 
     rooms_data = json.loads(ROOMS_PATH.read_text(encoding="utf-8"))
     rooms = rooms_data.get("rooms", [])
+    categories = json.loads(CATEGORIES_PATH.read_text(encoding="utf-8"))
 
     disclosures = {
         "layout": check_disclosure(LAYOUT_PATH),
@@ -291,6 +294,21 @@ def main() -> int:
             warnings.append(
                 f"Room #{room_num} totalPrice {room.get('totalPrice')} != sum of items {expected_total}"
             )
+
+        # Structure rules: max 10 products per page, every product placed on the photo, known category
+        products = room.get("products", [])
+        if len(products) > MAX_PRODUCTS:
+            critical_issues.append(f"Room #{room_num} has {len(products)} products (max {MAX_PRODUCTS})")
+        if room.get("category") not in categories:
+            critical_issues.append(f"Room #{room_num} category '{room.get('category')}' missing from categories.json")
+        for i, p in enumerate(products, 1):
+            hs = p.get("hotspot")
+            if p.get("number") != i:
+                critical_issues.append(f"Room #{room_num} product numbers are not 1..N (#{p.get('number')} at {i})")
+            if not hs:
+                warnings.append(f"Room #{room_num} #{p['number']} has no hotspot")
+            elif not (0 <= hs.get("x", -1) <= 100 and 0 <= hs.get("y", -1) <= 100):
+                critical_issues.append(f"Room #{room_num} #{p['number']} hotspot outside the photo")
 
         room_reports.append(
             {

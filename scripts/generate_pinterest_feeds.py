@@ -29,61 +29,10 @@ def room_disclosure(room: dict) -> str:
         return f"{ETSY_NOTE} {DISCLOSURE}"
     return DISCLOSURE
 
+# Single source of truth: src/data/categories.json (shared with the site and publish-pin.mjs)
 CATEGORY_META: dict[str, dict[str, str]] = {
-    "bedroom": {
-        "board": "Small Bedroom Hacks",
-        "title": "Small Bedroom Hacks",
-        "tags": "#bedroomdecor #smallbedroom #cozybedroom #amazonfinds #budgetdecor #homedecorideas",
-        "keywords": "bedroom decor, small bedroom hacks, amazon finds, budget decor, cozy bedroom",
-    },
-    "reading-nook": {
-        "board": "Cozy Reading Nooks & Corners",
-        "title": "Cozy Reading Nooks & Corners",
-        "tags": "#readingnook #cozycorner #bouclechair #amazonfinds #warmminimalism #homedecor",
-        "keywords": "reading nook, cozy corner, boucle chair, warm minimalism, amazon finds",
-    },
-    "desktop-setup": {
-        "board": "Aesthetic Desk Setups",
-        "title": "Aesthetic Desk Setups",
-        "tags": "#desksetup #wfhsetup #aestheticdesk #homeoffice #amazonfinds #workspacegoals",
-        "keywords": "desk setup, wfh setup, aesthetic desk, home office, amazon finds",
-    },
-    "living-room": {
-        "board": "Cozy Fall Apartment Decor",
-        "title": "Cozy Fall Apartment Inspo",
-        "tags": "#livingroomdecor #cozyfall #apartmentdecor #warmminimalism #amazonfinds #falldecor",
-        "keywords": "living room decor, cozy fall apartment, warm minimalism, autumn decor, amazon finds",
-    },
-    "dining-nook": {
-        "board": "Dining Nook Ideas",
-        "title": "Dining Nook Ideas",
-        "tags": "#diningnook #breakfastnook #smalldiningroom #diningroomdecor #amazonfinds #homedecorideas",
-        "keywords": "dining nook ideas, breakfast nook, small dining room, dining room decor, rattan pendant, amazon finds",
-    },
-    "kids-room": {
-        "board": "Kids Room Ideas",
-        "title": "Kids Room Ideas",
-        "tags": "#kidsroom #readingnook #kidsroomdecor #bohonursery #amazonfinds #homedecorideas",
-        "keywords": "kids reading nook, kids room ideas, boho nursery, reading corner, playroom decor, amazon finds",
-    },
-    "coffee-bar": {
-        "board": "Coffee Bar Ideas",
-        "title": "Coffee Bar Ideas",
-        "tags": "#coffeebar #coffeestation #coffeebarideas #kitchendecor #amazonfinds #homedecorideas",
-        "keywords": "coffee bar ideas, coffee station, small kitchen coffee bar, kitchen decor, amazon finds",
-    },
-    "entryway": {
-        "board": "Entryway Decor Ideas",
-        "title": "Entryway Decor Ideas",
-        "tags": "#entrywaydecor #smallentryway #farmhousedecor #mudroom #amazonfinds #homedecorideas",
-        "keywords": "entryway decor, small entryway ideas, farmhouse entryway, drop zone, amazon finds",
-    },
-    "bathroom": {
-        "board": "Small Bathroom Hacks",
-        "title": "Small Bathroom Hacks",
-        "tags": "#bathroomdecor #smallbathroom #spabathroom #bathroomorganization #amazonfinds",
-        "keywords": "small bathroom hacks, bathroom organization, spa bathroom, amazon finds",
-    },
+    cid: {"board": c["board"], "title": c["feedTitle"], "tags": c["tags"], "keywords": c["keywords"]}
+    for cid, c in json.loads((STOREFRONT_ROOT / "src" / "data" / "categories.json").read_text(encoding="utf-8")).items()
 }
 
 
