@@ -4,6 +4,7 @@
 //
 // usage: node scripts/generate-video-pins.mjs [roomNumber ...] [--out dir]
 //   default out dir: public/videos/pins   (file: room-NN.mp4 + room-NN-cover.jpg)
+//   existing videos are skipped unless --force (re-render after changing a room's photo or products)
 import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
@@ -20,6 +21,7 @@ const args = process.argv.slice(2);
 const outIdx = args.indexOf('--out');
 const OUT = outIdx >= 0 ? path.resolve(args[outIdx + 1]) : path.join(ROOT, 'public', 'videos', 'pins');
 const wanted = args.filter((a, i) => /^\d+$/.test(a) && args[i - 1] !== '--out').map(Number);
+const FORCE = args.includes('--force');
 
 const ease = (t) => (t <= 0 ? 0 : t >= 1 ? 1 : 1 - Math.pow(1 - t, 3));
 const fade = (t, start, len) => ease((t - start) / len);
@@ -114,7 +116,7 @@ async function renderRoom(room, num) {
   fs.mkdirSync(OUT, { recursive: true });
   const file = path.join(OUT, `room-${String(num).padStart(2, '0')}.mp4`);
   const ff = spawn(ffmpegPath, ['-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', `${W}x${H}`, '-r', String(FPS), '-i', '-',
-    '-c:v', 'libx264', '-preset', 'medium', '-crf', '21', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', file]);
+    '-c:v', 'libx264', '-preset', 'medium', '-crf', '23', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', file]);
   const done = new Promise((res, rej) => { ff.on('close', (c) => (c === 0 ? res() : rej(new Error('ffmpeg exit ' + c)))); });
   const write = (buf) => new Promise((res) => (ff.stdin.write(buf) ? res() : ff.stdin.once('drain', res)));
 
@@ -177,5 +179,7 @@ const list = wanted.length ? wanted : rooms.map((_, i) => i + 1);
 for (const n of list) {
   const r = rooms[n - 1];
   if (!r) { console.log(`room ${n} not found`); continue; }
+  const target = path.join(OUT, `room-${String(n).padStart(2, '0')}.mp4`);
+  if (!FORCE && fs.existsSync(target)) continue;
   console.log('video', ...(await renderRoom(r, n)));
 }

@@ -80,6 +80,10 @@ def main() -> int:
     if run_step("2b/4 Generate Extra Pins", ["node", "scripts/generate-extra-pins.mjs"]) != 0:
         return 1
 
+    # Video pins for rooms that do not have one yet (re-render a changed room with --force by hand)
+    if run_step("2c/4 Generate Video Pins", ["node", "scripts/generate-video-pins.mjs"]) != 0:
+        return 1
+
     if run_step("3/4 Generate Pinterest RSS & CSV", [py, "scripts/generate_pinterest_feeds.py"]) != 0:
         return 1
 
