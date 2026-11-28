@@ -1,6 +1,59 @@
 @import "tailwindcss";
 
+/* Dark mode follows a `.dark` class on <html> (set before paint by the inline script in layout.tsx:
+   saved choice first, otherwise the visitor's system setting). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Semantic tokens. Light = a sunlit linen room; dark = the same room in the evening, lamp on. */
+:root {
+  --canvas: #faf6f0;      /* linen page */
+  --surface: #ffffff;     /* cards */
+  --surface-2: #f3ebe0;   /* oatmeal panels, chips */
+  --ink: #2b1d14;         /* walnut: headings */
+  --ink-2: #5e4636;       /* body text */
+  --muted: #8a7261;       /* secondary text */
+  --line: #e6d8c6;        /* borders */
+  --accent: #7a4a2b;      /* walnut buttons */
+  --accent-hover: #643a20;
+  --accent-ink: #fff8f0;  /* text on accent */
+  --sage: #5f7357;        /* ratings, small positives */
+  --well: #ffffff;        /* product photo well (packshots are pure white) */
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: #17120f;
+  --surface: #221a15;
+  --surface-2: #2c231c;
+  --ink: #f3e9dc;
+  --ink-2: #d4c2ae;
+  --muted: #a08c79;
+  --line: #3b2f26;
+  --accent: #e2aa6c;      /* lamp glow */
+  --accent-hover: #ecbd88;
+  --accent-ink: #1e140d;
+  --sage: #a9bc9b;
+  --well: #f6f1ea;        /* soften pure-white packshots at night */
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-sage: var(--sage);
+  --color-well: var(--well);
+}
+
 @theme {
+  /* legacy brand scale (still used by a few one-off accents) */
   --color-warm-50: #fdf8f3;
   --color-warm-100: #f9efe4;
   --color-warm-200: #f2dcc5;
@@ -12,48 +65,38 @@
   --color-warm-800: #834c2d;
   --color-warm-900: #6b3f28;
 
-  --color-sage-50: #f4f7f4;
-  --color-sage-100: #e4ebe4;
-  --color-sage-200: #c9d7c9;
-  --color-sage-300: #a3b9a3;
-  --color-sage-400: #7a9a7a;
-  --color-sage-500: #5a7d5a;
-  --color-sage-600: #466346;
-  --color-sage-700: #3a5039;
-  --color-sage-800: #30412f;
-  --color-sage-900: #283628;
-
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
 }
 
-/* Custom scrollbar */
+body {
+  background: var(--canvas);
+  color: var(--ink-2);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track {
-  background: var(--color-warm-50);
+  background: var(--canvas);
 }
-
 ::-webkit-scrollbar-thumb {
-  background: var(--color-warm-300);
+  background: var(--line);
   border-radius: 3px;
 }
 
-/* Smooth image loading */
-img {
-  transition: opacity 0.3s ease;
-}
-
-/* Pinterest Save button hover area */
-.pin-hover:hover .pin-save-btn {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.pin-save-btn {
-  opacity: 0;
-  transform: translateY(-8px);
-  transition: all 0.3s ease;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

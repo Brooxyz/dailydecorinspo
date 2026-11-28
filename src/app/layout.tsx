@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { liveFindTypes } from "@/lib/finds";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dailydecorinspo.vercel.app"),
@@ -32,14 +33,18 @@ export const metadata: Metadata = {
   },
 };
 
+// Runs before paint: saved choice wins, otherwise follow the system setting (no light flash at night).
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <meta
           name="p:domain_verify"
           content="63275721639a1ac70a4eedda202d5668"
@@ -57,11 +62,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-warm-50 text-gray-900 font-body antialiased">
+      <body className="bg-canvas text-ink-2 font-body antialiased">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
@@ -75,38 +80,32 @@ export default function RootLayout({
 /* ─── Header ─── */
 function Header() {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-warm-50/90 border-b border-warm-200/50">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-warm-700 flex items-center justify-center text-white font-display text-lg font-bold group-hover:bg-warm-800 transition-colors">
-            D
-          </div>
-          <div>
-            <h1 className="font-display text-xl font-semibold text-warm-900 leading-tight">
-              Daily Decor Inspo
-            </h1>
-            <p className="text-xs text-warm-500 font-medium tracking-wide uppercase">
-              Shop the Room
-            </p>
-          </div>
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-canvas/85 border-b border-line">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <a href="/" className="flex items-baseline gap-2 group" aria-label="Daily Decor Inspo home">
+          <span className="font-display text-xl sm:text-2xl font-semibold text-ink tracking-tight">
+            Daily Decor Inspo
+          </span>
+          <span className="hidden sm:inline text-sm text-muted">shop the room</span>
         </a>
 
-        <nav className="flex items-center gap-4 sm:gap-6">
-          <a
-            href="/"
-            className="hidden sm:inline text-sm font-medium text-warm-700 hover:text-warm-900 transition-colors"
-          >
-            All Rooms
+        <nav className="flex items-center gap-3 sm:gap-5">
+          <a href="/#rooms" className="hidden sm:inline text-sm font-medium text-ink-2 hover:text-ink transition-colors">
+            Rooms
+          </a>
+          <a href="/#shop-by-piece" className="hidden sm:inline text-sm font-medium text-ink-2 hover:text-ink transition-colors">
+            Shop by piece
           </a>
           <a
             href="https://pinterest.com/dailydecorinspo_"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-warm-700 hover:text-warm-900 transition-colors flex items-center gap-1"
+            className="text-sm font-medium text-ink-2 hover:text-ink transition-colors flex items-center gap-1.5"
           >
             <PinterestIcon />
-            Pinterest
+            <span className="hidden sm:inline">Pinterest</span>
           </a>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
@@ -116,55 +115,51 @@ function Header() {
 /* ─── Footer ─── */
 function Footer() {
   return (
-    <footer className="bg-warm-100 border-t border-warm-200 mt-20">
-      <div className="max-w-6xl mx-auto px-4 py-10">
-        <div className="text-center space-y-4">
-          <p className="font-display text-lg text-warm-800">
-            Daily Decor Inspo
+    <footer className="bg-surface-2 border-t border-line mt-20">
+      <div className="max-w-6xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-[1.2fr_1fr]">
+        <div className="space-y-4">
+          <p className="font-display text-2xl text-ink">Daily Decor Inspo</p>
+          <p className="text-sm text-ink-2 max-w-md leading-relaxed">
+            Styled rooms built only from things you can buy today, each piece linked so you can
+            copy the whole look or just the part you love.
           </p>
-          <p className="text-sm text-warm-600 max-w-lg mx-auto">
-            Curated room designs with budget-friendly Amazon finds. Every room
-            is styled with products you can actually buy.
-          </p>
-
           {/* Amazon Associates Disclosure — REQUIRED */}
-          <div className="bg-warm-200/50 rounded-lg p-4 max-w-xl mx-auto">
-            <p className="text-xs text-warm-700 leading-relaxed">
-              <strong>#ad</strong> As an Amazon Associate, I earn from
-              qualifying purchases. This means if you click on a link and make a
-              purchase, I may receive a small commission at no extra cost to
-              you. All product recommendations are based on personal curation
-              and aesthetic fit.
-            </p>
-          </div>
+          <p className="text-xs text-muted leading-relaxed max-w-md border-l-2 border-line pl-3">
+            <strong className="text-ink-2">#ad</strong> As an Amazon Associate, I earn from
+            qualifying purchases. This means if you click on a link and make a purchase, I may
+            receive a small commission at no extra cost to you. All product recommendations are
+            based on personal curation and aesthetic fit.
+          </p>
+        </div>
 
-          <nav className="flex flex-wrap items-center justify-center gap-2 pt-2" aria-label="Shop by product">
+        <div className="space-y-4">
+          <p className="text-sm font-semibold text-ink">Shop by piece</p>
+          <nav className="flex flex-wrap gap-2" aria-label="Shop by product">
             {liveFindTypes().map((t) => (
-              <a key={t.slug} href={`/finds/${t.slug}/`} className="px-3 py-1 rounded-full bg-warm-200 text-warm-700 text-xs font-semibold hover:bg-warm-300 transition-colors">
+              <a
+                key={t.slug}
+                href={`/finds/${t.slug}/`}
+                className="px-3 py-1.5 rounded-full bg-surface border border-line text-ink-2 text-xs font-medium hover:text-ink hover:border-muted transition-colors"
+              >
                 {t.label}
               </a>
             ))}
           </nav>
-
-          <div className="flex items-center justify-center gap-6 pt-4 text-xs text-warm-600">
-            <a href="/privacy/" className="hover:text-warm-900 underline underline-offset-2 transition-colors">
+          <div className="flex items-center gap-5 pt-2 text-xs text-muted">
+            <a href="/privacy/" className="hover:text-ink underline underline-offset-2 transition-colors">
               Privacy Policy
             </a>
-            <span>•</span>
             <a
               href="https://pinterest.com/dailydecorinspo_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-warm-600 hover:text-warm-900 transition-colors flex items-center gap-1"
+              className="hover:text-ink transition-colors flex items-center gap-1"
             >
               <PinterestIcon />
               Pinterest
             </a>
+            <span>© {new Date().getFullYear()} Daily Decor Inspo</span>
           </div>
-
-          <p className="text-xs text-warm-400 pt-4">
-            © {new Date().getFullYear()} Daily Decor Inspo. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
@@ -174,8 +169,8 @@ function Footer() {
 function PinterestIcon() {
   return (
     <svg
-      width="20"
-      height="20"
+      width="18"
+      height="18"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"

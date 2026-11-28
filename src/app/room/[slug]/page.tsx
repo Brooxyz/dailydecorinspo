@@ -76,49 +76,21 @@ export default async function RoomPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Back Navigation */}
       <div className="max-w-6xl mx-auto px-4 pt-6">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-sm text-warm-500 hover:text-warm-800 transition-colors group"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            className="group-hover:-translate-x-1 transition-transform"
-          >
-            <path
-              d="M10 12L6 8L10 4"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+        <a href="/#rooms" className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-ink transition-colors">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          All Rooms
+          All rooms
         </a>
       </div>
 
       {/* Room Hero */}
       <section className="max-w-6xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* Room Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl pin-hover group">
-            <img
-              src={room.roomImage}
-              alt={room.title}
-              className="w-full aspect-[2/3] object-cover"
-              loading="eager"
-            />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Room Image with shoppable hotspots */}
+          <div className="relative rounded-2xl overflow-hidden shadow-xl lg:sticky lg:top-24">
+            <img src={room.roomImage} alt={room.title} className="w-full aspect-[2/3] object-cover" loading="eager" />
 
-            {/* Product count badge */}
-            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-md">
-              <p className="text-sm font-semibold text-warm-800">
-                {room.products.length} Items • {room.totalPrice}
-              </p>
-            </div>
-
-            {/* Shoppable hotspots placed on each product in the photo */}
             {(room.products as Product[]).map((product) =>
               product.hotspot ? (
                 <a
@@ -129,11 +101,11 @@ export default async function RoomPage({
                   style={{ left: `${product.hotspot.x}%`, top: `${product.hotspot.y}%` }}
                   className="group/hs absolute -translate-x-1/2 -translate-y-1/2 z-10"
                 >
-                  <span className="absolute inset-0 rounded-full bg-white/70 animate-ping opacity-60" />
-                  <span className="relative w-9 h-9 rounded-full bg-warm-700 ring-[3px] ring-white flex items-center justify-center text-sm font-bold text-white shadow-lg group-hover/hs:scale-110 group-hover/hs:bg-warm-800 transition-transform">
+                  <span className="absolute inset-0 rounded-full bg-white/70 animate-ping opacity-50 motion-reduce:hidden" />
+                  <span className="relative w-9 h-9 rounded-full bg-[#7a4a2b] ring-[3px] ring-white flex items-center justify-center text-sm font-semibold text-white shadow-lg group-hover/hs:scale-110 transition-transform">
                     {product.number}
                   </span>
-                  <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-warm-900/90 px-2 py-1 text-xs font-medium text-white opacity-0 group-hover/hs:opacity-100 transition-opacity hidden sm:block">
+                  <span className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-[#2b1d14]/90 px-2 py-1 text-xs font-medium text-white opacity-0 group-hover/hs:opacity-100 transition-opacity hidden sm:block">
                     {product.name} • {product.priceRange}
                   </span>
                 </a>
@@ -142,61 +114,36 @@ export default async function RoomPage({
           </div>
 
           {/* Room Info */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:pt-4">
             <div>
-              <span className="inline-block px-3 py-1 rounded-full bg-warm-200 text-warm-700 text-xs font-semibold uppercase tracking-wide mb-3">
+              <span className="inline-block px-3 py-1 rounded-full bg-surface-2 text-ink-2 text-xs font-semibold mb-4">
                 {categoryLabel(room.category)}
               </span>
-              <h1 className="font-display text-3xl sm:text-4xl font-bold text-warm-900 leading-tight">
+              <h1 className="font-display text-4xl sm:text-5xl font-medium text-ink leading-[1.05] tracking-tight">
                 {room.title}
               </h1>
-              <p className="text-warm-600 mt-2 text-lg">{room.subtitle}</p>
+              <p className="text-ink-2 mt-3 text-lg leading-relaxed">{room.subtitle}</p>
             </div>
 
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2">
-              {room.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1 rounded-full bg-warm-100 text-warm-500 text-xs font-medium"
-                >
-                  #{tag.replace(/\s+/g, "")}
-                </span>
-              ))}
-            </div>
-
-            {/* Quick Stats */}
-            <div className="bg-warm-100 rounded-xl p-5">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <p className="font-display text-2xl font-bold text-warm-800">
-                    {room.products.length}
-                  </p>
-                  <p className="text-xs text-warm-500 mt-1">Products</p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl font-bold text-warm-800">
-                    {room.totalPrice}
-                  </p>
-                  <p className="text-xs text-warm-500 mt-1">Total Cost</p>
-                </div>
-                <div>
-                  <p className="font-display text-2xl font-bold text-sage-600">
-                    ★{" "}
-                    {avgRating(room.products as Product[])}
-                  </p>
-                  <p className="text-xs text-warm-500 mt-1">Avg Rating</p>
-                </div>
+            <dl className="grid grid-cols-3 rounded-2xl border border-line bg-surface divide-x divide-line">
+              <div className="p-4 text-center">
+                <dt className="text-xs text-muted">Pieces</dt>
+                <dd className="font-display text-2xl text-ink mt-1">{room.products.length}</dd>
               </div>
-            </div>
+              <div className="p-4 text-center">
+                <dt className="text-xs text-muted">Whole look</dt>
+                <dd className="font-display text-2xl text-ink mt-1">{room.totalPrice}</dd>
+              </div>
+              <div className="p-4 text-center">
+                <dt className="text-xs text-muted">Avg rating</dt>
+                <dd className="font-display text-2xl text-sage mt-1">★ {avgRating(room.products as Product[])}</dd>
+              </div>
+            </dl>
 
-            {/* CTA */}
-            <div className="bg-gradient-to-r from-warm-700 to-warm-800 rounded-xl p-5 text-white">
-              <p className="font-display text-lg font-semibold">
-                Love this room?
-              </p>
-              <p className="text-warm-200 text-sm mt-1">
-                Every item is linked below. Click any product card to shop it on{" "}
+            <div className="rounded-2xl bg-surface-2 p-5">
+              <p className="font-display text-xl text-ink">Love this room?</p>
+              <p className="text-ink-2 text-sm mt-1 leading-relaxed">
+                Tap a number on the photo or scroll down: every item is linked to{" "}
                 {hasEtsy ? "Amazon or our Etsy shop" : "Amazon"}.
               </p>
               {cartAsins.length >= 2 && (
@@ -204,11 +151,19 @@ export default async function RoomPage({
                   href={cartUrl}
                   target="_blank"
                   rel="noopener noreferrer nofollow sponsored"
-                  className="mt-4 block w-full text-center py-3 px-4 rounded-xl bg-white text-warm-900 font-semibold text-sm hover:bg-warm-100 transition-colors shadow-md"
+                  className="mt-4 block w-full text-center py-3 px-4 rounded-full bg-accent text-accent-ink font-semibold text-sm hover:bg-accent-hover transition-colors"
                 >
-                  🛒 {hasEtsy ? "Add all Amazon items to your cart" : "Add all items to your Amazon cart"} →
+                  {hasEtsy ? "Add all Amazon items to your cart" : "Add all items to your Amazon cart"}
                 </a>
               )}
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {room.tags.map((tag) => (
+                <span key={tag} className="px-3 py-1 rounded-full border border-line text-muted text-xs">
+                  #{tag.replace(/\s+/g, "")}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -216,14 +171,7 @@ export default async function RoomPage({
 
       {/* Products Grid */}
       <section className="max-w-6xl mx-auto px-4 pb-16">
-        <div className="flex items-center gap-3 mb-8">
-          <div className="w-8 h-8 rounded-full bg-warm-800 flex items-center justify-center text-white text-sm font-bold">
-            🛒
-          </div>
-          <h2 className="font-display text-2xl font-bold text-warm-900">
-            Shop Every Item
-          </h2>
-        </div>
+        <h2 className="font-display text-3xl font-medium text-ink tracking-tight mb-6">Shop every item</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {room.products.map((product) => (
@@ -232,9 +180,9 @@ export default async function RoomPage({
         </div>
 
         {/* Disclosure */}
-        <div className="mt-10 bg-warm-100 rounded-xl p-5">
-          <p className="text-xs text-warm-600 leading-relaxed">
-            <strong>#ad</strong> — As an Amazon Associate, I earn from
+        <div className="mt-10 rounded-2xl border border-line p-5">
+          <p className="text-xs text-muted leading-relaxed">
+            <strong className="text-ink-2">#ad</strong> — As an Amazon Associate, I earn from
             qualifying purchases. Prices may vary. Product images are
             illustrative; check each listing for exact details.
             {hasEtsy &&

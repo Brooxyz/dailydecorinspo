@@ -12,35 +12,35 @@ export default function PrivacyPage() {
       <div className="mb-8">
         <a
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-warm-500 hover:text-warm-800 transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-muted hover:text-ink transition-colors"
         >
           ← Back to Rooms
         </a>
       </div>
 
-      <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-warm-200/60 space-y-8">
-        <div className="border-b border-warm-200 pb-6">
-          <span className="text-xs font-semibold uppercase tracking-wider text-warm-600">
+      <div className="bg-surface rounded-2xl p-8 sm:p-12 border border-line space-y-8">
+        <div className="border-b border-line pb-6">
+          <span className="text-xs font-semibold text-ink-2">
             Legal &amp; Compliance
           </span>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-warm-900 mt-2">
+          <h1 className="font-display text-3xl sm:text-4xl font-medium text-ink mt-2">
             Privacy Policy for Daily Decor Inspo
           </h1>
-          <p className="text-sm text-warm-500 mt-2">
+          <p className="text-sm text-muted mt-2">
             Effective Date: November 4, 2026
           </p>
         </div>
 
         {/* Section 1 */}
         <section className="space-y-3">
-          <h2 className="font-display text-xl font-semibold text-warm-900">
+          <h2 className="font-display text-xl font-semibold text-ink">
             1. Information We Collect
           </h2>
-          <p className="text-warm-700 leading-relaxed text-sm sm:text-base">
+          <p className="text-ink-2 leading-relaxed text-sm sm:text-base">
             Daily Decor Inspo (
             <a
               href="https://dailydecorinspo.vercel.app"
-              className="text-warm-800 underline underline-offset-4"
+              className="text-ink underline underline-offset-4"
             >
               https://dailydecorinspo.vercel.app
             </a>
@@ -53,17 +53,17 @@ export default function PrivacyPage() {
 
         {/* Section 2 */}
         <section className="space-y-3">
-          <h2 className="font-display text-xl font-semibold text-warm-900">
+          <h2 className="font-display text-xl font-semibold text-ink">
             2. Pinterest API Usage
           </h2>
-          <p className="text-warm-700 leading-relaxed text-sm sm:text-base">
+          <p className="text-ink-2 leading-relaxed text-sm sm:text-base">
             Our internal publishing application connects to the official
             Pinterest API v5 solely to manage our own account (
             <a
               href="https://pinterest.com/dailydecorinspo_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-warm-800 underline underline-offset-4"
+              className="text-ink underline underline-offset-4"
             >
               @dailydecorinspo_
             </a>
@@ -75,16 +75,16 @@ export default function PrivacyPage() {
 
         {/* Section 3 */}
         <section className="space-y-3">
-          <h2 className="font-display text-xl font-semibold text-warm-900">
+          <h2 className="font-display text-xl font-semibold text-ink">
             3. Affiliate Disclosure &amp; Third-Party Links
           </h2>
-          <div className="bg-warm-50 border-l-4 border-warm-600 p-4 rounded-r-lg">
-            <p className="text-warm-800 font-medium text-sm leading-relaxed">
+          <div className="bg-surface-2 border-l-4 border-accent p-4 rounded-r-lg">
+            <p className="text-ink font-medium text-sm leading-relaxed">
               This website contains curated product links to Amazon.com. As an
               Amazon Associate, we earn from qualifying purchases.
             </p>
           </div>
-          <p className="text-warm-700 leading-relaxed text-sm sm:text-base">
+          <p className="text-ink-2 leading-relaxed text-sm sm:text-base">
             When you click on an external merchant link or purchase products
             through our curated links, Amazon&apos;s own Privacy Policy, terms of
             service, and cookie rules apply. We do not process payments, store
@@ -94,15 +94,15 @@ export default function PrivacyPage() {
 
         {/* Section 4 */}
         <section className="space-y-3">
-          <h2 className="font-display text-xl font-semibold text-warm-900">
+          <h2 className="font-display text-xl font-semibold text-ink">
             4. Contact Us
           </h2>
-          <p className="text-warm-700 leading-relaxed text-sm sm:text-base">
+          <p className="text-ink-2 leading-relaxed text-sm sm:text-base">
             For any privacy-related questions, requests, or inquiries regarding
             our content, please contact us at:{" "}
             <a
               href="mailto:dailydecorinspo@gmail.com"
-              className="text-warm-800 font-semibold underline underline-offset-4"
+              className="text-ink font-semibold underline underline-offset-4"
             >
               dailydecorinspo@gmail.com
             </a>
