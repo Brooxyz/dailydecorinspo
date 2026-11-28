@@ -205,7 +205,7 @@ export default async function RoomPage({
                   rel="noopener noreferrer nofollow sponsored"
                   className="mt-4 block w-full text-center py-3 px-4 rounded-xl bg-white text-warm-900 font-semibold text-sm hover:bg-warm-100 transition-colors shadow-md"
                 >
-                  🛒 Add all {cartAsins.length} Amazon items to your cart →
+                  🛒 {hasEtsy ? "Add all Amazon items to your cart" : "Add all items to your Amazon cart"} →
                 </a>
               )}
             </div>
