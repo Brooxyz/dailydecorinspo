@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { liveFindTypes } from "@/lib/finds";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dailydecorinspo.vercel.app"),
@@ -131,6 +132,14 @@ function Footer() {
               and aesthetic fit.
             </p>
           </div>
+
+          <nav className="flex flex-wrap items-center justify-center gap-2 pt-2" aria-label="Shop by product">
+            {liveFindTypes().map((t) => (
+              <a key={t.slug} href={`/finds/${t.slug}/`} className="px-3 py-1 rounded-full bg-warm-200 text-warm-700 text-xs font-semibold hover:bg-warm-300 transition-colors">
+                {t.label}
+              </a>
+            ))}
+          </nav>
 
           <div className="flex items-center justify-center gap-6 pt-4 text-xs text-warm-600">
             <a href="/privacy/" className="hover:text-warm-900 underline underline-offset-2 transition-colors">

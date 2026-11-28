@@ -76,6 +76,10 @@ def main() -> int:
     if run_step("2/4 Generate Pins (Sharp)", ["node", "scripts/generate-pins.mjs"]) != 0:
         return 1
 
+    # Extra fresh pins (collage / zoom / product) + manifest for tools/schedule.py extras
+    if run_step("2b/4 Generate Extra Pins", ["node", "scripts/generate-extra-pins.mjs"]) != 0:
+        return 1
+
     if run_step("3/4 Generate Pinterest RSS & CSV", [py, "scripts/generate_pinterest_feeds.py"]) != 0:
         return 1
 

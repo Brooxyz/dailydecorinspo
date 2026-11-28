@@ -47,9 +47,32 @@ export default async function RoomPage({
   const room = roomsData.rooms.find((r) => r.slug === slug);
   if (!room) notFound();
   const hasEtsy = (room.products as Product[]).some((p) => p.store === "etsy");
+  // Amazon "Add to Cart" form (documented for Associates): puts every Amazon item of the room
+  // into the shopper's cart in one tap, attributed to our tag.
+  const cartAsins = (room.products as Product[])
+    .map((p) => (p.amazonUrl || "").match(/\/dp\/([A-Z0-9]{10})/)?.[1])
+    .filter((a): a is string => Boolean(a));
+  const cartUrl =
+    "https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=dailydecorins-20&tag=dailydecorins-20&" +
+    cartAsins.map((a, i) => `ASIN.${i + 1}=${a}&Quantity.${i + 1}=1`).join("&");
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${room.title}: shop the look`,
+    image: `https://dailydecorinspo.vercel.app${room.roomImage}`,
+    itemListElement: (room.products as Product[]).map((p) => ({
+      "@type": "ListItem",
+      position: p.number,
+      name: p.name,
+      image: `https://dailydecorinspo.vercel.app${p.image}`,
+      url: `https://dailydecorinspo.vercel.app/room/${room.slug}/#product-${p.number}`,
+    })),
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Back Navigation */}
       <div className="max-w-6xl mx-auto px-4 pt-6">
         <a
@@ -175,6 +198,16 @@ export default async function RoomPage({
                 Every item is linked below. Click any product card to shop it on{" "}
                 {hasEtsy ? "Amazon or our Etsy shop" : "Amazon"}.
               </p>
+              {cartAsins.length >= 2 && (
+                <a
+                  href={cartUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow sponsored"
+                  className="mt-4 block w-full text-center py-3 px-4 rounded-xl bg-white text-warm-900 font-semibold text-sm hover:bg-warm-100 transition-colors shadow-md"
+                >
+                  🛒 Add all {cartAsins.length} Amazon items to your cart →
+                </a>
+              )}
             </div>
           </div>
         </div>
