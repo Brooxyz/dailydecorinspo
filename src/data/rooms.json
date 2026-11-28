@@ -730,8 +730,8 @@
     {
       "id": "cozy-sage-coffee-bar-10",
       "slug": "cozy-sage-coffee-bar-10",
-      "title": "Cozy Sage Coffee Bar Corner",
-      "subtitle": "Sage stoneware, warm wood shelves & a small-space coffee station",
+      "title": "Cozy Farmhouse Coffee Bar Corner",
+      "subtitle": "Speckled stoneware, rustic wood shelves & a small-space coffee station",
       "category": "coffee-bar",
       "tags": ["coffee bar ideas", "coffee station", "small kitchen", "sage green", "amazon finds"],
       "roomImage": "/images/rooms/room-10.jpg",
@@ -740,9 +740,9 @@
       "products": [
         {
           "number": 1,
-          "hotspot": {"x": 41.3, "y": 65.7},
+          "hotspot": {"x": 53.1, "y": 64.9},
           "name": "SWTYMIKI Farmhouse Coffee Bar Cabinet (White)",
-          "description": "Compact white & black-metal coffee station with open shelf, fabric drawer & see-through mesh door",
+          "description": "White coffee station with drawer, open shelves & a glass-panel door",
           "image": "/images/products/room-10/cabinet.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0FXWMMK49?tag=dailydecorins-20",
           "priceRange": "$58-66",
@@ -750,7 +750,7 @@
         },
         {
           "number": 2,
-          "hotspot": {"x": 52.5, "y": 37.8},
+          "hotspot": {"x": 27.1, "y": 25.7},
           "name": "BAYKA Rustic Brown Floating Shelves (Set of 2)",
           "description": "22.5\" wall-mount wood shelves for mugs, jars & coffee syrups",
           "image": "/images/products/room-10/shelves.jpg",
@@ -760,7 +760,7 @@
         },
         {
           "number": 3,
-          "hotspot": {"x": 67.8, "y": 50.6},
+          "hotspot": {"x": 67.8, "y": 52.2},
           "name": "Glass Coffee Canisters with Wood Stand (2 x 40oz)",
           "description": "Airtight clear glass jars with rose-gold clasps & copper scoops on a wooden display stand",
           "image": "/images/products/room-10/canisters.jpg",
@@ -770,9 +770,9 @@
         },
         {
           "number": 4,
-          "hotspot": {"x": 40.1, "y": 33.6},
-          "name": "Ava Nord Sage Stoneware Coffee Mugs (Set of 4)",
-          "description": "12 oz matte sage-green speckled stoneware mugs, dishwasher & microwave safe",
+          "hotspot": {"x": 47.2, "y": 33.2},
+          "name": "Ava Nord Stoneware Coffee Mugs, Set of 4 (Sage Ash)",
+          "description": "Speckled cream reactive glaze with terracotta rims, 12 oz",
           "image": "/images/products/room-10/mugs.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0DPGF2NX7?tag=dailydecorins-20",
           "priceRange": "$25-32",
@@ -780,7 +780,7 @@
         },
         {
           "number": 5,
-          "hotspot": {"x": 51.3, "y": 49.1},
+          "hotspot": {"x": 48.9, "y": 47.5},
           "name": "MyLifeUNIT Wooden Mug Tree Holder",
           "description": "Brown wood countertop mug tree with 6 hooks, anti-slip base",
           "image": "/images/products/room-10/mugtree.jpg",
@@ -790,9 +790,9 @@
         },
         {
           "number": 6,
-          "hotspot": {"x": 72.5, "y": 11.9},
-          "name": "Vintage Coffee & Flowers Wall Art (Set of 3)",
-          "description": "12x16\" framed retro café prints with folk florals for kitchen or coffee nook",
+          "hotspot": {"x": 46, "y": 10.3},
+          "name": "Vintage Coffee & Flowers Canvas Wall Art (Set of 3)",
+          "description": "Frameless mid-century cafe prints in warm orange, red & teal",
           "image": "/images/products/room-10/art.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0DSHZ3HQX?tag=dailydecorins-20",
           "priceRange": "$24-30",
@@ -800,7 +800,7 @@
         },
         {
           "number": 7,
-          "hotspot": {"x": 36, "y": 22.9},
+          "hotspot": {"x": 67.8, "y": 32.4},
           "name": "Faux Eucalyptus Stems in Glass Vase",
           "description": "13.5\" artificial eucalyptus with faux water, zero-care greenery",
           "image": "/images/products/room-10/eucalyptus.jpg",
@@ -810,7 +810,7 @@
         },
         {
           "number": 8,
-          "hotspot": {"x": 35, "y": 51.7},
+          "hotspot": {"x": 28.3, "y": 50.6},
           "name": "Cuisinart 14-Cup Programmable Coffee Maker",
           "description": "Brushed stainless drip brewer with glass carafe & digital panel",
           "image": "/images/products/room-10/coffeemaker.jpg",
@@ -833,7 +833,7 @@
       "products": [
         {
           "number": 1,
-          "hotspot": {"x": 42.5, "y": 26},
+          "hotspot": {"x": 46, "y": 47.5},
           "name": "OldPAPA Pom Pom Hanging Canopy (White)",
           "description": "Cotton canopy tent with pom pom trim, 98\" tall, hangs from one ceiling hook",
           "image": "/images/products/room-11/canopy.jpg",
@@ -843,7 +843,7 @@
         },
         {
           "number": 2,
-          "hotspot": {"x": 84, "y": 55},
+          "hotspot": {"x": 83.1, "y": 52.2},
           "name": "Fixwal Nursery Book Ledges, Set of 3 (Natural)",
           "description": "16.5\" floating wood shelves with front lip for face-out picture books",
           "image": "/images/products/room-11/shelves.jpg",
@@ -853,7 +853,7 @@
         },
         {
           "number": 3,
-          "hotspot": {"x": 39, "y": 77},
+          "hotspot": {"x": 42.5, "y": 76},
           "name": "MAXYOYO 3-in-1 Kids Bean Bag Chair (Beige)",
           "description": "Foam-filled floor sofa that folds out into a lounger, removable cover",
           "image": "/images/products/room-11/beanbag.jpg",
@@ -863,9 +863,9 @@
         },
         {
           "number": 4,
-          "hotspot": {"x": 17.7, "y": 87},
-          "name": "Lahome Sylvie 4 ft Round Floral Rug (Beige)",
-          "description": "Soft low-pile washable circle rug with non-slip backing",
+          "hotspot": {"x": 16.5, "y": 87},
+          "name": "Lahome Sylvie 4 ft Round Boho Floral Rug",
+          "description": "Washable pastel floral medallion rug with non-slip backing",
           "image": "/images/products/room-11/rug.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0DC64M2YN?tag=dailydecorins-20",
           "priceRange": "$26-32",
@@ -873,7 +873,7 @@
         },
         {
           "number": 5,
-          "hotspot": {"x": 85, "y": 85.5},
+          "hotspot": {"x": 86.1, "y": 85.4},
           "name": "INDRESSME XXXL Woven Rope Basket",
           "description": "90L cotton rope basket for plush toys & blankets, with handles",
           "image": "/images/products/room-11/basket.jpg",
@@ -883,9 +883,9 @@
         },
         {
           "number": 6,
-          "hotspot": {"x": 75.5, "y": 30},
-          "name": "Boho Sun, Moon & Leaf Wall Art, Set of 3",
-          "description": "12x16\" neutral canvas prints in terracotta & mustard tones",
+          "hotspot": {"x": 74.3, "y": 26.1},
+          "name": "Boho Arch & Rainbow Canvas Wall Art, Set of 3",
+          "description": "Mid-century arch prints in terracotta, black & sage",
           "image": "/images/products/room-11/art.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0BZKH62S1?tag=dailydecorins-20",
           "priceRange": "$29-35",
@@ -893,7 +893,7 @@
         },
         {
           "number": 7,
-          "hotspot": {"x": 30, "y": 35.6},
+          "hotspot": {"x": 51.9, "y": 25.3},
           "name": "Minetom 50 LED Star String Lights",
           "description": "17 ft warm white battery fairy lights with timer, soft star glow",
           "image": "/images/products/room-11/lights.jpg",
@@ -903,7 +903,7 @@
         },
         {
           "number": 8,
-          "hotspot": {"x": 76, "y": 80},
+          "hotspot": {"x": 76.7, "y": 76},
           "name": "LAGRATY Chunky Knit Throw Blanket (Cream, 50x60)",
           "description": "Thick chenille cable-loop knit throw, soft & washable",
           "image": "/images/products/room-11/blanket.jpg",
@@ -913,7 +913,7 @@
         },
         {
           "number": 9,
-          "hotspot": {"x": 15, "y": 46.7},
+          "hotspot": {"x": 13, "y": 43.5},
           "name": "BGment Oatmeal Linen Curtains, 84\" (2 Panels)",
           "description": "Light-filtering textured linen-look grommet panels",
           "image": "/images/products/room-11/curtains.jpg",
@@ -927,7 +927,7 @@
       "id": "warm-cafe-dining-nook-12",
       "slug": "warm-cafe-dining-nook-12",
       "title": "Warm Cafe-Style Dining Nook",
-      "subtitle": "Walnut tulip table, cane chairs & a glowing rattan pendant for small spaces",
+      "subtitle": "Walnut tulip table, rattan boucle chairs & a woven pendant for small spaces",
       "category": "dining-nook",
       "tags": ["dining nook ideas", "small dining room", "breakfast nook", "rattan decor", "amazon finds"],
       "roomImage": "/images/rooms/room-12.jpg",
@@ -936,8 +936,8 @@
       "products": [
         {
           "number": 1,
-          "hotspot": {"x": 56, "y": 66},
-          "name": "Tulip Round Pedestal Dining Table (Faux Walnut)",
+          "hotspot": {"x": 51.9, "y": 63.3},
+          "name": "Tulip Round Pedestal Dining Table (Walnut Top, Black Base)",
           "description": "Mid-century tulip table with wipe-clean walnut-look top, sized for small nooks",
           "image": "/images/products/room-12/table.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0FG7SC33Y?tag=dailydecorins-20",
@@ -946,9 +946,9 @@
         },
         {
           "number": 2,
-          "hotspot": {"x": 79, "y": 75.3},
-          "name": "BedsPick Rattan Cane Dining Chairs, Set of 2 (Brown)",
-          "description": "Wingback cane-back chairs with brown boucle seats & black metal legs",
+          "hotspot": {"x": 74.3, "y": 72.8},
+          "name": "BedsPick Rattan Back Dining Chairs, Set of 2 (Cream Boucle)",
+          "description": "Woven rattan backs with cream boucle seats & black metal legs",
           "image": "/images/products/room-12/chairs.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0DZBM5YYY?tag=dailydecorins-20",
           "priceRange": "$119-135",
@@ -956,9 +956,9 @@
         },
         {
           "number": 3,
-          "hotspot": {"x": 55, "y": 24.7},
+          "hotspot": {"x": 50.1, "y": 28.5},
           "name": "Boho Rattan Plug-In Pendant Light",
-          "description": "Woven double-drum wicker shade with plug-in cord & dimmer, no hardwiring",
+          "description": "Zigzag woven rattan drum shade with a white inner drum, plug-in cord & dimmer",
           "image": "/images/products/room-12/pendant.jpg",
           "amazonUrl": "https://www.amazon.com/dp/B0CF8LBQ4W?tag=dailydecorins-20",
           "priceRange": "$32-38",
@@ -966,7 +966,7 @@
         },
         {
           "number": 4,
-          "hotspot": {"x": 9, "y": 46.7},
+          "hotspot": {"x": 18.9, "y": 39.6},
           "name": "MYSKY HOME Natural Linen Curtains, 84\" (2 Panels)",
           "description": "Semi-sheer grommet panels that soften daylight in an oatmeal tone",
           "image": "/images/products/room-12/curtains.jpg",
@@ -976,7 +976,7 @@
         },
         {
           "number": 5,
-          "hotspot": {"x": 51.5, "y": 61.3},
+          "hotspot": {"x": 46, "y": 58.5},
           "name": "Rustic Cream Ceramic Vase (6.3\")",
           "description": "Hand-finished textured farmhouse vase for dried stems or branches",
           "image": "/images/products/room-12/vase.jpg",
@@ -986,7 +986,7 @@
         },
         {
           "number": 6,
-          "hotspot": {"x": 64, "y": 57.3},
+          "hotspot": {"x": 61, "y": 57.5},
           "name": "Brass Gold Taper Candlestick Holders, Set of 3",
           "description": "Slim vintage-modern candlesticks in three heights for the table",
           "image": "/images/products/room-12/candles.jpg",
@@ -996,7 +996,7 @@
         },
         {
           "number": 7,
-          "hotspot": {"x": 77, "y": 40},
+          "hotspot": {"x": 81.4, "y": 38},
           "name": "Vintage Lemon Bowl Still Life Framed Art (12x16\")",
           "description": "European-style fruit oil painting print in an ornate gold frame",
           "image": "/images/products/room-12/art.jpg",
@@ -1006,7 +1006,7 @@
         },
         {
           "number": 8,
-          "hotspot": {"x": 64, "y": 51.3},
+          "hotspot": {"x": 59.5, "y": 48.5},
           "name": "Everymoment White Taper Candles (10\", 12-Pack)",
           "description": "Unscented dripless taper candles for brass candlesticks",
           "image": "/images/products/room-12/tapers.jpg",
