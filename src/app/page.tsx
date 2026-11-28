@@ -1,14 +1,20 @@
 import roomsData from "@/data/rooms.json";
 import { RoomsExplorer } from "@/components/RoomsExplorer";
+import { HeroCarousel, type HeroRoom } from "@/components/HeroCarousel";
 import { findsBySlug, liveFindTypes } from "@/lib/finds";
 import type { Product } from "@/components/ProductCard";
 
 export default function HomePage() {
   const rooms = roomsData.rooms;
   const productCount = rooms.reduce((acc, r) => acc + r.products.length, 0);
-  // Newest rooms lead the hero collage; the big one carries a live product tag (the site's signature)
-  const [lead, second, third] = [...rooms].reverse();
-  const tagged = (lead.products as Product[]).find((p) => p.hotspot && p.hotspot.y > 45 && p.hotspot.y < 80) ?? (lead.products[0] as Product);
+  // Hero collage pages through every room, newest first; each room offers the products whose tag
+  // sits in the readable middle of its photo, and the tagged one changes on every step
+  const heroRooms: HeroRoom[] = [...rooms].reverse().map((r) => {
+    const tags = (r.products as Product[])
+      .filter((p) => p.hotspot && p.hotspot.y > 30 && p.hotspot.y < 80)
+      .map((p) => ({ number: p.number, name: p.name, priceRange: p.priceRange, x: p.hotspot!.x, y: p.hotspot!.y, store: p.store }));
+    return { slug: r.slug, title: r.title, roomImage: r.roomImage, tags };
+  });
   const finds = findsBySlug();
 
   return (
@@ -39,44 +45,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative h-[440px] sm:h-[540px]">
-          <a
-            href={`/room/${second.slug}/`}
-            className="absolute left-0 top-10 w-[38%] aspect-[2/3] rounded-2xl overflow-hidden shadow-lg rotate-[-3deg] hidden sm:block"
-            aria-label={second.title}
-          >
-            <img src={second.roomImage} alt={second.title} className="w-full h-full object-cover" />
-          </a>
-          <a
-            href={`/room/${third.slug}/`}
-            className="absolute right-0 bottom-0 w-[34%] aspect-[2/3] rounded-2xl overflow-hidden shadow-lg rotate-[3deg] hidden sm:block"
-            aria-label={third.title}
-          >
-            <img src={third.roomImage} alt={third.title} className="w-full h-full object-cover" />
-          </a>
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full aspect-[2/3] max-w-[72%] sm:max-w-none">
-            <a
-              href={`/room/${lead.slug}/`}
-              className="block w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-4 ring-canvas"
-              aria-label={lead.title}
-            >
-              <img src={lead.roomImage} alt={lead.title} className="w-full h-full object-cover" loading="eager" />
-            </a>
-            {tagged.hotspot && (
-              <a
-                href={`/room/${lead.slug}/#product-${tagged.number}`}
-                className="absolute z-10 flex items-center gap-2 -translate-x-3 -translate-y-1/2"
-                style={{ left: `${Math.min(tagged.hotspot.x, 55)}%`, top: `${tagged.hotspot.y}%` }}
-              >
-                <span className="w-6 h-6 rounded-full bg-accent ring-[3px] ring-white shadow-md shrink-0" />
-                <span className="rounded-lg bg-surface/95 backdrop-blur px-3 py-1.5 shadow-lg text-xs leading-tight text-ink max-w-[11rem]">
-                  <span className="block font-semibold truncate">{tagged.name}</span>
-                  <span className="text-muted">{tagged.priceRange} on Amazon</span>
-                </span>
-              </a>
-            )}
-          </div>
-        </div>
+        <HeroCarousel rooms={heroRooms} />
       </section>
 
       {/* Rooms */}

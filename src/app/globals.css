@@ -92,6 +92,18 @@ body {
   border-radius: 3px;
 }
 
+/* Home hero room carousel: the photo that comes forward settles in, its tag pops after it */
+@keyframes hero-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes hero-tag {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-in { animation: hero-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.hero-tag { animation: hero-tag 0.35s 0.25s ease-out both; }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
